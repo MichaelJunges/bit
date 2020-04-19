@@ -2,7 +2,7 @@
 body{
 	/*font-family: 'Orbitron' ;*/
 	text-align: center;
-	background-color:NavajoWhite;
+	background-color:	#363636;
 	/*background-image: url(imagens/triangulo.jpg);*/
 	background-repeat: no-repeat;
 	background-size: all;
@@ -65,6 +65,7 @@ input[type=submit]{
 	margin: 3px;
 	font-size: 18px;
 	padding: 0px;
+	color: white;
 }
 .about_me
 {	
@@ -78,6 +79,7 @@ input[type=submit]{
 p
 {
 	margin: 10px;
+
 }
 table
 {
