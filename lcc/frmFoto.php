@@ -27,6 +27,14 @@ $id = $_GET["id"];
   	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
   	<title>Alterar Foto</title>
+    <script>
+      function limpaUrl() {     //função
+          urlpg = $(location).attr('href');   //pega a url atual da página
+          urllimpa = urlpg.split("?")[0]      //tira tudo o que estiver depois de '?'
+          window.history.replaceState(null, null, urllimpa); //subtitui a url atual pela url limpa
+      }
+      setTimeout(limpaUrl, 0) 
+    </script>
   </head>
   <body>
     <div class="grid-container">

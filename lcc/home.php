@@ -41,6 +41,14 @@ $dados = $sqlUser->fetchAll();
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
 	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
 	<title>QUIZ/<?=$nreal?></title>
+	<script>
+		function limpaUrl() {     //função
+		    urlpg = $(location).attr('href');   //pega a url atual da página
+		    urllimpa = urlpg.split("?")[0]      //tira tudo o que estiver depois de '?'
+		    window.history.replaceState(null, null, urllimpa); //subtitui a url atual pela url limpa
+		}
+		setTimeout(limpaUrl, 0) 
+	</script>
 </head>
 <body style=" margin: 0px; padding: 0px "; >
 	
