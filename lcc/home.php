@@ -34,13 +34,13 @@ $dados = $sqlUser->fetchAll();
 
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
 	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
-	<title>Principal/<?=$nreal?></title>
+	<title>QUIZ/<?=$nreal?></title>
 </head>
 <body style=" margin: 0px; padding: 0px "; >
 	
