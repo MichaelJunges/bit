@@ -21,6 +21,14 @@
             return true;
         }
 </script>
+<script>
+	function limpaUrl() {    
+	    urlpg = $(location).attr('href'); 
+	    urllimpa = urlpg.split("?")[0] 
+	    window.history.replaceState(null, null, urllimpa);
+	}
+	setTimeout(limpaUrl, 0) 
+</script>
 </head>
 
 <body>

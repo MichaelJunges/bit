@@ -28,12 +28,12 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
   	<title>Alterar Conta</title>
     <script>
-      function limpaUrl() {     //função
-          urlpg = $(location).attr('href');   //pega a url atual da página
-          urllimpa = urlpg.split("?")[0]      //tira tudo o que estiver depois de '?'
-          window.history.replaceState(null, null, urllimpa); //subtitui a url atual pela url limpa
+      function limpaUrl() {    
+          urlpg = $(location).attr('href'); 
+          urllimpa = urlpg.split("?")[0]; 
+          window.history.replaceState(null, null, urllimpa);
       }
-      setTimeout(limpaUrl, 0) 
+      setTimeout(limpaUrl, 0); 
     </script>
   </head>
   <body>
