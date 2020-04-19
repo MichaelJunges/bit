@@ -84,15 +84,15 @@ $dados = $sqlUser->fetchAll();
 		</div>
 	</div>
 	<p></p>
-	<!-- <div  style="margin-left: 7px" class="grid-25 about_me">+ Informações
+	 <div  style="margin-left: 7px" class="grid-25 about_me">
 			<p></p>
 			<div style="text-align: left;">
 			</div>
-			<a href="frmEditar.php?id=<?=$id?>"  style="background-color: white; border-radius: 30px; text-decoration: none; padding: 5px; ">Editar Info ⚙</a> 
+			<a href="frmEditar.php?id=<?=$id?>"  style="background-color: white; border-radius: 30px; text-decoration: none; padding: 5px; ">Criar Quizz ⚙</a> 
 			<p></p>
 			
 			<p style=" color: white"><?=@urldecode($_GET["msg"])?></p>	
-		</div> -->
+		</div> 
 </div>
 </div>
 
