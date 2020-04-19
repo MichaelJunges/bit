@@ -1,0 +1,91 @@
+
+body{
+	/*font-family: 'Orbitron' ;*/
+	text-align: center;
+	background-color: #D3D3D3;
+	background-image: url(imagens/triangulo.jpg);
+	background-repeat: no-repeat;
+	background-size: all;
+	font-family: 'Barlow';
+
+}
+
+		
+input[type=text], input[type=password], input[type=email], input[type=textarea]{
+	background-color: #ddd;
+    border: solid 2px #aaa;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 50px; 
+    border-color: white;
+    outline: none; /*remove desenho da seleção*/
+    color: black;
+
+	
+}
+input[type=submit]{
+	padding:5px 60px; 
+	background-color: #00FA9B;*/
+	font-family: 'Orbitron';
+	border: groove;
+	border-color: grey;
+} 
+.foco
+{
+	margin-left: 35%;
+	margin-right:35%;
+	padding: 1%; 
+	border-radius: 25px;
+	/*background-image: url(fundo1.jpg);*/
+	background-color: white;
+	font-family: 'Orbitron';*/
+}
+.titulo{
+	-webkit-text-stroke-width: 0.5px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+    padding-bottom: 20px; 
+    color: #00FA9B;
+    font-size: 40px;
+}
+.people_title
+{
+    background-image: url(imagens/fundosdsd.jpg);
+    background-repeat: no-repeat;
+    background-size: 1000px;
+	color: black;
+	border-radius: 20px;
+}
+.people
+{	
+	text-align: left; 
+	border: groove; 
+	border-color; 
+	border-radius: 30px; 
+	border-style: solid; 
+	margin: 3px;
+	font-size: 18px;
+	padding: 0px;
+}
+.about_me
+{	
+
+	background-color: #363636; 
+	color: white;
+	border-radius: 10px;
+	padding: 10px;
+	border-color: red;
+}
+p
+{
+	margin: 10px;
+}
+table
+{
+	border: 1px solid black;
+	width: 100%;
+}
+thead
+{
+	background-color: #eee;
+	border: 1px solid black;
+}

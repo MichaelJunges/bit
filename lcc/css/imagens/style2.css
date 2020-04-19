@@ -1,0 +1,36 @@
+
+body{
+	font-family: 'Orbitron' ;
+	/*background-image: url(fundo1.jpg);*/
+	text-align: center;
+	/*background-repeat: no-repeat;*/
+}
+
+		 
+}
+input[type=text], input[type=password], input[type=email]{
+	background-color: red;
+	border:solid 2px #aaa; 
+	padding: 8px; 
+	margin: 10px;
+
+	
+}
+input[type=submit]{
+	padding:5px 60px; 
+	background-color: #00FA9B;
+	font-family: 'Orbitron';
+	border: groove;
+	border-color: silver;
+} 
+
+.focoXXXX
+{
+	margin-left: 35%;
+	margin-right:35%;
+	padding: 3%; 
+	border-radius: 25px;
+	/*background-image: url(fundo1.jpg);*/
+	background-color: white;
+	opacity: 0.6;
+}
