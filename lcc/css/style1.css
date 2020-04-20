@@ -25,7 +25,7 @@ input[type=text], input[type=password], input[type=email], input[type=textarea]{
 }
 input[type=submit]{
 	padding:5px 60px; 
-	background-color: #00FA9B;*/
+	background-color: #00FA9B;
 	font-family: 'Orbitron';
 	border: groove;
 	border-color: grey;
@@ -46,6 +46,7 @@ input[type=submit]{
     padding-bottom: 20px; 
     color: #00FA9B;
     font-size: 40px;
+    font-family: 'Orbitron';
 }
 .people_title
 {
@@ -90,4 +91,9 @@ thead
 {
 	background-color: #eee;
 	border: 1px solid black;
+}
+.quiz
+{
+	color: white;
+	font-size: 20px;
 }
