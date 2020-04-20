@@ -4,7 +4,7 @@ session_start();
 // <!-- Validando o acesso do Usuario -->
 if ($_SESSION["acesso"] != true) {
 	
-	$mensagem = urldecode("Usuário e/ou Senha inválidos");
+	$mensagem = urldecode("ERRO");
   	header("Location:index.php?msg=$mensagem"); // L maiúsculo obrigatório
   	exit; //importa (SAIR)
   }

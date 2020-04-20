@@ -38,11 +38,15 @@
 		<div style="padding-top: 5%" class="grid-100">
 
 <div class="foco">
-			<div style="padding: 10px;">
+			<!-- <div style="padding: 10px;">
 			<p>Desenvolvido por:</p>
 			<a href="https://www.facebook.com/luancarlos.castoldi"><img src="logos/logo2.png" width="30%" ></a>  
-			</div>
-			 <!-- <h1 class="titulo">HIPOC4MPO</h1>  -->
+			</div> -->
+
+			<h1 class="titulo">4Quizz</h1>
+			<p>Crie Quiz e Desafie seus amigos</p>
+			<p>&nbsp</p>
+			 
 			<p> 
 				Login:<br /> 
 				<input  type="text" size="30" name="login" required="required" maxlength="6" autofocus="autofocus" > 
@@ -61,6 +65,8 @@
 
 			<p style=" color: purple"><?=@urldecode($_GET["msg"])?></p>
 
+
+<!-- teste -->
 
 		</div>
 	</div>
