@@ -23,10 +23,14 @@ $nreal = $_SESSION['nreal'];
 $email = $_SESSION['email'];
 $bio = $_SESSION['bio'];
 
-$sqlOutros = $PDO->prepare("SELECT * FROM register WHERE login != '$login'");
-$sqlOutros->execute();
-$dadosOutros = $sqlOutros->fetchAll();
 
+//quizes
+$sqlQuiz = $PDO->prepare("SELECT q.pergunta, q.id, p.nreal, p.email FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
+$sqlQuiz->execute();
+$dadosQuiz = $sqlQuiz->fetchAll();
+
+
+//perfil
 $sqlUser = $PDO->prepare("SELECT * FROM register WHERE id = ?");
 $sqlUser->execute(array($id));
 $dados = $sqlUser->fetchAll();
@@ -73,17 +77,14 @@ $dados = $sqlUser->fetchAll();
 		</div>
 		<div class="grid-75 people_title">
 			<?php  
-			foreach ($dadosOutros as $outros) {	
+			foreach ($dadosQuiz as $quizzes) {	
 				?>
 				<div class="grid-100 people">
-					<div class="grid-25">
-						<p><img style="object-fit: cover;width:100%; border-radius: 10px; height: 100px;" src="fotos/<?=$outros["id"]?>.jpg"width="100%" alt="Sem foto 😥"></p>
-					</div>
 					<div class="grid-60" style="padding: 0px;">
 
-						<p>🔥: <?=$outros["nreal"]?>
-						<p>✉ Contato: <?=$outros["email"]?></a> </p>
-						<p>📝 Bio:<?=$outros["bio"]?> </p>	
+						<p>👣 Criador: <?=$quizzes["nreal"]?>  📞 <?=$quizzes["email"]?> </p>
+					 <p>  💎 4Quiz:<a style="color: white" href="frmQuizId.php"> <?=$quizzes["pergunta"]?></a> </p>
+						<!-- <p>📝 Bio:<?=$quizzes["bio"]?> </p>	  -->
 					</div>	
 				</div>
 				<?php
