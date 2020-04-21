@@ -83,7 +83,7 @@ $dados = $sqlUser->fetchAll();
 					<div class="grid-60" style="padding: 0px;">
 
 						<p>👣 Criador: <?=$quizzes["nreal"]?>  📞 <a href="mailto:<?=$quizzes["email"]?>" style="color: white;"><?=$quizzes["email"]?></a> </p>
-					 <p>  💎 4Quiz:<a style="color: white" href="frmQuizId.php"> <?=$quizzes["pergunta"]?></a> </p>
+					 <p>  💎 4Quiz:<a style="color: white" href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["pergunta"]?></a> </p>
 						<!-- <p>📝 Bio:<?=$quizzes["bio"]?> </p>	  -->
 					</div>	
 				</div>
