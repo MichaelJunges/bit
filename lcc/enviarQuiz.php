@@ -32,9 +32,17 @@ if($_SESSION["acesso"] != true) {
 <html lang="pt-br">
 <head>
 	<title>Quiz</title>
+	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
+	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div>
+	<div class="grid container">
+		<div class="grid-20 menu"><a href="home.php">Início</a></div>
+		<div class="grid-20 menu"><a href="frmCreateQuiz.php">Adicionar + Quiz</a></div>
+		<div class="grid-20 menu">&nbsp</div>
+		<div class="grid-20 menu">&nbsp</div>
+		<div class="grid-20 menu"><a href="logoff.php">Sair</a></div>
 		<h1 style="color: <?=$e?>"><?=$escreve?></h1>
 	</div>
 </body>
