@@ -4,7 +4,7 @@ session_start();
 if($_SESSION["acesso"] != true) {
 
 	$mensagem = urldecode("Erro");
-	header("Location.index.php?msg=$mensagem");
+	header("Location:index.php?msg=$mensagem");
 	exit;
 }
 

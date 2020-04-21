@@ -4,7 +4,7 @@ session_start();
 if($_SESSION["acesso"] != true) {
 
 	$mensagem = urldecode("Favor logar");
-	header("Location.index.php?msg=$mensagem");
+	header("Location:index.php?msg=$mensagem");
 	exit;
 }
 
@@ -29,7 +29,7 @@ if($_SESSION["acesso"] != true) {
     	$e = "red";
   	}
   	if ($finalizar != 'on') {
-		header("frmCreateQuiz.php?id=$id_usuario");
+		header("Location:frmCreateQuiz.php?id=$id_usuario");
 		exit;
 	}
 ?>
