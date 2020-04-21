@@ -55,9 +55,11 @@ $id = $_SESSION["id"];
 
 			<input type="hidden" name="id" value="<?=$id?>">
 
+			<p>
+				<input type="checkbox" name="finalizar"> Marque para finalizar
+			</p>
 			<p class="titulo">  
 				<input type="submit" value="PRÓXIMO" id="proximo">
-				<input type="submit" value="FINALIZAR" id="finalizar">
 			</p>	
 
 </form>
