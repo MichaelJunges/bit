@@ -16,10 +16,7 @@ $PDO = new PDO("sqlite:users.db");
 
 $login = $_SESSION['login'];
 $id = $_SESSION['id'];
-// $email = $_SESSION['email'];
-// $bio = $_SESSION['bio'];
 $nreal = $_SESSION['nreal'];
-
 $email = $_SESSION['email'];
 $bio = $_SESSION['bio'];
 
@@ -64,12 +61,12 @@ $dados = $sqlUser->fetchAll();
 			<p></p>
 			<div style="text-align: left;">
 
-				<p><a href="frmFoto.php?id=<?=$id?>"><img style="object-fit: cover;width:100%; height: 200px; border-radius: 10px; color: white" src="fotos/<?=$id?>.jpg"width="100%" alt="Selecionar Imagem"></p></a>
+				<p><a href="frmFoto.php"><img style="object-fit: cover;width:100%; height: 200px; border-radius: 10px; color: white" src="fotos/<?=$id?>.jpg"width="100%" alt="Selecionar Imagem"></p></a>
 				<p>✉ Contato: <?=$dados[0]["email"]?></p>
 				<p>📝 Bio: <?=$dados[0]["bio"]?></p>	
 				<p>&nbsp</p>
 			</div>
-			<a href="frmEditar.php?id=<?=$id?>"  style="background-color: white; border-radius: 30px; text-decoration: none; padding: 5px; ">Editar perfil ⚙</a> 
+			<a href="frmEditar.php"  style="background-color: white; border-radius: 30px; text-decoration: none; padding: 5px; ">Editar perfil ⚙</a> 
 			<p><a href="logoff.php" style="background-color:  #363636; border-radius: 30px; text-decoration: none; padding: 4px; color: white; ;" >SAIR ❌</a> </p>
 			<p></p>
 			
@@ -97,7 +94,7 @@ $dados = $sqlUser->fetchAll();
 			<p></p>
 			<div style="text-align: left;">
 			</div>
-			<a href="frmCreateQuiz.php?id=<?=$id?>"  style="background-color: white; border-radius: 30px; text-decoration: none; padding: 5px; ">Criar Quizz 🤖</a> 	
+			<a href="frmCreateQuiz.php"  style="background-color: white; border-radius: 30px; text-decoration: none; padding: 5px; ">Criar Quizz 🤖</a> 	
 		</div> 
 </div>
 </div>
