@@ -18,9 +18,9 @@ $id = $_GET["id"];
 <head>
 	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
 	 <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
-	 <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="font-family: 'Press Start 2P', cursive;">
 	<form name="frmCreateQuiz" action="enviarQuiz.php" method="post">
 
 	 <div class="grid-container">
