@@ -27,30 +27,33 @@ $id = $_SESSION["id"];
 	 	<div class="grid-100">
 	 		<div class="grid-50"></div>
 	 		<h1 class="titulo">CRIE SEU QUIZ</h1>
-
+	 		<p class="quiz"> 
+				Titulo:<br /> 
+				<input  type="text" size="50" name="titulo" required="required" maxlength="50" autofocus="autofocus" > 
+			</p> 
 	 		<p class="quiz"> 
 				Pergunta:<br /> 
-				<input  type="text" size="50" name="pergunta" required="required" maxlength="100" autofocus="autofocus" > 
+				<input  type="text" size="50" name="pergunta" required="required" maxlength="100" > 
 			</p> 	
 
 	 		<p class="quiz"> 
 				Correta:<br /> 
-				<input  type="text" size="30" name="correta" required="required" maxlength="20" autofocus="autofocus" > 
+				<input  type="text" size="30" name="correta" required="required" maxlength="20"> 
 			</p> 	
 
 			<p class="quiz"> 
 				Errada:<br /> 
-				<input  type="text" size="30" name="errada" required="required" maxlength="20" autofocus="autofocus" > 
+				<input  type="text" size="30" name="errada" required="required" maxlength="20"> 
 			</p>
 
 			<p class="quiz"> 
 				Errada:<br /> 
-				<input  type="text" size="30" name="errada2" required="required" maxlength="20" autofocus="autofocus" > 
+				<input  type="text" size="30" name="errada2" required="required" maxlength="20"> 
 			</p>
 
 			<p class="quiz"> 
 				Errada:<br /> 
-				<input  type="text" size="30" name="errada3" required="required" maxlength="20" autofocus="autofocus" > 
+				<input  type="text" size="30" name="errada3" required="required" maxlength="20"> 
 			</p>
 
 			<input type="hidden" name="id" value="<?=$id?>">

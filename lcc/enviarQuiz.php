@@ -9,7 +9,7 @@ if($_SESSION["acesso"] != true) {
 }
 
 	$PDO = new PDO("sqlite:users.db");
-
+	$titulo = $_POST["titulo"];
 	$pergunta = $_POST["pergunta"];
 	$correta = $_POST["correta"];
 	$errada = $_POST["errada"];
@@ -18,8 +18,8 @@ if($_SESSION["acesso"] != true) {
 	$id_usuario = $_POST["id"];
 	$finalizar = $_POST["finalizar"];
 
-	$sqlInsert = $PDO->prepare("INSERT INTO quiz (pergunta, correta, errada, errada2, errada3, id_usuario) VALUES (?,?,?,?,?,?,?)");
-	$exec = $sqlInsert->execute(array($pergunta, $correta, $errada, $errada2, $errada3, $id_usuario));
+	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, pergunta, correta, errada, errada2, errada3, id_usuario) VALUES (?,?,?,?,?,?,?,?)");
+	$exec = $sqlInsert->execute(array($titulo, $pergunta, $correta, $errada, $errada2, $errada3, $id_usuario));
 
 	if ($exec){
     	$escreve = "Quiz criado com sucesso";
