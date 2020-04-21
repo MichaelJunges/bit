@@ -11,7 +11,7 @@ if ($_SESSION["acesso"] != true) {
 
 //Conexão
 $PDO = new PDO("sqlite:users.db");
-$id = $_GET["id"];
+$id = $_SESSION["id"];
 
 
 //Consulta
