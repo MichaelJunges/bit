@@ -17,7 +17,7 @@ if($_SESSION["acesso"] != true) {
 	$errada3 = $_POST["errada3"];
 	$id_usuario = $_POST["id"];
 
-	$sqlInsert = $PDO->prepare("INSERT INTO quiz (pergunta, correta, errada, errada2, errada3, id_usuario) VALUES (?,?,?,?,?,?)");
+	$sqlInsert = $PDO->prepare("INSERT INTO quiz (pergunta, correta, errada, errada2, errada3, id_usuario) VALUES (?,?,?,?,?,?,?)");
 	$exec = $sqlInsert->execute(array($pergunta, $correta, $errada, $errada2, $errada3, $id_usuario));
 
 	if ($exec){

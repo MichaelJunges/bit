@@ -9,7 +9,7 @@ if($_SESSION["acesso"] != true) {
 }
 
 $PDO = new PDO("sqlite:users.db");
-$id = $_GET["id"];
+$id = $_SESSION["id"];
 
 ?>
 
@@ -56,7 +56,8 @@ $id = $_GET["id"];
 			<input type="hidden" name="id" value="<?=$id?>">
 
 			<p class="titulo">  
-				<input type="submit"  value="FINALIZAR">
+				<input type="submit" value="PRÓXIMO" id="proximo">
+				<input type="submit" value="FINALIZAR" id="finalizar">
 			</p>	
 
 </form>
