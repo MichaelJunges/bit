@@ -1,6 +1,10 @@
 <?php
 	session_start();
-	$PDO = new PDO("sqlite:users.db");  //Diretório
+	$PDO = new PDO("sqlite:users.db");
+	if(@$_SESSION["acesso"] == true) {
+		header("Location:home.php");
+		exit;
+	}
 	?>
 <!DOCTYPE html>
 <html>
