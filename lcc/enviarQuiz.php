@@ -2,12 +2,10 @@
 session_start();
 
 if($_SESSION["acesso"] != true) {
-
 	$mensagem = urldecode("Favor logar");
 	header("Location:index.php?msg=$mensagem");
 	exit;
 }
-
 	$PDO = new PDO("sqlite:users.db");
 	$titulo = $_POST["titulo"];
 	$pergunta = $_POST["pergunta"];
@@ -16,9 +14,8 @@ if($_SESSION["acesso"] != true) {
 	$errada2 = $_POST["errada2"];
 	$errada3 = $_POST["errada3"];
 	$id_usuario = $_POST["id"];
-	$finalizar = $_POST["finalizar"];
 
-	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, pergunta, correta, errada, errada2, errada3, id_usuario) VALUES (?,?,?,?,?,?,?,?)");
+	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, pergunta, correta, errada, errada2, errada3, id_usuario) VALUES (?,?,?,?,?,?,?)");
 	$exec = $sqlInsert->execute(array($titulo, $pergunta, $correta, $errada, $errada2, $errada3, $id_usuario));
 
 	if ($exec){
@@ -28,10 +25,6 @@ if($_SESSION["acesso"] != true) {
     	$escreve = "Erro ao criar o quiz, por favor tente novamente.";
     	$e = "red";
   	}
-  	if ($finalizar != 'on') {
-		header("Location:frmCreateQuiz.php?id=$id_usuario");
-		exit;
-	}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
