@@ -22,7 +22,7 @@ $bio = $_SESSION['bio'];
 
 
 //quizes
-$sqlQuiz = $PDO->prepare("SELECT q.pergunta, q.id, p.nreal, p.email, q.titulo FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
+$sqlQuiz = $PDO->prepare("SELECT q.pergunta, q.id, p.nreal, p.email, q.titulo, q.foto FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
 $sqlQuiz->execute();
 $dadosQuiz = $sqlQuiz->fetchAll();
 
@@ -86,7 +86,7 @@ $dados = $sqlUser->fetchAll();
 				<div class="grid-50 people" > 
 					<p>👣 <?=$quizzes["nreal"]?></p>
 					 <p>  💎<a href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["titulo"]?></a> </p>
-						<!-- <p>📝 Bio:<?=$quizzes["bio"]?> </p>	  -->
+						<p><img width="200px" height="200px" src="<?=$quizzes["foto"]?>"></p>
 				</div>
 				<?php
 			}
