@@ -21,7 +21,7 @@ $id = $_SESSION["id"];
 	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body style="font-family: 'Press Start 2P', cursive;">
-	<form name="frmCreateQuiz" action="enviarQuiz.php" method="post">
+	<form name="frmCreateQuiz" action="enviarQuiz.php" method="POST" enctype="multipart/form-data" >
 
 	 <div class="grid-container">
 	 	<div class="grid-100">
@@ -54,6 +54,11 @@ $id = $_SESSION["id"];
 			<p class="quiz"> 
 				Errada:<br /> 
 				<input  type="text" size="30" name="errada3" required="required" maxlength="20"> 
+			</p>
+
+			<p class="quiz">
+				Foto:<br />
+				<input name="foto" type="file" accept=".jpg, .jpeg" required="required">
 			</p>
 
 			<input type="hidden" name="id" value="<?=$id?>">
