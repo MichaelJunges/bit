@@ -42,7 +42,7 @@
 	<div class="grid-container">
 		<div style="padding-top: 5%" class="grid-100">
 
-<div class="foco">
+<div class="">
 			<!-- <div style="padding: 10px;">
 			<p>Desenvolvido por:</p>
 			<a href="https://www.facebook.com/luancarlos.castoldi"><img src="logos/logo2.png" width="30%" ></a>  
@@ -51,17 +51,17 @@
 			<h1 class="titulo">4Quizz</h1>
 			
 			<p> 
-				Login:<br /> 
-				<input  type="text" size="30" name="login" required="required" maxlength="6" autofocus="autofocus" > 
+				<input  type="text"  name="login" required="required" maxlength="6" autofocus="autofocus" size="20" placeholder="Login"> 
 			</p> 
 			<p> 
-				Senha:<br /> 
-				<input type="password" size="30" name="pass" required="required"> 
+				<input type="password" size="20" name="pass" required="required" placeholder="Senha"> 
 			</p>
 			 <!-- <input type="hidden" id="id" name="id" value=""> -->
+			 &nbsp
 			<p>  
-				<input type="submit"  value="ENTRAR">
+				<input type="submit"  value="Entrar">
 			</p>
+				 &nbsp
 				<p>  
 				<a style="color:rgb(51,109,226)" href="create.php">CRIAR CONTA</a>
 			</p>

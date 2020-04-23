@@ -2,7 +2,7 @@
 body{
 	/*font-family: 'Orbitron' ;*/
 	text-align: center;
-	background-color:	rgb(51,109,226);
+	background-color: #00121e;
 	/*background-image: url(imagens/triangulo.jpg);*/
 	background-repeat: no-repeat;
 	background-size: all;
@@ -12,40 +12,43 @@ body{
 
 		
 input[type=text], input[type=password], input[type=email], input[type=textarea]{
-	background-color: #ddd;
     border: solid 2px #aaa;
     padding: 8px;
     margin: 10px;
-    border-radius: 20px; 
-    border-color: white;
+    border-radius:10px;
+    border-color: #255e87;
+    background-color: #082336;
+    border-color: ;
     outline: none; /*remove desenho da seleção*/
-    color: black;
-    border-color: rgb(51,109,226);
+    color: #4099d1;
+    border-color: #4099d1;
+
 
 }
 input[type=submit]{
-	padding:5px 60px; 
-	background-color: rgb(51,109,226);
+	padding:5px 50px; 
 	border: groove;
+	border-radius: 20px;
 	border-style: solid;
 	border-color: blue;
 	cursor: pointer;
-	color: white;
+	color:#4099d1;
 	font-family: calibri;
 	font-size: 20px;
+	border-color: #4099d1;
+	background-color: #082336;
 }
-.foco
+/*.foco*/
 {
-	padding: 3px;
-	margin-left: 35%;
-	margin-right:35%;
+	/*padding: 3px;*/
+	/*margin-left: 50px;
+	margin-right: 50px;*/
 	border-radius: 25px;
-	/*background-image: url(fundo1.jpg);*/
 	background-color: white;
 }
 .titulo{
-	-webkit-text-stroke-width: 0.5px; /* largura da borda */
-    -webkit-text-stroke-color: #000; /* cor da borda */
+	-webkit-text-stroke-width: 0.1px; /* largura da borda */
+    -webkit-text-stroke-color: black; /* cor da borda */
     padding-bottom: 20px; 
     color:rgb(51,109,226);
     font-size: 40px;
@@ -127,4 +130,17 @@ thead
 }
 .sair:hover{
 	background-color: red;
+}
+
+::-webkit-input-placeholder 
+{
+   color: #4099d1 ;
+}
+/*input:-webkit-autofill {
+    -webkit-text-fill-color: #4099d1;
+   filter: saturate(1) hue-rotate(200deg);
+}*/
+input:-webkit-autofill {
+    -webkit-text-fill-color: #4099d1 ;
+    -webkit-box-shadow: 0 0 0px 1000px #082336 inset;
 }
