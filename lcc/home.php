@@ -55,44 +55,50 @@ $dados = $sqlUser->fetchAll();
 	
 
 	<div class="grid-container">
-		<div class="grid-100" style="padding: 0px">
+		<div class="grid-100" style="padding: 0px;">
 
+
+
+<div class="sair" >	
+	<a href="logoff.php" style=" text-decoration: none;  color: white;">SAIR</a>
+</div>
 			<div class="grid-100 about_me">
-<div class="grid-10">
-				<p><a href="frmFoto.php"><img style="object-fit: cover;width:100%; height: 200px; border-radius: 10px; color: white" src="fotos/<?=$id?>.jpg"width="50%" alt="Selecionar Imagem"></a></p>
-				</div>
+<!-- <div class="grid-10" style="width: 50%">
+				<p><a href="frmFoto.php"><img style="object-fit: cover;width:100%; height: 100px; border-radius:0px; color: white" src="fotos/<?=$id?>.jpg"width="100%" alt="Selecionar Imagem"></a></p>
+				</div> -->
 
-				Bem-Vindo <?=$nreal?>
-			<div style="text-align: left;">
+				<!-- Bem-Vindo <?=$nreal?>   -->
+<div style="text-align: left;">	
+			<!-- <?=$dados[0]["email"]?> Bio: 
+				<?=$dados[0]["bio"]?> --> <!--  NÃO PRECISA MOSTRAR -->
 
-				<p><?=$dados[0]["email"]?></p>
-				<p>Bio: <?=$dados[0]["bio"]?></p>	
-				<p>&nbsp</p>
-			</div>
-			<a class="azulEbranco" href="frmEditar.php"> Editar perfil ⚙</a> 
-			<p><a class="azulEbranco" href="frmCreateQuiz.php"> Criar Quizz 🤖</a> 	</p>
-			<p style=" color: white"><?=@urldecode($_GET["msg"])?></p>	
-			<p><a href="logoff.php" style="background-color:  #363636; border-radius: 30px; text-decoration: none; padding: 4px; color: white; ;" >SAIR ❌</a> </p>
-			<p></p>
+</div>
+			<a class="azulEbranco" href="frmEditar.php"> Editar perfil </a>
+			<a class="azulEbranco" href="frmCreateQuiz.php"> Criar Quizz </a>
 		</div>
-		<div class="grid-80 people_title" style="padding: 0px">
+
+&nbsp
+
+		<div class="grid-100 people_title" style="padding: 0px">
 			<?php  
 			foreach ($dadosQuiz as $quizzes) {	
 				?>
-				<div class="grid-40 people " style="margin: 5px">
-					<div class="grid-100" style="padding: 0px;">
-
-						<p>👣 <?=$quizzes["nreal"]?></p>
-					 <p>  💎<a style="color: white" href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["titulo"]?></a> </p>
+				<div class="grid-50 people" > 
+					<p>👣 <?=$quizzes["nreal"]?></p>
+					 <p>  💎<a href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["titulo"]?></a> </p>
 						<!-- <p>📝 Bio:<?=$quizzes["bio"]?> </p>	  -->
-					</div>	
 				</div>
 				<?php
 			}
 			?>
 		</div>
-	<p></p>
+	&nbsp
+	<div class="grid-100">
+		&nbsp
+		<p style=" color: white"><?=@urldecode($_GET["msg"])?></p>
+	</div>
 	</div>
 </div>
 </body>
+
 </html>
