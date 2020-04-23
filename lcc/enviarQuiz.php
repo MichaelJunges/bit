@@ -14,9 +14,13 @@ if($_SESSION["acesso"] != true) {
 	$errada2 = $_POST["errada2"];
 	$errada3 = $_POST["errada3"];
 	$id_usuario = $_POST["id"];
+	$local = $_FILES["foto"]["tmp_name"];
+	$foto = $_FILES['foto']["name"];
+	$conteudo = "fotos_quiz/$foto";
+	copy($local, $conteudo);
 
-	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, pergunta, correta, errada, errada2, errada3, id_usuario) VALUES (?,?,?,?,?,?,?)");
-	$exec = $sqlInsert->execute(array($titulo, $pergunta, $correta, $errada, $errada2, $errada3, $id_usuario));
+	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, pergunta, correta, errada, errada2, errada3, id_usuario, foto) VALUES (?,?,?,?,?,?,?,?)");
+	$exec = $sqlInsert->execute(array($titulo, $pergunta, $correta, $errada, $errada2, $errada3, $id_usuario, $conteudo));
 
 	if ($exec){
     	$escreve = "Quiz criado com sucesso";
