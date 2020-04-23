@@ -34,7 +34,7 @@ if($_SESSION["acesso"] != true) {
 	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<body style="font-family: 'Press Start 2P', cursive;">
+<body style="font-family: 'Press Start 2P', cursive;" style=" margin: 0px; padding: 0px ";>
 	<div class="grid container">
 		<div class="grid-20 menu"><a href="home.php">Início</a></div>
 		<div class="grid-20 menu"><a href="frmCreateQuiz.php">Adicionar + Quiz</a></div>

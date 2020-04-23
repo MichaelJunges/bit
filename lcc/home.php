@@ -61,7 +61,7 @@ $dados = $sqlUser->fetchAll();
 			<p></p>
 			<div style="text-align: left;">
 
-				<p><a href="frmFoto.php"><img style="object-fit: cover;width:100%; height: 200px; border-radius: 10px; color: white" src="fotos/<?=$id?>.jpg"width="100%" alt="Selecionar Imagem"></p></a>
+				<p><a href="frmFoto.php"><img style="object-fit: cover;width:100%; height: 200px; border-radius: 10px; color: white" src="fotos/<?=$id?>.jpg"width="100%" alt="Selecionar Imagem"></a></p>
 				<p>✉ Contato: <?=$dados[0]["email"]?></p>
 				<p>📝 Bio: <?=$dados[0]["bio"]?></p>	
 				<p>&nbsp</p>
@@ -69,7 +69,7 @@ $dados = $sqlUser->fetchAll();
 			<a href="frmEditar.php"  style="background-color: white; border-radius: 30px; text-decoration: none; padding: 5px; ">Editar perfil ⚙</a> 
 			<p><a href="logoff.php" style="background-color:  #363636; border-radius: 30px; text-decoration: none; padding: 4px; color: white; ;" >SAIR ❌</a> </p>
 			<p></p>
-			
+			<p><a href="frmCreateQuiz.php"  style="background-color: white; border-radius: 30px; text-decoration: none; padding: 5px; ">Criar Quizz 🤖</a> 	</p>
 			<p style=" color: white"><?=@urldecode($_GET["msg"])?></p>	
 		</div>
 		<div class="grid-75 people_title">
@@ -88,20 +88,8 @@ $dados = $sqlUser->fetchAll();
 			}
 			?>
 		</div>
-	</div>
 	<p></p>
-	 <div  style="margin-left: 7px" class="grid-25 about_me">
-			<p></p>
-			<div style="text-align: left;">
-			</div>
-			<a href="frmCreateQuiz.php"  style="background-color: white; border-radius: 30px; text-decoration: none; padding: 5px; ">Criar Quizz 🤖</a> 	
-		</div> 
+	</div>
 </div>
-</div>
-
-</div>
-			 <!--  <input type="hidden" name="id" value="<?=$id?>"> -->
-
-</form>
 </body>
 </html>
