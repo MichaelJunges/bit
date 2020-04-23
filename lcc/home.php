@@ -51,7 +51,7 @@ $dados = $sqlUser->fetchAll();
 		setTimeout(limpaUrl, 0) 
 	</script>
 </head>
-<body style=" margin: 0px; padding: 0px "; >
+<body style=" margin: 0px; padding: 0px; background-color: rgb(51,109,226)">
 	
 
 	<div class="grid-container">

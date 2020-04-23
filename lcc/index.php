@@ -63,7 +63,7 @@
 			</p>
 				 &nbsp
 				<p>  
-				<a style="color:rgb(51,109,226)" href="create.php">CRIAR CONTA</a>
+				<a style="color:rgb(51,109,226); text-decoration: none;" href="create.php">CRIAR CONTA</a>
 			</p>
 	
 <p style="color: red; font-style: 20px; "><?=@urldecode($_GET["msg"])?></p>

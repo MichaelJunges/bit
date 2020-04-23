@@ -33,33 +33,30 @@ session_start();
 <div class="foco">
 			<h1 class="titulo">Registro</h1>
 			<p> 
-				Login:<br /> 
-				<input type="text" size="30" name="login" required="required" maxlength="6" pattern="[a-zA-Z0-9-]+"> 
+				<input type="text" size="30" name="login" required="required" maxlength="6" pattern="[a-zA-Z0-9-]+" placeholder="Login"> 
 			</p>
 			<p> 
-				Nome Real:<br /> 
-				<input type="text" size="30" name="nreal" required="required" maxlength="50" pattern="[a-zA-Z- ]+"> 
+				<input type="text" size="30" name="nreal" required="required" maxlength="50" pattern="[a-zA-Z- ]+" placeholder="Nome Real"> 
 			</p>
 			<p> 
-				Senha:<br /> 
-				<input type="password" size="30" name="pass" required="required" pattern="[a-zA-Z0-9-]+"> 
+				<input type="password" size="30" name="pass" required="required" pattern="[a-zA-Z0-9-]+" placeholder="Senha"> 
 			</p>
 			<p> 
-				Email:<br /> 
-				<input type="email" size="30" name="email" maxlength="50" required="required"> 
+				<input type="email" size="30" name="email" maxlength="50" required="required" placeholder="Email"> 
 			</p> 	
-			<p>
-				<input type="radio" id="m" name="sexo" required="required" value="F">Feminino
-                    <input type="radio" id="f" name="sexo" value="M">Masculino
-			</p>
+			<p style="color: white">
+				<input  type="radio" id="m" name="sexo" required="required" value="F">Feminino
+                    <input type="radio" id="f" name="sexo" value="M"> Masculino
 
+			</p>
+  &nbsp
 			<p>  
 				<input type="submit"  value="Registrar">
 			</p>
 			
 			<p>  
-				<a style="color: black" href="index.php">
-				⬅️ Voltar Pagina !</a>
+				<a style="color: white; text-decoration: none;" href="index.php">
+				⬅️ Voltar Pagina</a>
 			</p>
 		</div>
 	</div>
