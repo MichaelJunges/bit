@@ -22,7 +22,7 @@ $bio = $_SESSION['bio'];
 
 
 //quizes
-$sqlQuiz = $PDO->prepare("SELECT q.pergunta, q.id, p.nreal, p.email FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
+$sqlQuiz = $PDO->prepare("SELECT q.pergunta, q.id, p.nreal, p.email, q.titulo FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
 $sqlQuiz->execute();
 $dadosQuiz = $sqlQuiz->fetchAll();
 
@@ -37,7 +37,7 @@ $dados = $sqlUser->fetchAll();
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+ 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
 	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
@@ -55,32 +55,35 @@ $dados = $sqlUser->fetchAll();
 	
 
 	<div class="grid-container">
-		<div class="grid-100">
+		<div class="grid-100" style="padding: 0px">
 
-			<div class="grid-25 about_me">Logado(a): <?=$login?>
-			<p></p>
+			<div class="grid-100 about_me">
+<div class="grid-10">
+				<p><a href="frmFoto.php"><img style="object-fit: cover;width:100%; height: 200px; border-radius: 10px; color: white" src="fotos/<?=$id?>.jpg"width="50%" alt="Selecionar Imagem"></a></p>
+				</div>
+
+				Bem-Vindo <?=$nreal?>
 			<div style="text-align: left;">
 
-				<p><a href="frmFoto.php"><img style="object-fit: cover;width:100%; height: 200px; border-radius: 10px; color: white" src="fotos/<?=$id?>.jpg"width="100%" alt="Selecionar Imagem"></a></p>
-				<p>✉ Contato: <?=$dados[0]["email"]?></p>
-				<p>📝 Bio: <?=$dados[0]["bio"]?></p>	
+				<p><?=$dados[0]["email"]?></p>
+				<p>Bio: <?=$dados[0]["bio"]?></p>	
 				<p>&nbsp</p>
 			</div>
-			<a href="frmEditar.php"  style="background-color: white; border-radius: 30px; text-decoration: none; padding: 5px; ">Editar perfil ⚙</a> 
+			<a class="azulEbranco" href="frmEditar.php"> Editar perfil ⚙</a> 
+			<p><a class="azulEbranco" href="frmCreateQuiz.php"> Criar Quizz 🤖</a> 	</p>
+			<p style=" color: white"><?=@urldecode($_GET["msg"])?></p>	
 			<p><a href="logoff.php" style="background-color:  #363636; border-radius: 30px; text-decoration: none; padding: 4px; color: white; ;" >SAIR ❌</a> </p>
 			<p></p>
-			<p><a href="frmCreateQuiz.php"  style="background-color: white; border-radius: 30px; text-decoration: none; padding: 5px; ">Criar Quizz 🤖</a> 	</p>
-			<p style=" color: white"><?=@urldecode($_GET["msg"])?></p>	
 		</div>
-		<div class="grid-75 people_title">
+		<div class="grid-80 people_title" style="padding: 0px">
 			<?php  
 			foreach ($dadosQuiz as $quizzes) {	
 				?>
-				<div class="grid-100 people">
-					<div class="grid-60" style="padding: 0px;">
+				<div class="grid-40 people " style="margin: 5px">
+					<div class="grid-100" style="padding: 0px;">
 
-						<p>👣 Criador: <?=$quizzes["nreal"]?>  📞 <a href="mailto:<?=$quizzes["email"]?>" style="color: white;"><?=$quizzes["email"]?></a> </p>
-					 <p>  💎 4Quiz:<a style="color: white" href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["pergunta"]?></a> </p>
+						<p>👣 <?=$quizzes["nreal"]?></p>
+					 <p>  💎<a style="color: white" href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["titulo"]?></a> </p>
 						<!-- <p>📝 Bio:<?=$quizzes["bio"]?> </p>	  -->
 					</div>	
 				</div>

@@ -9,7 +9,7 @@ session_start();
 	<title>■ NOVA CONTA ■</title>
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
 	<link rel="stylesheet" href="css/style1.css">
-	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script>
         function validar4()	
         {	  

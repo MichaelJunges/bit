@@ -2,11 +2,11 @@
 body{
 	/*font-family: 'Orbitron' ;*/
 	text-align: center;
-	background-color:	#363636;
+	background-color:	rgb(51,109,226);
 	/*background-image: url(imagens/triangulo.jpg);*/
 	background-repeat: no-repeat;
 	background-size: all;
-	font-family: 'Barlow';
+	font-family: calibri;
 
 }
 
@@ -16,37 +16,40 @@ input[type=text], input[type=password], input[type=email], input[type=textarea]{
     border: solid 2px #aaa;
     padding: 8px;
     margin: 10px;
-    border-radius: 50px; 
+    border-radius: 20px; 
     border-color: white;
     outline: none; /*remove desenho da seleção*/
     color: black;
+    border-color: rgb(51,109,226);
 
-	
 }
 input[type=submit]{
 	padding:5px 60px; 
-	background-color: #00FA9B;
-	font-family: 'Orbitron';
+	background-color: rgb(51,109,226);
 	border: groove;
-	border-color: grey;
-} 
+	border-style: solid;
+	border-color: blue;
+	cursor: pointer;
+	color: white;
+	font-family: calibri;
+	font-size: 20px;
+}
 .foco
 {
+	padding: 3px;
 	margin-left: 35%;
 	margin-right:35%;
-	padding: 1%; 
 	border-radius: 25px;
 	/*background-image: url(fundo1.jpg);*/
 	background-color: white;
-	font-family: 'Orbitron';*/
 }
 .titulo{
 	-webkit-text-stroke-width: 0.5px; /* largura da borda */
     -webkit-text-stroke-color: #000; /* cor da borda */
     padding-bottom: 20px; 
-    color: #00FA9B;
+    color:rgb(51,109,226);
     font-size: 40px;
-    font-family: 'Orbitron';
+    font-family: 'Press Start 2P';
 }
 .people_title
 {
@@ -61,9 +64,9 @@ input[type=submit]{
 	text-align: left; 
 	border: groove; 
 	border-color; 
-	border-radius: 30px; 
+	border-radius: 10px; 
 	border-style: solid; 
-	margin: 3px;
+	margin: 0px;
 	font-size: 18px;
 	padding: 0px;
 	color: white;
@@ -71,11 +74,10 @@ input[type=submit]{
 .about_me
 {	
 
-	background-color: Crimson; 
-	color: white;
+	background-color: white; 
+	color: black;
 	border-radius: 10px;
 	padding: 10px;
-	border-color: red;
 }
 p
 {
@@ -106,4 +108,13 @@ thead
 .menu a{
 	text-decoration: none;
 	color: white;
+}
+.azulEbranco
+{
+	background-color: rgb(51,109,226);
+	font-family: calibri;
+	color: white;
+	/*border-radius: 10px; */
+	text-decoration: none; 
+	padding: 5px;
 }

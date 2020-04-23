@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
 	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script>
         function validarFormulario()	
         {	  
@@ -46,11 +47,9 @@
 			<p>Desenvolvido por:</p>
 			<a href="https://www.facebook.com/luancarlos.castoldi"><img src="logos/logo2.png" width="30%" ></a>  
 			</div> -->
-
+	<p>&nbsp</p>
 			<h1 class="titulo">4Quizz</h1>
-			<p>Crie Quiz e Desafie seus amigos</p>
-			<p>&nbsp</p>
-			 
+			
 			<p> 
 				Login:<br /> 
 				<input  type="text" size="30" name="login" required="required" maxlength="6" autofocus="autofocus" > 
@@ -61,14 +60,14 @@
 			</p>
 			 <!-- <input type="hidden" id="id" name="id" value=""> -->
 			<p>  
-				<input type="submit"  value="LOGIN">
+				<input type="submit"  value="ENTRAR">
 			</p>
 				<p>  
-				<a style="color: black" href="create.php">Não tenho conta !</a>
+				<a style="color:rgb(51,109,226)" href="create.php">CRIAR CONTA</a>
 			</p>
-
-			<p style=" color: purple"><?=@urldecode($_GET["msg"])?></p>
-
+	
+<p style="color: red; font-style: 20px; "><?=@urldecode($_GET["msg"])?></p>
+	
 
 <!-- teste -->
 
