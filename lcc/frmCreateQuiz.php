@@ -19,6 +19,13 @@ $id = $_SESSION["id"];
 	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
 	 <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
 	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	 <script  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	 <script>
+	 	function imagem(){
+			location.href="recortarImagem.php"
+	 	}
+	 </script>
 </head>
 <body style="font-family: 'Press Start 2P', cursive;">
 	<form name="frmCreateQuiz" action="enviarQuiz.php" method="POST" enctype="multipart/form-data" >
@@ -27,6 +34,10 @@ $id = $_SESSION["id"];
 	 	<div class="grid-100">
 	 		<div class="grid-50"></div>
 	 		<h1 class="titulo">CRIE SEU QUIZ</h1>
+	 		<p class="quiz">
+				Foto:<br />
+				<input name="foto" type="file" accept=".jpg, .jpeg" required="required">
+			</p><br>
 	 		<p class="quiz"> 
 				Titulo:<br /> 
 				<input  type="text" size="50" name="titulo" required="required" maxlength="50" autofocus="autofocus" > 
@@ -56,16 +67,8 @@ $id = $_SESSION["id"];
 				<input  type="text" size="30" name="errada3" required="required" maxlength="20"> 
 			</p>
 
-			<p class="quiz">
-				Foto:<br />
-				<input name="foto" type="file" accept=".jpg, .jpeg" required="required">
-			</p>
-
 			<input type="hidden" name="id" value="<?=$id?>">
 
-			<p>
-				<input type="checkbox" name="finalizar"> Marque para finalizar
-			</p>
 			<p class="titulo">  
 				<input type="submit" value="PRÓXIMO" id="proximo">
 			</p>	

@@ -1,5 +1,6 @@
 <?php
 session_start();
+date_default_timezone_set('America/Sao_Paulo');
 
 if($_SESSION["acesso"] != true) {
 	$mensagem = urldecode("Favor logar");
@@ -16,7 +17,8 @@ if($_SESSION["acesso"] != true) {
 	$id_usuario = $_POST["id"];
 	$local = $_FILES["foto"]["tmp_name"];
 	$foto = $_FILES['foto']["name"];
-	$conteudo = "fotos_quiz/$foto";
+	$date = date('Y-m-d.H.i.s');
+	$conteudo = "fotos_quiz/$date$foto";
 	copy($local, $conteudo);
 
 	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, pergunta, correta, errada, errada2, errada3, id_usuario, foto) VALUES (?,?,?,?,?,?,?,?)");
