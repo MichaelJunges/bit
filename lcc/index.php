@@ -59,7 +59,7 @@
 			 <!-- <input type="hidden" id="id" name="id" value=""> -->
 			 &nbsp
 			<p>  
-				<input type="submit"  value="Entrar">
+				<input style="border-radius: 0px; background-color: #32f41f; color: black; border-color: black" type="submit"  value="Entrar">
 			</p>
 				 &nbsp
 				<p>  
