@@ -32,7 +32,7 @@ copy($local, $conteudo);
                 onSelect: UpdateCrop,
                 setSelect: [0, 0, 200, 200],
                 minSize: [200,200],
-                maxSize: [500,500],
+                maxSize: [1024,1024],
             });
         }); 
         function UpdateCrop(c)
