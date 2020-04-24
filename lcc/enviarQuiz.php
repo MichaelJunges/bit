@@ -25,29 +25,9 @@ if($_SESSION["acesso"] != true) {
 	$exec = $sqlInsert->execute(array($titulo, $pergunta, $correta, $errada, $errada2, $errada3, $id_usuario, $conteudo));
 
 	if ($exec){
-    	$escreve = "Quiz criado com sucesso";
-    	$e = "green";
+		$msg=urlencode("Sucesso");
+		header("Location:home.php?msg=$msg");
   	}else{
-    	$escreve = "Erro ao criar o quiz, por favor tente novamente.";
-    	$e = "red";
+  		$msg=urlencode("Erro");
+    	header("Location:home.php?msg=$msg");
   	}
-?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<title>Quiz</title>
-	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
-	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
-	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-</head>
-<body style="font-family: 'Press Start 2P', cursive;" style=" margin: 0px; padding: 0px ";>
-	<div class="grid container">
-		<div class="grid-20 menu"><a href="home.php">Início</a></div>
-		<div class="grid-20 menu"><a href="frmCreateQuiz.php">Adicionar + Quiz</a></div>
-		<div class="grid-20 menu">&nbsp</div>
-		<div class="grid-20 menu">&nbsp</div>
-		<div class="grid-20 menu"><a href="logoff.php">Sair</a></div>
-		<h1 style="color: <?=$e?>"><?=$escreve?></h1>
-	</div>
-</body>
-</html>

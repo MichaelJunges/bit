@@ -11,35 +11,27 @@
 	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 
-<body style=" background-image: none; background-color: yellow " >
+<body>
 	<form name="frmLoginAdmin" action="login.php" method="post">
 
 	<div class="grid-container">
 		<div style="padding-top: 5%" class="grid-100">
-
-<div class="foco">
-			<div style="padding: 10px;">
-			<p>Desenvolvido por:</p>
-			<a href="https://www.facebook.com/luancarlos.castoldi"><img src="../logos/logo2.png" width="30%" ></a>  
-			</div>
-			 <!-- <h1 class="titulo">HIPOC4MPO</h1>  -->
 			<p> 
-				Login:<br /> 
-				<input  type="text" size="30" name="login" required="required" maxlength="6" autofocus="autofocus" > 
+
+				<input  type="text" size="30" name="login" required="required" maxlength="6" autofocus="autofocus" placeholder="Login" > 
 			</p> 
 			<p> 
-				Senha:<br /> 
-				<input type="password" size="30" name="pass" required="required"> 
+				<input type="password" size="30" name="pass" required="required" placeholder="Senha"> 
 			</p>
 			 <!-- <input type="hidden" id="id" name="id" value=""> -->
 			<p>  
-				<input style="background-color: yellow" type="submit"  value="LOGAR ADMIN">
+				<input type="submit"  value="Logar">
 
 			<p style=" color: purple"><?=@urldecode($_GET["msg"])?></p>
 
 			<p>  
         <a style="color: black" href="../index.php">
-        ⬅️ Voltar Pagina !</a>
+        ⬅️</a>
 
         <p style=" color: white"><?=@urldecode($_GET["msg"])?></p>	
       </p>

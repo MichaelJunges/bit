@@ -20,6 +20,11 @@ $sqlOutros = $PDO->prepare("SELECT * FROM register");
 $sqlOutros->execute();
 $dadosOutros = $sqlOutros->fetchAll();
 
+$sqlQuiz = $PDO->prepare("SELECT * FROM quiz");
+$sqlQuiz->execute();
+$dadosQuiz = $sqlQuiz->fetchAll();
+
+
 ?>
 
 
@@ -38,7 +43,7 @@ $dadosOutros = $sqlOutros->fetchAll();
 	<div class="grid-container">
 		<div class="grid-100">
 
-			<div class="grid-25 about_me">
+			<div class="grid-100 about_me">
 			<p></p>
 			<div style="text-align: left;">
 		
@@ -48,7 +53,7 @@ $dadosOutros = $sqlOutros->fetchAll();
 			
 			<p style=" color: white"><?=@urldecode($_GET["msg"])?></p>	
 		</div>
-		<div class="grid-75 people_title">
+		<div class="grid-100 people_title">
 			<table>
 				<thead>
 					<tr>
@@ -80,6 +85,33 @@ $dadosOutros = $sqlOutros->fetchAll();
 				}
 			?>
 		</div>
+		<div class="grid-100 people_title">
+			<table>
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Título</th>
+						<th>ID User</th>
+						<th>Foto</th>
+					</tr>
+				</thead>
+			<tbody>
+				<?php  
+			foreach ($dadosQuiz as $quizes) {	
+		?>
+			<tr>
+				<td><?=$quizes["id"]?></td>
+				<td><?=$quizes["titulo"]?></td>
+				<td><?=$quizes["id_usuario"]?></td>
+				<td><?=$quizes["foto"]?></td>
+				
+				<td><a href="excluirQ.php?id=<?=$quizes["id"]?>">Excluir</a></td>
+				</tr>
+				<?php
+				}
+			?>
+		</div>
+		<div class="grid-100" style="background-color: black">d</div>
 	</div>
 </div>
 </div>

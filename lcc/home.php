@@ -31,6 +31,8 @@ $dadosQuiz = $sqlQuiz->fetchAll();
 $sqlUser = $PDO->prepare("SELECT * FROM register WHERE id = ?");
 $sqlUser->execute(array($id));
 $dados = $sqlUser->fetchAll();
+
+@$mensagem=urldecode($_GET["msg"]);
 ?>
 
 
@@ -77,6 +79,9 @@ $dados = $sqlUser->fetchAll();
 			<a class="azulEbranco" href="frmCreateQuiz.php"> Criar Quizz </a>
 		</div>
 
+<p><?php 
+echo $mensagem;
+ ?></p>
 &nbsp
 
 		<div class="grid-100 people_title" style="padding: 0px">
@@ -84,8 +89,8 @@ $dados = $sqlUser->fetchAll();
 			foreach ($dadosQuiz as $quizzes) {	
 				?>
 				<div class="grid-50 people" > 
-					<p>👣 <?=$quizzes["nreal"]?></p>
-					 <p>  💎<a href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["titulo"]?></a> </p>
+					 <p>  <a href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["titulo"]?></a> </p>
+					 <p>Criador: <?=$quizzes["nreal"]?></p>
 						<p><img width="200px" height="200px" src="<?=$quizzes["foto"]?>"></p>
 				</div>
 				<?php

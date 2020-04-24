@@ -47,8 +47,8 @@
 			<p>Desenvolvido por:</p>
 			<a href="https://www.facebook.com/luancarlos.castoldi"><img src="logos/logo2.png" width="30%" ></a>  
 			</div> -->
-	<p>&nbsp</p>
-			<h1 class="titulo">4Quizz</h1>
+	&nbsp
+		<h1 class="titulo"> 4QUIZZ </h1>
 			
 			<p> 
 				<input  type="text"  name="login" required="required" maxlength="6" autofocus="autofocus" size="20" placeholder="Login"> 
@@ -57,14 +57,16 @@
 				<input type="password" size="20" name="pass" required="required" placeholder="Senha"> 
 			</p>
 			 <!-- <input type="hidden" id="id" name="id" value=""> -->
-			 &nbsp
+		
+			 <p>  
+				<a style="color:rgb(51,109,226); text-decoration: none;" href="create.php">CRIAR CONTA</a>
+			    </p>
+			    	 &nbsp
 			<p>  
-				<input style="border-radius: 0px; background-color: #32f41f; color: black; border-color: black" type="submit"  value="Entrar">
+				<input style="border-radius: 0px; background-color: ; color: white; border-color: #32f41f" type="submit"  value="Entrar">
 			</p>
 				 &nbsp
-				<p>  
-				<a style="color:rgb(51,109,226); text-decoration: none;" href="create.php">CRIAR CONTA</a>
-			</p>
+				
 	
 <p style="color: red; font-style: 20px; "><?=@urldecode($_GET["msg"])?></p>
 	

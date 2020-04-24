@@ -26,9 +26,9 @@ input[type=text], input[type=password], input[type=email], input[type=textarea]{
 
 }
 input[type=submit]{
-	padding:5px 50px; 
+	padding:2px 60px; 
 	border: groove;
-	border-radius: 20px;
+	/*border-radius: 20px;*/
 	border-style: solid;
 	border-color: blue;
 	cursor: pointer;
@@ -38,16 +38,15 @@ input[type=submit]{
 	border-color: #4099d1;
 	background-color: #082336;
 }
-input[type=submit]:hover{
-        transform: scale(1.1);
-}
+
 .titulo{
-	-webkit-text-stroke-width: 0.1px; /* largura da borda */
+	-webkit-text-stroke-width: 1,5px; /* largura da borda */
     -webkit-text-stroke-color: black; /* cor da borda */
     padding-bottom: 20px; 
-    color:rgb(51,109,226);
+    color: white;
     font-size: 40px;
-    font-family: 'Press Start 2P';
+    font-family: 'Press Start 2P', cursive;
+
 }
 .people_title
 {
@@ -59,7 +58,7 @@ input[type=submit]:hover{
 }
 .people
 {	
-	text-align: left; 
+	text-align: center; 
 	border-style: solid; 
 	font-size: 18px;
 	color: rgb(51,109,226);
@@ -131,10 +130,6 @@ thead
 {
    color: #4099d1 ;
 }
-/*input:-webkit-autofill {
-    -webkit-text-fill-color: #4099d1;
-   filter: saturate(1) hue-rotate(200deg);
-}*/
 input:-webkit-autofill {
     -webkit-text-fill-color: #4099d1 ;
     -webkit-box-shadow: 0 0 0px 1000px #082336 inset;

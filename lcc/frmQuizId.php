@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<title>Quiz da pessoa clikada</title>
 </head>
-<body>
+<body style="background-color: white">
 
  <div class="grid-container">
     <div class="grid-100">
@@ -39,7 +39,11 @@
 
 
 
-<h1 style="font-family: 'Press Start 2P', cursive;font-size: 25px; " class="titulo"><?=$consulta[0]["pergunta"]?></h1>
+<h1 style="font-family: 'Press Start 2P', cursive;font-size: 20px; " class="titulo"><?=$consulta[0]["pergunta"]?></h1>
+
+<div class="grid-100" >
+   <p ><img width="50%" style="border: solid 1px black; margin-bottom: 10px " src="<?=$consulta[0]["foto"]?> "> </p>
+</div>
 
   	<p><form name="frmQuizId" method="POST" action="tentarQuiz.php"></p>
 

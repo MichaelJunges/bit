@@ -46,9 +46,9 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
     if ($id == $_SESSION["id"]) {?>
   	<p><form name="frmEditar" method="POST" action="editarConta.php"></p>
 
- <p><p>E-mail:</p><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" value=<?=$consulta[0]["email"]?>></p> 
+ <p><p></p><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value=<?=$consulta[0]["email"]?>></p> 
 
-  <p><p>Biografia:</p><input type="text" name="bio" maxlength="" autofocus="autofocus" required="required" pattern="[a-zA-Z0-9- ]+" value="<?=$consulta[0]["bio"]?>"></p> 
+  <p><p></p><input type="text" name="bio" maxlength="" autofocus="autofocus" required="required" pattern="[a-zA-Z0-9- ]+" placeholder="Biografia" value="<?=$consulta[0]["bio"]?>"></p> 
 
 <input type="hidden" name="id" value="<?=$id?>">
 
@@ -58,7 +58,7 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
 }?>
 <h3><?=@$e?></h3>
   <p>  
-        <a style="color: black" href="home.php">
+        <a style="color: white" href="home.php">
         ⬅️ Voltar Pagina !</a>
       </p>
 </div>

@@ -22,7 +22,7 @@ header("Location: home.php");
    
 <body>
 <script>
-if (confirm("Deseja remover a notícia?")) {
+if (confirm("Deseja remover o Usuario?")) {
 // ok
 window.location.href = "excluir.php?id=<?=$id?>&confirma=1";
 } else {
