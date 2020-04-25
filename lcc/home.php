@@ -65,22 +65,17 @@ $dados = $sqlUser->fetchAll();
 <p  style=" text-decoration: none;  color: white;">SAIR</p>
 </div>
 </a>
-	<div class="grid-100 about_me">
-
-
-<img width="4%" style="border-radius: 50px; padding-bottom: 0px;" align="left" src="fotos/<?=$id?>.jpg" >
-    <p style="text-align: left;"><?=$dados[0]["nreal"]?></p>
-
-		 <div   style="text-align: right; margin-bottom: 10px"> 	
-			<a class="azulEbranco" href="frmEditar.php"> Editar perfil </a>
-			<a class="azulEbranco" href="frmCreateQuiz.php"> Criar Quizz </a>
-		</div>
-		</div>
-
-<p><?php 
-echo $mensagem;
- ?></p>
-&nbsp
+<div class="grid-100 about_me">
+	<div class="grid-50">
+		<p><img width="9%" style="border-radius: 50px; padding-bottom: 0px;" align="left" src="fotos/<?=$id?>.jpg" ></p>
+	    <p style="text-align: left;"><?=$dados[0]["nreal"]?></p>
+	</div>
+	<div class="grid-50" style="text-align: right; margin-top: 8px;">
+		<a class="azulEbranco" href="frmEditar.php"> Editar perfil </a>
+		<a class="azulEbranco" href="frmCreateQuiz.php"> Criar Quizz </a>
+	</div>
+</div>
+		&nbsp
 		<dv class="grid-100 people_title" style="padding: 0px">
 			<?php  
 			foreach ($dadosQuiz as $quizzes) {	
@@ -97,7 +92,7 @@ echo $mensagem;
 	&nbsp
 	<div class="grid-100">
 		&nbsp
-		<p style=" color: white"><?=@urldecode($_GET["msg"])?></p>
+		<p style=" color: white"><?=$mensagem?></p>
 	</div>
 	</div>
 </div>
