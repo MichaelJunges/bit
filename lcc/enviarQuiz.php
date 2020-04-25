@@ -10,10 +10,11 @@ if($_SESSION["acesso"] != true) {
 	$PDO = new PDO("sqlite:users.db");
 	$titulo = $_POST["titulo"];
 	$pergunta = $_POST["pergunta"];
-	$correta = $_POST["correta"];
-	$errada = $_POST["errada"];
-	$errada2 = $_POST["errada2"];
-	$errada3 = $_POST["errada3"];
+	$resposta = $_POST["resposta"];
+	$resposta2 = $_POST["resposta2"];
+	$resposta3 = $_POST["resposta3"];
+	$resposta4 = $_POST["resposta4"];
+	$certa = $_POST["certa"];
 	$id_usuario = $_POST["id"];
 
 	//foto
@@ -35,8 +36,8 @@ if($_SESSION["acesso"] != true) {
 	unlink("fotos_quiz/$foto");
 	//fim foto
 
-	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, pergunta, correta, errada, errada2, errada3, id_usuario, foto) VALUES (?,?,?,?,?,?,?,?)");
-	$exec = $sqlInsert->execute(array($titulo, $pergunta, $correta, $errada, $errada2, $errada3, $id_usuario, $conteudo));
+	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, pergunta, correta, errada, errada2, errada3, id_usuario, foto, certa) VALUES (?,?,?,?,?,?,?,?,?)");
+	$exec = $sqlInsert->execute(array($titulo, $pergunta, $correta, $errada, $errada2, $errada3, $id_usuario, $conteudo, $certa));
 
 	if ($exec){
 		$msg=urlencode("Quiz criado com sucesso");
