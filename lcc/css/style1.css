@@ -76,7 +76,7 @@ input[type=submit]{
 }
 .textoUpImagem
 {
-	background-color: rgb(51,109,226);;
+	background-color: rgb(51,109,226);
 	font-family: calibri;
 	border-radius: 5px;
 	padding: 5px;
@@ -89,7 +89,7 @@ input[type=submit]{
 	background-color: white; 
 	color: black;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 1px;
 }
 p
 {

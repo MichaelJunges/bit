@@ -64,19 +64,16 @@ $dados = $sqlUser->fetchAll();
 <div class="sair" >	
 	<a href="logoff.php" style=" text-decoration: none;  color: white;">SAIR</a>
 </div>
-			<div class="grid-100 about_me">
-<!-- <div class="grid-10" style="width: 50%">
-				<p><a href="frmFoto.php"><img style="object-fit: cover;width:100%; height: 100px; border-radius:0px; color: white" src="fotos/<?=$id?>.jpg"width="100%" alt="Selecionar Imagem"></a></p>
-				</div> -->
+	<div class="grid-100 about_me">
 
-				<!-- Bem-Vindo <?=$nreal?>   -->
-<div style="text-align: left;">	
-			<!-- <?=$dados[0]["email"]?> Bio: 
-				<?=$dados[0]["bio"]?> --> <!--  NÃO PRECISA MOSTRAR -->
 
-</div>
+<img width="4%" style="border-radius: 50px; padding-bottom: 0px; " align="left" src="fotos/<?=$id?>.jpg" >
+    <p style="text-align: left;"><?=$dados[0]["nreal"]?></p>
+
+		 <div   style="text-align: right;"> 	
 			<a class="azulEbranco" href="frmEditar.php"> Editar perfil </a>
 			<a class="azulEbranco" href="frmCreateQuiz.php"> Criar Quizz </a>
+		</div>
 		</div>
 
 <p><?php 
