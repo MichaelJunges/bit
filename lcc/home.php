@@ -59,11 +59,12 @@ $dados = $sqlUser->fetchAll();
 	<div class="grid-container">
 		<div class="grid-100" style="padding: 0px;">
 
-
-
+<a href="logoff.php">
 <div class="sair" >	
-	<a href="logoff.php" style=" text-decoration: none;  color: white;">SAIR</a>
+
+<p  style=" text-decoration: none;  color: white;">SAIR</p>
 </div>
+</a>
 	<div class="grid-100 about_me">
 
 
@@ -80,7 +81,6 @@ $dados = $sqlUser->fetchAll();
 echo $mensagem;
  ?></p>
 &nbsp
-i
 		<dv class="grid-100 people_title" style="padding: 0px">
 			<?php  
 			foreach ($dadosQuiz as $quizzes) {	
