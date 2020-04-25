@@ -44,10 +44,10 @@
 
   	<p><form name="frmQuizId" method="POST" action="tentarQuiz.php"></p>
 
-  	<input type="button" style="font-size: 2em" name="correta" value="<?=$consulta[0]["correta"]?>">
-  	<input type="button" style="font-size: 2em" name="errada" value="<?=$consulta[0]["errada"]?>">
-  	<input type="button" style="font-size: 2em" name="errada2" value="<?=$consulta[0]["errada2"]?>">
-  	<input type="button" style="font-size: 2em" name="errada3" value="<?=$consulta[0]["errada3"]?>">	
+  	<input type="button" style="font-size: 2em" name="resposta" value="<?=$consulta[0]["resposta"]?>">
+  	<input type="button" style="font-size: 2em" name="resposta2" value="<?=$consulta[0]["resposta2"]?>">
+  	<input type="button" style="font-size: 2em" name="resposta3" value="<?=$consulta[0]["resposta3"]?>">
+  	<input type="button" style="font-size: 2em" name="resposta4" value="<?=$consulta[0]["resposta4"]?>">	
 
 	<input type="hidden" name="id" value="<?=$id?>">
 
