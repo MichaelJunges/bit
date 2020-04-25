@@ -83,16 +83,16 @@ $dados = $sqlUser->fetchAll();
 echo $mensagem;
  ?></p>
 &nbsp
-
-		<div class="grid-100 people_title" style="padding: 0px">
+i
+		<dv class="grid-100 people_title" style="padding: 0px">
 			<?php  
 			foreach ($dadosQuiz as $quizzes) {	
 				?>
-				<div class="grid-25 people" > 
-					 <p class="textoUpImagem">  <a style="text-decoration: none; color: white" href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["titulo"]?></a> </p>
+				<a href="frmQuizId.php?id=<?=$quizzes["id"]?>"><div class="grid-25 people" > 
+					 <p class="textoUpImagem" style="text-decoration: none; color: white"> <?=$quizzes["titulo"]?></p>
 					 <!-- <p>Criador: <?=$quizzes["nreal"]?></p> -->
-						<p><a href="frmQuizId.php?id=<?=$quizzes["id"]?>"><img  style="border-radius: 10px" width="100%" height="100%" src="<?=$quizzes["foto"]?>"></a></p>
-				</div>
+						<p><img  style="border-radius: 10px" width="100%" height="100%" src="<?=$quizzes["foto"]?>"></p>
+				</div></a>
 				<?php
 			}
 			?>
