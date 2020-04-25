@@ -89,9 +89,9 @@ echo $mensagem;
 			foreach ($dadosQuiz as $quizzes) {	
 				?>
 				<div class="grid-25 people" > 
-					 <p>  <a href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["titulo"]?></a> </p>
-					 <p>Criador: <?=$quizzes["nreal"]?></p>
-						<p><img  width="270px" height="300px" src="<?=$quizzes["foto"]?>"></p>
+					 <p class="textoUpImagem">  <a style="text-decoration: none; color: white" href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["titulo"]?></a> </p>
+					 <!-- <p>Criador: <?=$quizzes["nreal"]?></p> -->
+						<p><a href="frmQuizId.php?id=<?=$quizzes["id"]?>"><img  style="border-radius: 10px" width="100%" height="100%" src="<?=$quizzes["foto"]?>"></a></p>
 				</div>
 				<?php
 			}

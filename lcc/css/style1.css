@@ -64,17 +64,25 @@ input[type=submit]{
 	color: rgb(51,109,226);
 	background-color: white;
 	text-decoration: none;
-	display: block;
+	padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 5px;
 }
 .people:hover{
-	background-color: silver;
-	text-decoration: none;
+	/*background-color: silver;*/
 	moz-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
-
 }
-
+.textoUpImagem
+{
+	background-color: rgb(51,109,226);;
+	font-family: calibri;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 3px;
+	font-weight: 800;
+}
 .about_me
 {	
 
@@ -124,7 +132,8 @@ thead
 	margin: 5px;
 }
 .azulEbranco:hover{
-	background-color: blue;
+	color: blue;
+	background-color: silver;
 	
 }
 .sair:hover{
