@@ -27,14 +27,6 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
   	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   	<title>Alterar Conta</title>
-    <script>
-      function limpaUrl() {    
-          urlpg = $(location).attr('href'); 
-          urllimpa = urlpg.split("?")[0]; 
-          window.history.replaceState(null, null, urllimpa);
-      }
-      setTimeout(limpaUrl, 0); 
-    </script>
   </head>
   <body>
     <div class="grid-container">
@@ -42,8 +34,6 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
 
 <div class="foco">
   	<h1 class="titulo">Editar</h1>
-    <?php 
-    if ($id == $_SESSION["id"]) {?>
   	<p><form name="frmEditar" method="POST" action="editarConta.php"></p>
 
  <p><p></p><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value=<?=$consulta[0]["email"]?>></p> 
@@ -53,10 +43,6 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
 <input type="hidden" name="id" value="<?=$id?>">
 
   <p><input type="submit" value="Confirmar"></p>
-<?php }else{
-  $e = "Você não tem permissão";
-}?>
-<h3><?=@$e?></h3>
   <p>  
         <a style="color: white" href="home.php">
         ⬅️ Voltar Pagina !</a>

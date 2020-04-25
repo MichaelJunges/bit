@@ -24,11 +24,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
+	  <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
   	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-	<title>Quiz</title>
+	  <title>Quiz</title>
 </head>
 <body style="background-color:  rgb(51,109,226); ">
 

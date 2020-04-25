@@ -12,13 +12,7 @@ if ($_SESSION["acesso"] != true) {
 //Conexão
 $PDO = new PDO("sqlite:users.db");
 $id = $_SESSION["id"];
-
-
-// //Consulta
-// $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
-// 	$sqlSelect->execute(array($id));
-// 	$consulta = $sqlSelect->fetchAll(); 
-  ?>  
+?>  
 
   <!DOCTYPE html>
   <html>
@@ -27,14 +21,8 @@ $id = $_SESSION["id"];
   	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
   	<title>Alterar Foto</title>
-    <script>
-      function limpaUrl() {     //função
-          urlpg = $(location).attr('href');   //pega a url atual da página
-          urllimpa = urlpg.split("?")[0]      //tira tudo o que estiver depois de '?'
-          window.history.replaceState(null, null, urllimpa); //subtitui a url atual pela url limpa
-      }
-      setTimeout(limpaUrl, 0) 
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
   </head>
   <body>
     <div class="grid-container">
@@ -42,22 +30,15 @@ $id = $_SESSION["id"];
 
 <div class="foco">
   	<h1 class="titulo">Foto</h1>
-        <?php 
-    if ($id == $_SESSION["id"]) {?>
   <form name="frmFoto" method="POST" action="foto.php" enctype="multipart/form-data" >
 
- <p><input type="file" name="foto" autofocus="autofocus" required="required" <?=@$f?>></p> 
+ <p><input type="file" name="foto" autofocus="autofocus" required="required"></p> 
 
 
-  <input type="hidden" name="id" value="<?=$id?>" <?=@$f?>>
+  <input type="hidden" name="id" value="<?=$id?>">
 
-  <p><input type="submit" value="Enviar" <?=@$f?>></p>
+  <p><input type="submit" value="Enviar"></p>
   <p><input type="reset" value="Limpar"></p>
-  <?php }else{
-  $e = "Você não tem permissão";
-  $f = "disabled";
-}?>
-<h3><?=@$e?></h3>
   <p>  
         <a style="color: black" href="home.php">
         ⬅️ Voltar Pagina !</a>
