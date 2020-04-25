@@ -68,10 +68,10 @@ $dados = $sqlUser->fetchAll();
 	<div class="grid-100 about_me">
 
 
-<img width="4%" style="border-radius: 50px; padding-bottom: 0px; " align="left" src="fotos/<?=$id?>.jpg" >
+<img width="4%" style="border-radius: 50px; padding-bottom: 0px;" align="left" src="fotos/<?=$id?>.jpg" >
     <p style="text-align: left;"><?=$dados[0]["nreal"]?></p>
 
-		 <div   style="text-align: right;"> 	
+		 <div   style="text-align: right; margin-bottom: 10px"> 	
 			<a class="azulEbranco" href="frmEditar.php"> Editar perfil </a>
 			<a class="azulEbranco" href="frmCreateQuiz.php"> Criar Quizz </a>
 		</div>
