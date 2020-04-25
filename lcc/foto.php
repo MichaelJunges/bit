@@ -14,6 +14,7 @@ $id = $_POST["id"];
 $foto = $_FILES["foto"]["tmp_name"];
 
 copy($foto, "fotos/$id.jpg");
-header("Location: home.php");
+$mensagem = urldecode("Imagem alterada com sucesso");
+header("Location: home.php?msg=$mensagem");
 
   ?>

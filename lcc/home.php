@@ -68,7 +68,7 @@ $dados = $sqlUser->fetchAll();
 </a>
 <div class="grid-100 about_me">
 	<div class="grid-50">
-		<p><img width="9%" style="border-radius: 50px; padding-bottom: 0px;" align="left" src="fotos/<?=$id?>.jpg" ></p>
+		<a href="frmFoto.php"><img width="9%" style="border-radius: 50px; padding-bottom: 0px;" align="left" src="fotos/<?=$id?>.jpg" ></a>
 	    <p style="text-align: left;"><?=$dados[0]["nreal"]?></p>
 	</div>
 	<div class="grid-50" style="text-align: right; margin-top: 8px;">

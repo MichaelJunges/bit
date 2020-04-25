@@ -23,6 +23,22 @@ $id = $_SESSION["id"];
   	<title>Alterar Foto</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+      function readURL(input) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+          $('#inputImage').attr('src', e.target.result)
+      };
+      reader.readAsDataURL(input.files[0]);
+      } 
+      function mostraImagem(){
+          $('input[type=file]').each(function(index){
+              if ($('input[type=file]').eq(index).val() != ""){
+                  readURL(this);
+              }
+          });
+      }
+    </script>
   </head>
   <body>
     <div class="grid-container">
@@ -31,16 +47,15 @@ $id = $_SESSION["id"];
 <div class="foco">
   	<h1 class="titulo">Foto</h1>
   <form name="frmFoto" method="POST" action="foto.php" enctype="multipart/form-data" >
+ <p><input type="file" name="foto" autofocus="autofocus" required="required" accept=".jpg, .jpeg" onchange="mostraImagem()"></p> <br>
 
- <p><input type="file" name="foto" autofocus="autofocus" required="required"></p> 
-
-
+<p><img id="inputImage" width="50%"></p>
   <input type="hidden" name="id" value="<?=$id?>">
 
-  <p><input type="submit" value="Enviar"></p>
+  <p><input type="submit" value="Enviar"></p><br>
   <p><input type="reset" value="Limpar"></p>
   <p>  
-        <a style="color: black" href="home.php">
+        <a style="color: white" href="home.php"><br>
         ⬅️ Voltar Pagina !</a>
       </p>
 </div>
