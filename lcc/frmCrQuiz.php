@@ -41,8 +41,6 @@ copy($local, $conteudo);
             $('#y').val(c.y);
             $('#w').val(c.w);
             $('#h').val(c.h);
-            $("#altura").html("Altura:" + c.h);
-            $("#largura").html("Largura:" + c.w);
         };
     </script>
 </head>
@@ -59,29 +57,29 @@ copy($local, $conteudo);
             </p> 
             <p class="quiz"> 
                 Pergunta:<br /> 
-                <input  type="text" size="50" name="pergunta" required="required" maxlength="100" > 
+                <input  type="text" size="50" name="pergunta" required="required" maxlength="100">
+            </p>    
+            <p class="quiz">Selecione a resposta correta</p>
+            <p class="quiz"> 
+                Resposta:<br /> 
+                <input type="radio" name="certa" required="required" value="1"><input  type="text" size="30" name="resposta" required="required" maxlength="20">
             </p>    
 
             <p class="quiz"> 
-                Correta:<br /> 
-                <input  type="text" size="30" name="correta" required="required" maxlength="20"> 
-            </p>    
-
-            <p class="quiz"> 
-                Errada:<br /> 
-                <input  type="text" size="30" name="errada" required="required" maxlength="20"> 
+                Resposta:<br /> 
+                <input type="radio" name="certa" value="2"><input  type="text" size="30" name="resposta2" required="required" maxlength="20"> 
             </p>
 
             <p class="quiz"> 
-                Errada:<br /> 
-                <input  type="text" size="30" name="errada2" required="required" maxlength="20"> 
+                Resposta:<br /> 
+                <input type="radio" name="certa" value="3"><input  type="text" size="30" name="resposta3" required="required" maxlength="20"> 
             </p>
 
             <p class="quiz"> 
-                Errada:<br /> 
-                <input  type="text" size="30" name="errada3" required="required" maxlength="20"> 
+                Resposta:<br /> 
+                <input type="radio" name="certa" value="4"><input  type="text" size="30" name="resposta4" required="required" maxlength="20"> 
             </p>
-
+            
             <input type="hidden" name="id" value="<?=$id?>">
         
             <p>
