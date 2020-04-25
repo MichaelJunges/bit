@@ -59,10 +59,9 @@ $dados = $sqlUser->fetchAll();
 	<div class="grid-container">
 		<div class="grid-100" style="padding: 0px;">
 
-<a href="logoff.php">
+<a href="logoff.php" style="text-decoration: none;">
 <div class="sair" >	
-
-<p  style=" text-decoration: none;  color: white;">SAIR</p>
+<p  style="color: white;">SAIR</p>
 </div>
 </a>
 <div class="grid-100 about_me">
