@@ -18,7 +18,7 @@ copy($local, $conteudo);
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Criar Quiz</title>
     <link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
     <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
