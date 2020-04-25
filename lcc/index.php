@@ -17,9 +17,9 @@
     <script>
         function validarFormulario()	
         {	  
-            if (document.frmLogin.login.value.trim().length < 4) 
+            if (document.frmLogin.login.value.trim().length < 3) 
             {
-                alert("Digite um nome com 4 ou + caracteres");
+                alert("Digite um nome com 3 ou + caracteres");
                 document.frmLogin.login.focus();
                 return false;
             }
