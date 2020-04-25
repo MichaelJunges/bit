@@ -148,3 +148,9 @@ input:-webkit-autofill {
     -webkit-text-fill-color: #4099d1 ;
     -webkit-box-shadow: 0 0 0px 1000px #082336 inset;
 }
+.minhasInfo
+{
+	text-align: left;
+	font-weight: 900;
+	font-size: 20px;
+}

@@ -66,6 +66,7 @@ $dados = $sqlUser->fetchAll();
 <p  style="color: white;">SAIR</p>
 </div>
 </a>
+<<<<<<< HEAD
 <div class="grid-100 about_me">
 	<div class="grid-50">
 		<a href="frmFoto.php"><img width="9%" style="border-radius: 50px; padding-bottom: 0px;" align="left" src="fotos/<?=$id?>.jpg" ></a>
@@ -77,6 +78,30 @@ $dados = $sqlUser->fetchAll();
 	</div>
 </div>
 		&nbsp
+=======
+	<div class="grid-100 about_me">
+
+<div class="grid-70"> 
+ <a href="frmFoto.php?id=<?=$id?>"><img  width="6%" style="border-radius: 5px; padding-bottom: 0px; padding-right: 50px;" align="left" src="fotos/<?=$id?>.jpg"  > </a>
+<!-- <a href="frmFoto.php?id=<?=$id?>"><img style="object-fit: cover;width:100%; height: 200px; border-radius: 10px; color: white" src="fotos/<?=$id?>.jpg"width="100%" alt="Selecionar Imagem"></a> -->
+    <p class="minhasInfo" >Nome: <?=$dados[0]["nreal"]?></p>
+     <p class="minhasInfo">Bio: <?=$dados[0]["bio"]?></p>
+     </div>
+
+     <div class="grid-20" style="margin-top: 20px">
+
+		 <div   style="text-align: right; margin-bottom: 10px"> 	
+			<a class="azulEbranco" href="frmEditar.php"> Editar perfil </a>
+			<a class="azulEbranco" href="frmCreateQuiz.php"> Criar Quizz </a>
+		</div>
+		</div>
+		</div>
+
+<p><?php 
+echo $mensagem;
+ ?></p>
+&nbsp
+>>>>>>> 7 FILES
 		<dv class="grid-100 people_title" style="padding: 0px">
 			<?php  
 			foreach ($dadosQuiz as $quizzes) {	
@@ -93,7 +118,10 @@ $dados = $sqlUser->fetchAll();
 	&nbsp
 	<div class="grid-100">
 		&nbsp
+<<<<<<< HEAD
 		<p style=" color: white"><?=$mensagem?></p>
+=======
+>>>>>>> 7 FILES
 	</div>
 	</div>
 </div>
