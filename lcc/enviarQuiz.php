@@ -36,8 +36,8 @@ if($_SESSION["acesso"] != true) {
 	unlink("fotos_quiz/$foto");
 	//fim foto
 
-	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, pergunta, correta, errada, errada2, errada3, id_usuario, foto, certa) VALUES (?,?,?,?,?,?,?,?,?)");
-	$exec = $sqlInsert->execute(array($titulo, $pergunta, $correta, $errada, $errada2, $errada3, $id_usuario, $conteudo, $certa));
+	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, pergunta, resposta, resposta2, resposta3, resposta4, id_usuario, foto, certa) VALUES (?,?,?,?,?,?,?,?,?)");
+	$exec = $sqlInsert->execute(array($titulo, $pergunta, $resposta, $resposta2, $resposta3, $resposta4, $id_usuario, $conteudo, $certa));
 
 	if ($exec){
 		$msg=urlencode("Quiz criado com sucesso");
