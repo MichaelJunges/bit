@@ -88,10 +88,10 @@ echo $mensagem;
 			<?php  
 			foreach ($dadosQuiz as $quizzes) {	
 				?>
-				<div class="grid-50 people" > 
+				<div class="grid-25 people" > 
 					 <p>  <a href="frmQuizId.php?id=<?=$quizzes["id"]?>"><?=$quizzes["titulo"]?></a> </p>
 					 <p>Criador: <?=$quizzes["nreal"]?></p>
-						<p><img width="200px" height="200px" src="<?=$quizzes["foto"]?>"></p>
+						<p><img  width="270px" height="300px" src="<?=$quizzes["foto"]?>"></p>
 				</div>
 				<?php
 			}
