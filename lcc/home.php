@@ -59,39 +59,50 @@ $dados = $sqlUser->fetchAll();
 	
 
 	<div class="grid-container">
-		<div class="grid-100" style="padding: 0px;">
+<div class="grid-100">
 
-<a href="logoff.php" style="text-decoration: none;">
-<div class="sair" >	
-<p  style="color: white;">SAIR</p>
+<div class="grid-33" style="padding: 0px;">
+<a href="frmEditar.php" style="text-decoration: none;">
+<div class="grid-100 criarEditar" >	
+<p >Editar Conta</p>
 </div>
 </a>
+</div>
+
+<div class="grid-33" style="padding: 0px;">
+<a href="frmCreateQuiz.php" style="text-decoration: none;">
+<div class="grid-100 criarEditar" >	
+<p>Criar Quiz</p>
+</div>
+</a>
+</div>
+
+<div class="grid-33" style="padding: 0px;">
+<a href="logoff.php" style="text-decoration: none;">
+<div class="grid-100 criarEditar" >	
+<p >Sair</p>
+</div>
+</a>
+</div>
+
 
 </div>
+
 	<div class="grid-100 about_me">
 
-<div class="grid-70"> 
- <a href="frmFoto.php?id=<?=$id?>"><img  width="6%" style="border-radius: 5px; padding-bottom: 0px; padding-right: 50px;" align="left" src="fotos/<?=$id?>.jpg"  > </a>
-
+<div class="grid-60"> 
+ <a href="frmFoto.php?id=<?=$id?>"><img  width="6%" style="border-radius: 10px; padding-bottom: 0px; padding-right: 10px;" align="left" src="fotos/<?=$id?>.jpg"  > </a>
     <p class="minhasInfo" >Nome: <?=$dados[0]["nreal"]?></p>
      <p class="minhasInfo">Bio: <?=$dados[0]["bio"]?></p>
+</div>	
+</div>
 
-     </div>
-
-     <div class="grid-20" style="margin-top: 20px">
-
-		 <div   style="text-align: left; margin-bottom: 10px"> 	
-			<a class="azulEbranco" href="frmEditar.php"> Editar perfil </a>
-			<a class="azulEbranco" href="frmCreateQuiz.php"> Criar Quizz </a>
-		</div>
-		</div>
-		</div>
 
 <p><?php 
 echo $mensagem;
  ?></p>
 &nbsp
-		<dv class="grid-100 people_title" style="padding: 0px">
+		<div class="grid-100 people_title" style="padding: 0px">
 			<?php  
 			foreach ($dadosQuiz as $quizzes) {	
 				?>
@@ -103,10 +114,6 @@ echo $mensagem;
 				<?php
 			}
 			?>
-		</div>
-</div>
-	</div>
 </div>
 </body>
-
 </html>
