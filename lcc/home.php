@@ -67,6 +67,7 @@ $dados = $sqlUser->fetchAll();
 </div>
 </a>
 <<<<<<< HEAD
+<<<<<<< Updated upstream
 <div class="grid-100 about_me">
 	<div class="grid-50">
 		<a href="frmFoto.php"><img width="9%" style="border-radius: 50px; padding-bottom: 0px;" align="left" src="fotos/<?=$id?>.jpg" ></a>
@@ -79,6 +80,8 @@ $dados = $sqlUser->fetchAll();
 </div>
 		&nbsp
 =======
+=======
+>>>>>>> Stashed changes
 	<div class="grid-100 about_me">
 
 <div class="grid-70"> 
@@ -101,7 +104,23 @@ $dados = $sqlUser->fetchAll();
 echo $mensagem;
  ?></p>
 &nbsp
+<<<<<<< Updated upstream
 >>>>>>> 7 FILES
+=======
+=======
+<div class="grid-100 about_me">
+	<div class="grid-50">
+		<a href="frmFoto.php"><img width="9%" style="border-radius: 50px; padding-bottom: 0px;" align="left" src="fotos/<?=$id?>.jpg" ></a>
+	    <p style="text-align: left;"><?=$dados[0]["nreal"]?></p>
+	</div>
+	<div class="grid-50" style="text-align: right; margin-top: 8px;">
+		<a class="azulEbranco" href="frmEditar.php"> Editar perfil </a>
+		<a class="azulEbranco" href="frmCreateQuiz.php"> Criar Quizz </a>
+	</div>
+</div>
+		&nbsp
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 		<dv class="grid-100 people_title" style="padding: 0px">
 			<?php  
 			foreach ($dadosQuiz as $quizzes) {	
@@ -119,9 +138,15 @@ echo $mensagem;
 	<div class="grid-100">
 		&nbsp
 <<<<<<< HEAD
+<<<<<<< Updated upstream
 		<p style=" color: white"><?=$mensagem?></p>
 =======
 >>>>>>> 7 FILES
+=======
+=======
+		<p style=" color: white"><?=$mensagem?></p>
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 	</div>
 	</div>
 </div>
