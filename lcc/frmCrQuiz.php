@@ -43,9 +43,56 @@ copy($local, $conteudo);
             $('#h').val(c.h);
         };
     </script>
+    <script>
+        var idContador = 0;
+        var resposta = 5;
+
+        function exclui(id){
+            var campo = $("#"+id.id).remove();
+            idContador--;
+            resposta = resposta -4;
+        }
+        $( document ).ready(function() {
+            $("#btnAdicionarPergunta").click(function(e){
+                e.preventDefault();
+                var tipoCampo = "text";
+                adicionaCampo(tipoCampo);
+            })
+            function adicionaCampo(tipo){
+
+                idContador++;
+                
+                var idCampo = "pergunta"+idContador;
+                var idForm = "formExtra"+idContador;
+            
+                var html = "";
+                
+                html += "<div style='margin-top: 8px;' id='"+idForm+"'>";
+                html += "<p class='quiz'>Pergunta:</p>"
+                html += "<input  type='text' size='50' name='pergunta"+idContador+"' required='required' maxlength='100'><br>";
+                html += "<p class='quiz'>Resposta:</p>"
+                html += "<input type='radio' name='certa"+idContador+"' required='required' value='1'><input  type='text' size='30' name='resposta"+resposta+"' required='required' maxlength='20'>"
+                resposta++;
+                html += "<p class='quiz'>Resposta:</p>"
+                html += "<input type='radio' name='certa"+idContador+"' value='2'><input  type='text' size='30' name='resposta"+resposta+"' required='required' maxlength='20'><br>"
+                resposta++;
+                html += "<p class='quiz'>Resposta:</p>"
+                html += "<input type='radio' name='certa"+idContador+"' value='2'><input  type='text' size='30' name='resposta"+resposta+"' required='required' maxlength='20'><br>"
+                resposta++;
+                html += "<p class='quiz'>Resposta:</p>"
+                html += "<input type='radio' name='certa"+idContador+"' value='2'><input  type='text' size='30' name='resposta"+resposta+"' required='required' maxlength='20'><br>"
+                resposta++;
+                html += "<button onclick='exclui("+idForm+")' type='button'>Excluir</button>";
+                html += "</div>";
+                
+                $("#addPerg").append(html);
+            }
+        });
+
+    </script>
 </head>
 <body>
-        <form name="frmCreateQuiz" action="enviarQuiz.php" method="POST" enctype="multipart/form-data" >
+    <form name="frmCreateQuiz" action="enviarQuiz.php" method="POST" enctype="multipart/form-data" >
 
      <div class="grid-container">
         <div class="grid-100">
@@ -81,6 +128,10 @@ copy($local, $conteudo);
                 <input type="radio" name="certa" value="4"><input  type="text" size="30" name="resposta4" required="required" maxlength="20"> 
             </p>
             
+            <div id="addPerg"></div>
+            <p>
+                <input type="button" id="btnAdicionarPergunta" value="Adicionar +Perguntas">
+            </p>
             <input type="hidden" name="id" value="<?=$id?>">
         <h1 style="color: white">Imagem grande ? Redimencione-a !</h1>
             <p>
