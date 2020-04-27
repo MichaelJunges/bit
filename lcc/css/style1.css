@@ -37,17 +37,22 @@ input[type=submit]{
 	border-color: #4099d1;
 	background-color: #082336;
 }
-.button{
-	width: 400px;
-	background-color: white;
-	border-color: black;
-	font-weight: 700;
-	margin-top: 5px;
+input[type=radio]{
+	text-align: left;
+	color: red;
 }
-.button:hover
-{
-	background-color: #39ff14;
-	color: white;
+.button{
+	color: red;
+}
+.alternativa{
+	background-color: white;
+	text-align: center;
+	font-weight: 800;
+	font-size: 30px;
+	margin-left: 0px, 100px, 0px, 100px;
+	border: inset;
+	border-color: black;
+	padding: 0px;
 }
 
 .titulo{
@@ -58,14 +63,6 @@ input[type=submit]{
     font-family: 'Press Start 2P', cursive;
 
 }
-/*.people_title
-{
-    background-image: url(imagens/fundosdsd.jpg);
-    background-repeat: no-repeat;
-    background-size: 1000px;
-	color: black;
-	border-radius: 20px;
-}*/
 .people
 {	
 	text-align: center; 

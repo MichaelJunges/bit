@@ -53,14 +53,23 @@
 
   	<p><form name="frmQuizId" method="POST" action="tentarQuiz.php"></p>
 
+<div class="alternativa"> 
   	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="1" required="required"><?=$consulta[0]["resposta"]?>
+  </div> 
     <br>
+    <div class="alternativa"> 
   	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="2"><?=$consulta[0]["resposta2"]?>
+      </div> 
      <br>
+     <div class="alternativa"> 
   	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="3"><?=$consulta[0]["resposta3"]?>
+      </div> 
      <br>
+     <div class="alternativa"> 
   	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="4"><?=$consulta[0]["resposta4"]?>
+      </div> 
       <br>
+
     <input type="submit" value="Confirmar">
 	<input type="hidden" name="id" value="<?=$id?>">
 </form>
