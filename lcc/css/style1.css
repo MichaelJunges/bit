@@ -37,14 +37,14 @@ input[type=submit]{
 	border-color: #4099d1;
 	background-color: #082336;
 }
-input[type=button]{
+.button{
 	width: 400px;
 	background-color: white;
 	border-color: black;
 	font-weight: 700;
 	margin-top: 5px;
 }
-input[type=button]:hover
+.button:hover
 {
 	background-color: #39ff14;
 	color: white;

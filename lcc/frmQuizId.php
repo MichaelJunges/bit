@@ -18,7 +18,8 @@
 	$sqlSelect = $PDO->prepare("SELECT * FROM quiz WHERE id=?");
 	$sqlSelect->execute(array($id));
 	$consulta = $sqlSelect->fetchAll(); 
-
+  @$mensagem=urldecode($_GET["msg"]);
+  @$color=urldecode($_GET["cor"]);
   ?>  
 
 <!DOCTYPE html>
@@ -29,6 +30,16 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	  <title>Quiz</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+      function limpaUrl() {     //função
+          urlpg = $(location).attr('href');   //pega a url atual da página
+          urllimpa = urlpg.split("?")[0]      //tira tudo o que estiver depois de '?'
+          window.history.replaceState(null, null, urllimpa); //subtitui a url atual pela url limpa
+      }
+      setTimeout(limpaUrl, 0)
+    </script>
 </head>
 <body style="background-color:  rgb(51,109,226); ">
 
@@ -42,19 +53,19 @@
 
   	<p><form name="frmQuizId" method="POST" action="tentarQuiz.php"></p>
 
-  	<input type="button" style="font-size: 2em" name="resposta" value="<?=$consulta[0]["resposta"]?>">
+  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="1" required="required"><?=$consulta[0]["resposta"]?>
     <br>
-  	<input type="button" style="font-size: 2em" name="resposta2" value="<?=$consulta[0]["resposta2"]?>">
+  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="2"><?=$consulta[0]["resposta2"]?>
      <br>
-  	<input type="button" style="font-size: 2em" name="resposta3" value="<?=$consulta[0]["resposta3"]?>">
+  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="3"><?=$consulta[0]["resposta3"]?>
      <br>
-  	<input type="button" style="font-size: 2em" name="resposta4" value="<?=$consulta[0]["resposta4"]?>">	
-
+  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="4"><?=$consulta[0]["resposta4"]?>
+      <br>
+    <input type="submit" value="Confirmar">
 	<input type="hidden" name="id" value="<?=$id?>">
-
+</form>
+    <h2 style="color:<?=$color?>;"><?=$mensagem?></h2>
   	<!-- <p><input type="submit" value="Confirmar"></p> -->
-
-	<h3><?=@$e?></h3>
  	 <p>  
         <a style="color: black" href="home.php">
         ⬅️ Voltar Pagina !</a>
