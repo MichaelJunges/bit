@@ -211,3 +211,10 @@ input:-webkit-autofill {
 	background-image: url(../icons/del.png);
 	cursor: pointer;
 }
+.teste:checked {
+	background-color: blue;
+}
+.marcado:checked
+{
+	background-color: red;
+}

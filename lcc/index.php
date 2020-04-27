@@ -6,6 +6,8 @@
 		exit;
 	}
 	?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,9 +68,9 @@
 				<input type="submit"  value="ENTRAR">
 			</p>
 				 &nbsp
-				
 	
-<p style="color: red; font-style: 20px; font-family: Calibri; "><?=@urldecode($_GET["msg"])?></p>
+	
+<p class="alert"><?=@urldecode($_GET["msg"])?></p>
 	
 
 <!-- teste -->
