@@ -36,15 +36,14 @@ $id = $_SESSION["id"];
 	}
     </script>
 </head>
-<body style="font-family: 'Press Start 2P', cursive;">
+<body >
 	<div class="grid-container">
 		<div class="grid-100">
 			<div class="grid-50"></div>
-			<h1 class="titulo">CRIE SEU QUIZ</h1>
+			<h1 style="color: white">Seu Quiz precisa de uma foto :)</h1>
 			<form name="frmCreateQuiz" action="frmCrQuiz.php" method="POST" enctype="multipart/form-data">
 			<p class="quiz">
-		        Adicione uma Foto:<br />
-		        <input name="foto" type="file" accept=".jpg, .jpeg" required="required" onchange="mostraImagem()">
+		        <input name="foto" type="file" accept=".jpg, .jpeg" required="required" onchange="mostraImagem()" >
 		    </p><br>
 		    <p><img id="ImageCrop" width="50%"></p>
 		    <p class="titulo">  

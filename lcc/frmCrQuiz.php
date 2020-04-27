@@ -50,7 +50,8 @@ copy($local, $conteudo);
      <div class="grid-container">
         <div class="grid-100">
             <div class="grid-50"></div>
-            <h1 class="titulo">CRIE SEU QUIZ</h1>
+            <h1 class="h1person">Agora, preencha os campos !</h1>
+
             <p class="quiz"> 
                 Titulo:<br /> 
                 <input  type="text" size="50" name="titulo" required="required" maxlength="50" autofocus="autofocus" > 
@@ -81,7 +82,7 @@ copy($local, $conteudo);
             </p>
             
             <input type="hidden" name="id" value="<?=$id?>">
-        
+        <h1 style="color: white">Imagem grande ? Redimencione-a !</h1>
             <p>
                 <img id="ImagemCrop" src="<?=$conteudo?>">
                 <input type="hidden" id="x" name="x" />
@@ -92,6 +93,7 @@ copy($local, $conteudo);
                 <input type="hidden" name="foto" value="<?=$foto?>">
             </p>
                 <p class="titulo">  
+                    <h1 class="h1person">Quando você estiver pronto clique aqui</h1>
                     <input type="submit" value="FINALIZAR" id="finalizar">
                 </p>
         </div>
