@@ -98,9 +98,9 @@ $dados = $sqlUser->fetchAll();
 </div>
 
 
-<p><?php 
+<!-- <p><?php 
 echo $mensagem;
- ?></p>
+ ?></p> -->
 &nbsp
 		<div class="grid-100 people_title" style="padding: 0px">
 			<?php  
@@ -108,7 +108,7 @@ echo $mensagem;
 				?>
 				<a href="frmQuizId.php?id=<?=$quizzes["id"]?>"><div class="grid-25 people" > 
 					 <p class="textoUpImagem" style="text-decoration: none; color: white"> <?=$quizzes["titulo"]?></p>
-					 <!-- <p>Criador: <?=$quizzes["nreal"]?></p> -->
+
 						<p><img  style="border-radius: 10px" width="100%" height="100%" src="<?=$quizzes["foto"]?>"></p>
 				</div></a>
 				<?php

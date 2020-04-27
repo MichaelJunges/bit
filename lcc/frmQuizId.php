@@ -34,19 +34,20 @@
 
  <div class="grid-container">
 
-
-
-<h1 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><?=$consulta[0]["pergunta"]?></h1>
-
 <div class="grid-100" >
    <p ><img width="30%" style="border: solid 1px black; margin-bottom: 10px " src="<?=$consulta[0]["foto"]?> "> </p>
 </div>
 
+<h1 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><?=$consulta[0]["pergunta"]?></h1>
+
   	<p><form name="frmQuizId" method="POST" action="tentarQuiz.php"></p>
 
   	<input type="button" style="font-size: 2em" name="resposta" value="<?=$consulta[0]["resposta"]?>">
+    <br>
   	<input type="button" style="font-size: 2em" name="resposta2" value="<?=$consulta[0]["resposta2"]?>">
+     <br>
   	<input type="button" style="font-size: 2em" name="resposta3" value="<?=$consulta[0]["resposta3"]?>">
+     <br>
   	<input type="button" style="font-size: 2em" name="resposta4" value="<?=$consulta[0]["resposta4"]?>">	
 
 	<input type="hidden" name="id" value="<?=$id?>">
