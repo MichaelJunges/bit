@@ -1,0 +1,49 @@
+input[type="text"], input[type="password"] {
+  width: 50%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  background-image: url(../icons/user.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+input[type="password"] {
+  background-image: url(../icons/key.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+input[type="text"], input[type="password"]:focus{
+  border-color: dodgerBlue;
+  box-shadow: 0 0 15px 0 dodgerBlue;
+}
+
+
+.inputWithIcon input[type="text"], input[type="password"] {
+  padding-left: 40px;
+}
+
+input[type="submit"]{
+ border-radius: 0px;
+  background-color: black;
+  color: #39ff14; 
+  border-color: #39ff14;
+  font-family: Calibri;
+  font-size: 20px;
+  font-weight: 800;
+  box-shadow: 0 0 9px 0 #39ff14;
+
+}
+body{
+  background-color: black;
+}
+h1
+{
+  font-family: Calibri; 
+  color: white;
+}

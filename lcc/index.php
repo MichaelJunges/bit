@@ -9,9 +9,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>■ Quizz Teste ■</title>
+	<title>■ 4Quiz - Login ■</title>
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
-	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
+	<!-- <link rel="stylesheet" href="css/style1.css?time=<?=time()?>"> -->
+		<link rel="stylesheet" href="css/campos.css?time=<?=time()?>">
+		<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script>
@@ -42,40 +44,36 @@
 	<form name="frmLogin" action="login.php" method="post" onsubmit="return validarFormulario()">
 
 	<div class="grid-container">
-		<div style="padding-top: 5%" class="grid-100">
 
-<div class="">
-			<!-- <div style="padding: 10px;">
-			<p>Desenvolvido por:</p>
-			<a href="https://www.facebook.com/luancarlos.castoldi"><img src="logos/logo2.png" width="30%" ></a>  
-			</div> -->
-	&nbsp
-		<h1 class="titulo"> 4QUIZZ </h1>
+<div class="grid-100" style="text-align: center;" >
+		<h1 > 4QUIZZ </h1>
 			
-			<p> 
-				<input  type="text"  name="login" required="required" maxlength="6" autofocus="autofocus" size="20" placeholder="Login"> 
-			</p> 
-			<p> 
-				<input type="password" size="20" name="pass" required="required" placeholder="Senha"> 
-			</p>
+			<div class="inputWithIcon">
+				<input  type="text"  name="login" required="required" maxlength="6" autofocus="autofocus"  placeholder="Login"> 
+			</div>
+
+			
+			<div class="inputWithIcon">
+				<input type="password" name="pass" required="required" placeholder="Senha" autofocus="autofocus"> 
+			</div>
+
 			 <!-- <input type="hidden" id="id" name="id" value=""> -->
 		
 			 <p>  
-				<a style="color:rgb(51,109,226); text-decoration: none;" href="create.php">CRIAR CONTA</a>
+				<a style="text-decoration: none; font-family: Calibri; color: white" href="create.php">CRIAR CONTA</a>
 			    </p>
-			    	 &nbsp
 			<p>  
-				<input style="border-radius: 0px; background-color: ; color: white; border-color: #32f41f" type="submit"  value="Entrar">
+				<input type="submit"  value="ENTRAR">
 			</p>
 				 &nbsp
 				
 	
-<p style="color: red; font-style: 20px; "><?=@urldecode($_GET["msg"])?></p>
+<p style="color: red; font-style: 20px; font-family: Calibri; "><?=@urldecode($_GET["msg"])?></p>
 	
 
 <!-- teste -->
 
-		</div>
+</div>
 	</div>
 	</div>
 </form>
