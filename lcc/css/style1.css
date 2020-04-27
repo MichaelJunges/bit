@@ -1,6 +1,5 @@
 
 body{
-	/*font-family: 'Orbitron' ;*/
 	text-align: center;
 	background-color: #00121e;
 	/*background-image: url(imagens/triangulo.jpg);*/
@@ -59,14 +58,14 @@ input[type=button]:hover
     font-family: 'Press Start 2P', cursive;
 
 }
-.people_title
+/*.people_title
 {
     background-image: url(imagens/fundosdsd.jpg);
     background-repeat: no-repeat;
     background-size: 1000px;
 	color: black;
 	border-radius: 20px;
-}
+}*/
 .people
 {	
 	text-align: center; 
@@ -96,8 +95,7 @@ input[type=button]:hover
 }
 .about_me
 {	
-
-	background-color: white; 
+	background-color: white;
 	color: black;
 	border-radius: 10px;
 	padding: 10px;
