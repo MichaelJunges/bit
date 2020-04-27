@@ -47,7 +47,7 @@ copy($local, $conteudo);
         var idContador = 0;
         var resposta = 5;
 
-        function exclui(id){
+        function  exclui(id ){
             var campo = $("#"+id.id).remove();
             idContador--;
             resposta = resposta -4;
@@ -67,7 +67,7 @@ copy($local, $conteudo);
             
                 var html = "";
                 
-                html += "<div style='margin-top: 8px;' id='"+idForm+"'>";
+                html += "<div style='margin-top: 8px;  ' id='"+idForm+"'>";
                 html += "<p class='quiz'>Pergunta:</p>"
                 html += "<input  type='text' size='50' name='pergunta"+idContador+"' required='required' maxlength='100'><br>";
                 html += "<p class='quiz'>Resposta:</p>"
@@ -82,8 +82,9 @@ copy($local, $conteudo);
                 html += "<p class='quiz'>Resposta:</p>"
                 html += "<input type='radio' name='certa"+idContador+"' value='2'><input  type='text' size='30' name='resposta"+resposta+"' required='required' maxlength='20'><br>"
                 resposta++;
-                html += "<button onclick='exclui("+idForm+")' type='button'>Excluir</button>";
+                html += "<button onclick='exclui("+idForm+")' type='button' class='excluir'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspExcluir Pergunta</button> "; 
                 html += "</div>";
+                
                 
                 $("#addPerg").append(html);
             }
@@ -104,10 +105,14 @@ copy($local, $conteudo);
                 <input  type="text" size="50" name="titulo" required="required" maxlength="50" autofocus="autofocus" > 
             </p> 
             <p class="quiz"> 
-                Pergunta:<br /> 
+                Pergunta: 
+
+                <!-- name='pergunta"+idContador+"' -->
+                <br /> 
                 <input  type="text" size="50" name="pergunta" required="required" maxlength="100">
             </p>    
-            <p class="quiz">Selecione a resposta correta</p>
+            <p class="quiz">Selecione a resposta correta !</p>
+
             <p class="quiz"> 
                 Resposta:<br /> 
                 <input type="radio" name="certa" required="required" value="1"><input  type="text" size="30" name="resposta" required="required" maxlength="20">
@@ -130,7 +135,7 @@ copy($local, $conteudo);
             
             <div id="addPerg"></div>
             <p>
-                <input type="button" id="btnAdicionarPergunta" value="Adicionar +Perguntas">
+                <input type="button" class="adicionar" id="btnAdicionarPergunta" value="        Adicionar Pergunta">
             </p>
             <input type="hidden" name="id" value="<?=$id?>">
         <h1 style="color: white">Imagem grande ? Redimencione-a !</h1>

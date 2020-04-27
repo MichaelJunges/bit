@@ -172,3 +172,42 @@ input:-webkit-autofill {
 	font-family: calibri;
 
 }
+.adicionar
+{
+	padding: 8px;
+	background-image: url(../icons/plus.png);
+	background-size: 32px;
+	background-repeat: no-repeat;
+	font-family: Calibri;
+	font-size: 15px;
+	border-radius: 20px;
+	border-color: white;
+	border-style: dotted;
+	outline: none;
+
+}
+.adicionar:hover
+{
+	background-image: url(../icons/right.png);
+	cursor: pointer;
+}
+.excluir
+{
+	padding: 8px;
+	background-image: url(../icons/trash.png);
+	background-size: 32px;
+	background-repeat: no-repeat;
+	font-family: Calibri;
+	font-size: 15px;
+	border-radius: 20px;
+	border-color: white;
+	border-style: dotted;
+	margin: 10px;
+	outline: none;
+
+}
+.excluir:hover
+{
+	background-image: url(../icons/del.png);
+	cursor: pointer;
+}
