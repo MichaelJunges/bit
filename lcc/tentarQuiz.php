@@ -1,6 +1,6 @@
 <?php
 $PDO = new PDO("sqlite:users.db");
-
+$contador = $_POST["contador"];
 $id = $_POST["id"];
 $resposta = $_POST["resposta"];
 
@@ -13,7 +13,7 @@ $sqlPergunta->execute(array($dadosQuiz[0]["id"]));
 $dadosPergunta = $sqlPergunta->fetchAll();
 
 $pergunta = $_POST["pergunta"];
-$certa = $dadosPergunta[0]["certa"];
+$certa = $dadosPergunta[$pergunta]["certa"];
 
 if ($resposta == $certa) {
 	$contador++;
@@ -21,11 +21,8 @@ if ($resposta == $certa) {
     header("Location:frmQuizId.php?id=$id&pergunta=$pergunta&contador=$contador");
     exit;
 }else {
-	if (empty($contador)) {
-		$contador=0;
-	}
 	$pergunta++;
-    header("Location:frmQuizId.php?id=$id&pergunta=$pergunta&contador=$contador");
+	header("Location:frmQuizId.php?id=$id&pergunta=$pergunta&contador=$contador");
     exit;
 }
 ?>
