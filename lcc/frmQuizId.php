@@ -12,14 +12,24 @@
 	//Conexão
 	$PDO = new PDO("sqlite:users.db");
 	$id = $_GET["id"];
-
+  $pergunta = $_GET["pergunta"];
 
     //Consulta e pega quiz
-	$sqlSelect = $PDO->prepare("SELECT * FROM quiz WHERE id=?");
-	$sqlSelect->execute(array($id));
-	$consulta = $sqlSelect->fetchAll(); 
-  @$mensagem=urldecode($_GET["msg"]);
-  @$color=urldecode($_GET["cor"]);
+	$sqlSelectQ = $PDO->prepare("SELECT * FROM quiz WHERE id=?");
+	$sqlSelectQ->execute(array($id));
+	$consultaQ = $sqlSelectQ->fetchAll();
+
+  $sqlSelectP = $PDO->prepare("SELECT id, texto, certa FROM pergunta WHERE id_quiz = ?");
+  $sqlSelectP->execute(array($consultaQ[0]["id"]));
+  $consultaP = $sqlSelectP->fetchAll();
+
+  $sqlId = $PDO->prepare("SELECT count(id) AS pp FROM pergunta WHERE id_quiz = ?");
+  $sqlId->execute(array($consultaQ[0]["id"]));
+  $consultaId = $sqlId->fetchAll();
+
+  $sqlSelectR = $PDO->prepare("SELECT * FROM resposta WHERE id_pergunta = ?");
+  @$sqlSelectR->execute(array($consultaP[$pergunta]["id"]));
+  $consultaR = $sqlSelectR->fetchAll();
   ?>  
 
 <!DOCTYPE html>
@@ -32,54 +42,56 @@
 	  <title>Quiz</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script>
+    <!-- <script>
       function limpaUrl() {     //função
           urlpg = $(location).attr('href');   //pega a url atual da página
           urllimpa = urlpg.split("?")[0]      //tira tudo o que estiver depois de '?'
           window.history.replaceState(null, null, urllimpa); //subtitui a url atual pela url limpa
       }
       setTimeout(limpaUrl, 0)
-    </script>
+    </script> -->
 </head>
 <body style="background-color:  rgb(51,109,226); ">
 
  <div class="grid-container">
 
 <div class="grid-100" >
-   <p ><img width="30%" style="border: solid 1px black; margin-bottom: 10px " src="<?=$consulta[0]["foto"]?> "> </p>
+   <p><img width="30%" style="border: solid 1px black; margin-bottom: 10px " src="<?=$consultaQ[0]["foto"]?> "> </p>
 </div>
+<?php
+if (!($pergunta == $consultaId[0]["pp"])) {
+?>
+<h1 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><?=$consultaP[$pergunta]["texto"]?></h1>
 
-<h1 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><?=$consulta[0]["pergunta"]?></h1>
-
-  	<p><form name="frmQuizId" method="POST" action="tentarQuiz.php"></p>
-
-<div class="alternativa"> 
-  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="1" required="required"><?=$consulta[0]["resposta"]?>
-  </div> 
-    <br>
-    <div class="alternativa"> 
-  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="2"><?=$consulta[0]["resposta2"]?>
-      </div> 
-     <br>
-     <div class="alternativa"> 
-  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="3"><?=$consulta[0]["resposta3"]?>
-      </div> 
-     <br>
-     <div class="alternativa"> 
-  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="4"><?=$consulta[0]["resposta4"]?>
-      </div> 
-      <br>
-
-    <input type="submit" value="Confirmar">
+<form name="frmQuizId" method="POST" action="tentarQuiz.php">
+  <div class="alternativa">
+  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="1" required="required"><?=$consultaR[0]["resposta"]?>
+  </div><br>
+  <div class="alternativa"> 
+  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="2"><?=$consultaR[1]["resposta"]?>
+  </div><br>
+  <div class="alternativa"> 
+  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="3"><?=$consultaR[2]["resposta"]?>
+  </div><br>
+  <div class="alternativa"> 
+  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="4"><?=$consultaR[3]["resposta"]?>
+  </div><br>
+  <input type="submit" value="PRÓXIMA">
 	<input type="hidden" name="id" value="<?=$id?>">
+  <input type="hidden" name="pergunta" value="<?=$pergunta?>">
 </form>
-    <h2 style="color:<?=$color?>;"><?=$mensagem?></h2>
+<?php }else{
+  $contador = $_GET["contador"];
+  ?>
+  <h2>Você acertou <?=$contador?> de <?=$pergunta?></h2>
+  <?php
+}?>
   	<!-- <p><input type="submit" value="Confirmar"></p> -->
- 	 <p>  
+ 	  <p>  
         <a style="color: black" href="home.php">
         ⬅️ Voltar Pagina !</a>
-      </p>
+    </p>
 
 </div>
-    </body>
+</body>
 </html>

@@ -8,17 +8,24 @@ $sqlQuiz = $PDO->prepare("SELECT * FROM quiz WHERE id = ?");
 $sqlQuiz->execute(array($id));
 $dadosQuiz = $sqlQuiz->fetchAll();
 
-$certa = $dadosQuiz[0]["certa"];
+$sqlPergunta = $PDO->prepare("SELECT * FROM pergunta WHERE id_quiz = ?");
+$sqlPergunta->execute(array($dadosQuiz[0]["id"]));
+$dadosPergunta = $sqlPergunta->fetchAll();
+
+$pergunta = $_POST["pergunta"];
+$certa = $dadosPergunta[0]["certa"];
 
 if ($resposta == $certa) {
-	$mensagem = urlencode("Você acertou");
-	$color = urlencode("green");
-    header("Location:frmQuizId.php?id=$id&msg=$mensagem&cor=$color");
+	$contador++;
+	$pergunta++;
+    header("Location:frmQuizId.php?id=$id&pergunta=$pergunta&contador=$contador");
     exit;
 }else {
-	$mensagem = urlencode("Você errou");
-	$color = urlencode("red");
-    header("Location:frmQuizId.php?id=$id&msg=$mensagem&cor=$color");
+	if (empty($contador)) {
+		$contador=0;
+	}
+	$pergunta++;
+    header("Location:frmQuizId.php?id=$id&pergunta=$pergunta&contador=$contador");
     exit;
 }
 ?>

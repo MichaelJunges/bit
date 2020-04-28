@@ -22,7 +22,7 @@ $bio = $_SESSION['bio'];
 
 
 //quizes
-$sqlQuiz = $PDO->prepare("SELECT q.pergunta, q.id, p.nreal, p.email, q.titulo, q.foto FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
+$sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
 $sqlQuiz->execute();
 $dadosQuiz = $sqlQuiz->fetchAll();
 
@@ -96,17 +96,13 @@ $dados = $sqlUser->fetchAll();
      <p class="minhasInfo">Bio: <?=$dados[0]["bio"]?></p>
 </div>	
 </div>
-
-
-<!-- <p><?php 
-echo $mensagem;
- ?></p> -->
+<p><?=@$mensagem?></p>
 &nbsp
 		<div class="grid-100 people_title" style="padding: 0px">
 			<?php  
 			foreach ($dadosQuiz as $quizzes) {	
 				?>
-				<a href="frmQuizId.php?id=<?=$quizzes["id"]?>"><div class="grid-25 people" > 
+				<a href="frmQuizId.php?id=<?=$quizzes["id"]?>&pergunta=0"><div class="grid-25 people" > 
 					 <p class="textoUpImagem" style="text-decoration: none; color: white"> <?=$quizzes["titulo"]?></p>
 
 						<p><img  style="border-radius: 10px" width="100%" height="100%" src="<?=$quizzes["foto"]?>"></p>
