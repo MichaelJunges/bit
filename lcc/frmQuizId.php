@@ -40,7 +40,7 @@
 <html>
 <head>
 	  <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
-  	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
+  	<link rel="stylesheet" href="css/login.css?time=<?=time()?>">
     <link rel="stylesheet" href="css/radioBox.css?time=<?=time()?>">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -56,21 +56,20 @@
       setTimeout(limpaUrl, 0)
     </script>
 </head>
-<body style="background-color:  rgb(51,109,226); ">
+<body>
 
-
-<div class="grid-100" >
+<div class="grid-container" style="text-align: center;">
+<div class="grid-100" style="text-align: center;" >
    <p><img width="30%" style="border: solid 1px black; margin-bottom: 10px " src="<?=$consultaQ[0]["foto"]?> "> </p>
 </div>
 <?php
 if (!($pergunta == $consultaId[0]["pp"])) {
 ?>
-<h1 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><?=$consultaP[$pergunta]["texto"]?></h1>
+<h3 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><?=$consultaP[$pergunta]["texto"]?></h3>
 
 <form name="frmQuizId" method="POST" action="tentarQuiz.php">
 
-<input type="submit" value="PRÓXIMA">
-&nbsp
+
 
 <fieldset class="radio-image">  
 
@@ -108,7 +107,7 @@ if (!($pergunta == $consultaId[0]["pp"])) {
 </label>
    </fieldset>
 
-  
+  <input type="submit" value="PRÓXIMA">
 	<input type="hidden" name="id" value="<?=$id?>">
   <input type="hidden" name="contador" value="<?=$contador?>">
   <input type="hidden" name="pergunta" value="<?=$pergunta?>">
@@ -120,11 +119,9 @@ if (!($pergunta == $consultaId[0]["pp"])) {
   <h2>Você acertou <?=$contador?> de <?=$pergunta?></h2>
   <?php
 }?>
- 	  <p>  
-        <a style="color: black" href="home.php">
-        ⬅️ Voltar Pagina !</a>
-    </p>
-
+        <a href="home.php">
+        Voltar Pagina </a>
+</div>
 </div>
 </body>
 </html>

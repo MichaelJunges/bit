@@ -16,6 +16,8 @@ h3
 {
 	font-family: Calibri;
 	font-size: 25px;
+	color: white;
+	margin: 0px;
 }
 
 
@@ -34,6 +36,7 @@ input[type="text"],input[type="password"],input[type="email"], input[type="texta
 	width: 300px;
 	box-shadow: 0 0 0 0;
     outline: 0;
+    padding: 5px
 }
 
 .radio{
@@ -107,9 +110,22 @@ input[type="submit"]:hover{
 	background-image: url(../icons/del.png);
 	cursor: pointer;
 }
-p
+p,a
 {
 	font-family: Calibri;
 	color: white;
 	font-size: 25px;
+	text-decoration: none;
+}
+.alternativa{
+	background-color: white;
+	text-align: center;
+	font-weight: 800;
+	font-size: 30px;
+	font-family: Calibri;
+	border: inset;
+	border-color: black;
+}
+.alternativa:hover{
+	background-color: silver;
 }
