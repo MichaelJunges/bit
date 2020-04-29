@@ -37,10 +37,7 @@ input[type=submit]{
 	border-color: #4099d1;
 	background-color: #082336;
 }
-input[type=radio]{
-	text-align: left;
-	color: red;
-}
+
 .button{
 	color: red;
 }
@@ -49,10 +46,13 @@ input[type=radio]{
 	text-align: center;
 	font-weight: 800;
 	font-size: 30px;
-	margin-left: 0px, 100px, 0px, 100px;
+	/*margin-left: 0px, 100px, 0px, 100px;*/
 	border: inset;
 	border-color: black;
-	padding: 0px;
+	/*padding: 0px ,10px, 10px, 10px;*/
+}
+.alternativa:hover{
+	background-color: silver;
 }
 
 .titulo{
@@ -73,7 +73,7 @@ input[type=radio]{
 	text-decoration: none;
 	padding-left: 2px;
     padding-right: 2px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .people:hover{
 	/*background-color: silver;*/
@@ -90,6 +90,18 @@ input[type=radio]{
 	margin: 3px;
 	font-weight: 800;
 }
+.textoUpImagem2{
+text-decoration: none;
+ color: white;
+ background-color: red;
+ font-family: calibri;
+ border-radius: 5px;
+ padding: 5px;
+ margin: 3px;
+ font-weight: 800;
+}
+
+
 .about_me
 {	
 	background-color: white;
@@ -114,11 +126,6 @@ thead
 	border: 1px solid black;
 }
 
-.quiz
-{
-	color: white;
-	font-size: 20px;
-}
 
 .azulEbranco
 {
@@ -211,10 +218,9 @@ input:-webkit-autofill {
 	background-image: url(../icons/del.png);
 	cursor: pointer;
 }
-.teste:checked {
-	background-color: blue;
-}
-.marcado:checked
-{
-	background-color: red;
+
+.imagemQuiz{
+	border-radius: 10px;
+	 margin-top: -1px; 
+	 margin-bottom: -5px;
 }

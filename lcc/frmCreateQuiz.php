@@ -41,7 +41,7 @@ $id = $_SESSION["id"];
 		<div class="grid-100">
 			<div class="grid-50"></div>
 			<h1 style="color: white">Seu Quiz precisa de uma foto :)</h1>
-			<form name="frmCreateQuiz" action="frmCrQuiz.php" method="POST" enctype="multipart/form-data">
+			<form name="frmCreateQuiz" action="frmCrQuiz.php" method="POST" enctype="multipart/form-data" >
 			<p class="quiz">
 		        <input name="foto" type="file" accept=".jpg, .jpeg" required="required" onchange="mostraImagem()" >
 		    </p><br>

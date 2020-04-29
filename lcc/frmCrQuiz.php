@@ -20,6 +20,7 @@ copy($local, $conteudo);
 <head>
     <title>Criar Quiz</title>
     <link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
+    <link rel="stylesheet" href="css/radioBox.css?time=<?=time()?>">
     <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
@@ -96,6 +97,18 @@ copy($local, $conteudo);
 <body>
     <form name="frmCreateQuiz" action="enviarQuiz.php" method="POST" enctype="multipart/form-data" >
 
+         <h1 style="color: white">Imagem grande ? Redimencione-a !</h1>
+
+            <p >
+                <img id="ImagemCrop" src="<?=$conteudo?>">
+                <input type="hidden" id="x" name="x" />
+                <input type="hidden" id="y" name="y" />
+                <input type="hidden" id="w" name="w" />
+                <input type="hidden" id="h" name="h" />
+                <input type="hidden" id="imagem" name="imagem" value="<?=$conteudo?>" />
+                <input type="hidden" name="foto" value="<?=$foto?>" >
+            </p>
+
      <div class="grid-container">
         <div class="grid-100">
             <div class="grid-50"></div>
@@ -114,7 +127,7 @@ copy($local, $conteudo);
             </p>    
             <p class="quiz">Selecione a resposta correta !</p>
 
-            <p class="quiz"> 
+<p class="quiz"> 
                 Resposta:<br /> 
                 <input type="radio" name="certa1" required="required" value="1"><input  type="text" size="30" name="resposta1" required="required" maxlength="50">
             </p>    
@@ -133,22 +146,14 @@ copy($local, $conteudo);
                 Resposta:<br /> 
                 <input type="radio" name="certa1" value="4"><input  type="text" size="30" name="resposta4" required="required" maxlength="50"> 
             </p>
-            
+    
+
             <div id="addPerg"></div>
             <p> 
                 <input type="button" class="adicionar" id="btnAdicionarPergunta" value="        Adicionar +Pergunta">
             </p>
             <input type="hidden" name="id" value="<?=$id?>">
-        <h1 style="color: white">Imagem grande ? Redimencione-a !</h1>
-            <p>
-                <img id="ImagemCrop" src="<?=$conteudo?>">
-                <input type="hidden" id="x" name="x" />
-                <input type="hidden" id="y" name="y" />
-                <input type="hidden" id="w" name="w" />
-                <input type="hidden" id="h" name="h" />
-                <input type="hidden" id="imagem" name="imagem" value="<?=$conteudo?>" />
-                <input type="hidden" name="foto" value="<?=$foto?>">
-            </p>
+       &nbsp
                 <p class="titulo">  
                     <h1 class="h1person">Quando você estiver pronto clique aqui</h1>
                     <input type="submit" value="FINALIZAR" id="finalizar">
@@ -156,5 +161,7 @@ copy($local, $conteudo);
         </div>
     </div>  
     </form>
+
+
 </body>
 </html>

@@ -41,6 +41,7 @@
 <head>
 	  <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
   	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
+    <link rel="stylesheet" href="css/radioBox.css?time=<?=time()?>">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	  <title>Quiz</title>
@@ -57,7 +58,6 @@
 </head>
 <body style="background-color:  rgb(51,109,226); ">
 
- <div class="grid-container">
 
 <div class="grid-100" >
    <p><img width="30%" style="border: solid 1px black; margin-bottom: 10px " src="<?=$consultaQ[0]["foto"]?> "> </p>
@@ -68,18 +68,43 @@ if (!($pergunta == $consultaId[0]["pp"])) {
 <h1 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><?=$consultaP[$pergunta]["texto"]?></h1>
 
 <form name="frmQuizId" method="POST" action="tentarQuiz.php">
-  <div class="alternativa">
-  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="1" required="required"><?=$consultaR[0]["resposta"]?>
+
+<fieldset class="radio-image">  
+
+  <div class="grid-100">
+  <div class="alternativa" >
+  <label for="A">
+  	<input id="A" type="radio" class="button" name="resposta" value="1" required="required"><?=$consultaR[0]["resposta"]?>
+     <img src="icons/right.png"  width="20px" alt="Masculino">  
   </div><br>
+</label>
+
+
   <div class="alternativa"> 
-  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="2"><?=$consultaR[1]["resposta"]?>
+    <label for="B">
+  	<input id="B" type="radio" class="button" name="resposta" value="2"><?=$consultaR[1]["resposta"]?>
+    <img src="icons/right.png"  width="20px" alt="Masculino">
   </div><br>
+</label>
+
+ 
+ 
   <div class="alternativa"> 
-  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="3"><?=$consultaR[2]["resposta"]?>
+    <label for="C"> 
+  	<input id="C" type="radio" class="button" name="resposta" value="3"><?=$consultaR[2]["resposta"]?>
+        <img src="icons/right.png"  width="20px" alt="Masculino">
   </div><br>
+</label>
+
+
   <div class="alternativa"> 
-  	<input type="radio" class="button" style="font-size: 2em" name="resposta" value="4"><?=$consultaR[3]["resposta"]?>
+    <label for="D"> 
+  	<input id="D" type="radio" class="button"  name="resposta" value="4"><?=$consultaR[3]["resposta"]?>
+    <img src="icons/right.png"  width="20px" alt="Masculino">
   </div><br>
+</label>
+   </fieldset>
+
   <input type="submit" value="PRÓXIMA">
 	<input type="hidden" name="id" value="<?=$id?>">
   <input type="hidden" name="contador" value="<?=$contador?>">

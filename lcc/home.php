@@ -94,8 +94,10 @@ $dados = $sqlUser->fetchAll();
 				<p class="textoUpImagem" style="text-decoration: none; color: white">
 				  <?=$quizzes["titulo"]?>		
 				</p>
-				<p>
-				  <img  style="border-radius: 10px" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
+				<p >
+				  <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
+				</p>
+				<p class="textoUpImagem2" >QUIZ	
 				</p>
 			</div>
 		  </a>
