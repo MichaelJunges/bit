@@ -12,6 +12,7 @@ session_start();
 	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
         function validarFormulario()	
         {	  
@@ -25,7 +26,7 @@ session_start();
         }
 	</script>
 	<script language="Javascript">
-		function validarEmail(){
+	  function validarEmail(){
 		if( document.forms[0].email.value==""){
 			document.getElementById("msgemail").innerHTML = "<font color='red'>Por favor digite um e-mail</font>";
 			return false;
@@ -33,11 +34,11 @@ session_start();
 		     || document.forms[0].email.value.indexOf('.')==-1 ){
 			  document.getElementById("msgemail").innerHTML = "<font color='red'>E-mail Inválido</font>";
 			  return false;
-			}else{
-				document.getElementById("msgemail").innerHTML = "";
-				return true;
-			}
+		}else{
+			document.getElementById("msgemail").innerHTML = "";
+			return true;
 		}
+	  }
 		document.getElementById("email").addEventListener("input", function (event) {
 		  if (validarEmail()) {
 		    fetch('verifica.php?email=${this.value}')
@@ -78,9 +79,24 @@ session_start();
 				<input type="text" size="30" name="nreal" required="required" maxlength="50" pattern="[a-zA-Z- ]+" placeholder="Nome Real"> 
 			</p>
 			<p> 
-				<input type="email" size="30" name="email" id="email" maxlength="50" required="required" placeholder="Email" onblur="validarEmail()"> 
+				<input type="email" size="30" name="email" id="email" maxlength="50" required="required" placeholder="Email" onblur="validarEmail()"><br>
+				<span id="msgemail" style="margin: 0; color: red"></span>
+				<script language="javascript">
+				    var email = $("#email"); 
+				        email.blur(function() { 
+				            $.ajax({ 
+				                url: 'verificaEmail.php', 
+				                type: 'POST', 
+				                data:{"email" : email.val()}, 
+				                success: function(data) { 
+				                console.log(data); 
+				                data = $.parseJSON(data); 
+				                $("#msgemail").text(data.email);
+				            } 
+				        }); 
+				    }); 
+				</script>
 			</p>
-			<p id="msgemail"></p>  
 			<p> 
 				<input type="password" size="30" name="pass" required="required" pattern="[a-zA-Z0-9-]+" placeholder="Senha"> 
 			</p>
