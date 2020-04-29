@@ -120,15 +120,28 @@ if (!($pergunta == $consultaId[0]["pp"])) {
     if ($contador == $pergunta) {       
  ?>    
  <div style="text-align: center;">
-  <input type="hidden" name="imagem" src="<?=$consultaQ[0]["foto"]?>">
  <h3>PARABÉNS</h3>
   <h3>Você acertou <?=$contador?> de <?=$pergunta?></h3>
   <img src="./icons/congru.gif" alt="meu gif">
   </div>
-
  <?php  
+    }elseif ($contador == "0") {
+      ?>
+    <div style="text-align: center;">
+ <h3>PUTSSSS...</h3>
+  <h3>Você acertou <?=$contador?> de <?=$pergunta?></h3>
+  <img src="./icons/puts.gif" alt="meu gif">
+  </div>
+   <?php 
+    }elseif ($contador == $pergunta - '1') {
+      ?>
+    <div style="text-align: center;">
+ <h3>ESSA FOI POR POUCO...</h3>
+  <h3>Você acertou <?=$contador?> de <?=$pergunta?></h3>
+  <img src="./icons/quase.gif" alt="meu gif">
+  </div>
+   <?php 
     }
-
 }?>
 &nbsp
         <a href="home.php">Voltar Pagina </a>
