@@ -116,11 +116,22 @@ if (!($pergunta == $consultaId[0]["pp"])) {
 
 <?php }else{
   ?>
-  <h2>Você acertou <?=$contador?> de <?=$pergunta?></h2>
-  <?php
+<?php
+    if ($contador == $pergunta) {       
+ ?>    
+ <div style="text-align: center;">
+  <input type="hidden" name="imagem" src="<?=$consultaQ[0]["foto"]?>">
+ <h3>PARABÉNS</h3>
+  <h3>Você acertou <?=$contador?> de <?=$pergunta?></h3>
+  <img src="./icons/congru.gif" alt="meu gif">
+  </div>
+
+ <?php  
+    }
+
 }?>
-        <a href="home.php">
-        Voltar Pagina </a>
+&nbsp
+        <a href="home.php">Voltar Pagina </a>
 </div>
 </div>
 </body>

@@ -41,19 +41,7 @@ input[type=submit]{
 .button{
 	color: red;
 }
-.alternativa{
-	background-color: white;
-	text-align: center;
-	font-weight: 800;
-	font-size: 30px;
-	/*margin-left: 0px, 100px, 0px, 100px;*/
-	border: inset;
-	border-color: black;
-	/*padding: 0px ,10px, 10px, 10px;*/
-}
-.alternativa:hover{
-	background-color: silver;
-}
+
 
 .titulo{
 	-webkit-text-stroke-width: 1,5px; /* largura da borda */
@@ -178,45 +166,6 @@ input:-webkit-autofill {
 	color: white;
 	font-family: calibri;
 
-}
-.adicionar
-{
-	padding: 8px;
-	background-image: url(../icons/plus.png);
-	background-size: 32px;
-	background-repeat: no-repeat;
-	font-family: Calibri;
-	font-size: 15px;
-	border-radius: 20px;
-	border-color: white;
-	border-style: dotted;
-	outline: none;
-
-}
-.adicionar:hover
-{
-	background-image: url(../icons/right.png);
-	cursor: pointer;
-}
-.excluir
-{
-	padding: 8px;
-	background-image: url(../icons/trash.png);
-	background-size: 32px;
-	background-repeat: no-repeat;
-	font-family: Calibri;
-	font-size: 15px;
-	border-radius: 20px;
-	border-color: white;
-	border-style: dotted;
-	margin: 10px;
-	outline: none;
-
-}
-.excluir:hover
-{
-	background-image: url(../icons/del.png);
-	cursor: pointer;
 }
 
 .imagemQuiz{
