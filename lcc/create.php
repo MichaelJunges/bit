@@ -8,7 +8,7 @@ session_start();
 <head>
 	<title>■ NOVA CONTA ■</title>
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
-	<link rel="stylesheet" href="css/style1.css">
+	<link rel="stylesheet" href="css/login.css">
 	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
@@ -32,8 +32,8 @@ session_start();
 	<div class="grid-container">
 		<div style="padding-top: 1%" class="grid-100">
 
-<div class="foco">
-			<h1 class="titulo">Registro</h1>
+<div style="text-align: center;">
+			<h1>REGISTRO</h1>
 			<p> 
 				<input type="text" size="30" name="login" required="required" maxlength="6" pattern="[a-zA-Z0-9-]+" placeholder="Login"> 
 			</p>
@@ -46,19 +46,19 @@ session_start();
 			<p> 
 				<input type="password" size="30" name="pass" required="required" pattern="[a-zA-Z0-9-]+" placeholder="Senha"> 
 			</p>
-			<p style="color: white">
+			<p class="radio" >
 				<input  type="radio" id="m" name="sexo" required="required" value="F">Feminino
                     <input type="radio" id="f" name="sexo" value="M"> Masculino
 
 			</p>
   &nbsp
 			<p>  
-				<input type="submit"  value="Registrar">
+				<input type="submit"  value="REGISTRAR">
 			</p>
 			
 			<p>  
-				<a style="color: white; text-decoration: none;" href="index.php">
-				⬅️ Voltar Pagina</a>
+				<a class="aviso" style="color: white; text-decoration: none;" href="index.php">
+				Voltar Pagina</a>
 			</p>
 		</div>
 	</div>

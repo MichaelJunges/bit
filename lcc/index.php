@@ -12,9 +12,8 @@
 <html>
 <head>
 	<title>■ 4Quiz - Login ■</title>
-	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
-	<!-- <link rel="stylesheet" href="css/style1.css?time=<?=time()?>"> -->
-		<link rel="stylesheet" href="css/campos.css?time=<?=time()?>">
+	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css"> 
+		<link rel="stylesheet" href="css/login.css?time=<?=time()?>">
 		<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -60,20 +59,20 @@
 			</div>
 
 			 <!-- <input type="hidden" id="id" name="id" value=""> -->
-		
+
 			 <p>  
-				<a style="text-decoration: none; font-family: Calibri; color: white" href="create.php">CRIAR CONTA</a>
-			    </p>
-			<p>  
 				<input type="submit"  value="ENTRAR">
 			</p>
+		
+			 <p>  
+				<a style="text-decoration: none; font-family: Calibri; color: white" href="create.php"><h3>Não tenho conta :(</h3></a>
+			    </p>
+			
 				 &nbsp
 	
 	
-<p class="alert"><?=@urldecode($_GET["msg"])?></p>
+<p class="aviso"><?=@urldecode($_GET["msg"])?></p>
 	
-
-<!-- teste -->
 
 </div>
 	</div>
