@@ -40,7 +40,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	  <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
+	  <!-- <link rel="stylesheet" href="css/unsemantic-grid-responsive.css"> -->
   	<link rel="stylesheet" href="css/login.css?time=<?=time()?>">
     <link rel="stylesheet" href="css/radioBox.css?time=<?=time()?>">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
@@ -65,13 +65,13 @@
 <?php
 if (!($pergunta == $consultaId[0]["pp"])) {
 ?>
-<h3 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><?=$consultaP[$pergunta]["texto"]?></h3>
-
 <form name="frmQuizId" method="POST" action="tentarQuiz.php">
 
 <div class="grid-100" style="text-align: center;" >
-   <p><img width="30%" style="border: solid 1px black; margin-bottom: 10px " src="<?=$consultaQ[0]["foto"]?> "> </p>
+   <p><img width="20%" style="border: solid 4px black; " src="<?=$consultaQ[0]["foto"]?> "> </p>
 </div>
+
+<h3 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><?=$consultaP[$pergunta]["texto"]?></h3>
 
 <fieldset class="radio-image">  
 
@@ -131,7 +131,7 @@ if (!($pergunta == $consultaId[0]["pp"])) {
       ?>
     <div style="text-align: center;">
  <h3>PUTSSSS...NENHUMA ?</h3>
-  <img src="./icons/puts.gif" alt="meu gif">
+  <img src="./icons/reprovado.gif" alt="meu gif">
   </div>
    <?php 
     }elseif ($contador == $pergunta - '1') {

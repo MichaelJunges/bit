@@ -121,7 +121,6 @@ session_start();
                     <input type="radio" id="f" name="sexo" value="M"> Masculino
 
 			</p>
-  &nbsp
 			<p>  
 				<input type="submit"  value="REGISTRAR">
 			</p>

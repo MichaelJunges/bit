@@ -37,22 +37,19 @@ $dadosQuiz = $sqlQuiz->fetchAll();
 	<link rel="stylesheet" href="../css/style1.css?time=<?=time()?>">
 	<title>Principal/<?=$nreal?></title>
 </head>
-<body style=" margin: 0px; padding: 0px; background-image: none; background-color: yellow " >
+<body style="background-color: #1C1C1C; " >
 	
 
 	<div class="grid-container">
 		<div class="grid-100">
 
 			<div class="grid-100 about_me">
-			<p></p>
-			<div style="text-align: left;">
-		
-			</div>
 			<p><a href="logoff.php" style="background-color:  #363636; border-radius: 30px; text-decoration: none; padding: 4px; color: white; ;" >SAIR ❌</a> </p>
 			<p></p>
-			
 			<p style=" color: white"><?=@urldecode($_GET["msg"])?></p>	
 		</div>
+
+		
 		<div class="grid-100 people_title">
 			<table>
 				<thead>

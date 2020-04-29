@@ -6,40 +6,6 @@ body{
 	background-repeat: no-repeat;
 	background-size: all;
 	font-family: calibri;
-
-}
-
-		
-input[type=text], input[type=password], input[type=email], input[type=textarea]{
-    border: solid 2px #aaa;
-    padding: 8px;
-    margin: 10px;
-    border-radius:10px;
-    border-color: #255e87;
-    background-color: #082336;
-    border-color: ;
-    outline: none; /*remove desenho da seleção*/
-    color: #4099d1;
-    border-color: #4099d1;
-
-
-}
-input[type=submit]{
-	padding:2px 60px; 
-	border: groove;
-	/*border-radius: 20px;*/
-	border-style: solid;
-	border-color: blue;
-	cursor: pointer;
-	color:#4099d1;
-	font-family: calibri;
-	font-size: 20px;
-	border-color: #4099d1;
-	background-color: #082336;
-}
-
-.button{
-	color: red;
 }
 
 
@@ -94,8 +60,9 @@ text-decoration: none;
 {	
 	background-color: white;
 	color: black;
-	border-radius: 10px;
+	border-radius: 5px;
 	padding: 10px;
+	margin-bottom: 10px;
 }
 p
 {
@@ -104,16 +71,23 @@ p
 }
 table
 {
-	border: 1px solid black;
+	border: 1px solid white;
 	width: 100%;
 }
 
 thead
 {
 	background-color: #eee;
-	border: 1px solid black;
+	border: 1px solid white;
+}
+td{
+	color: white;
 }
 
+a{
+	color: red;
+	text-decoration: none;
+}
 
 .azulEbranco
 {

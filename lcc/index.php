@@ -49,14 +49,14 @@
 <div class="grid-100" style="text-align: center;" >
 		<h1 > 4QUIZZ </h1>
 			
-			<div class="inputWithIcon">
+		
 				<input  type="text"  name="login" required="required" maxlength="6" autofocus="autofocus"  placeholder="Login"> 
-			</div>
+		
 
 			
-			<div class="inputWithIcon">
+			<p >
 				<input type="password" name="pass" required="required" placeholder="Senha" autofocus="autofocus"> 
-			</div>
+			</p>
 
 			 <!-- <input type="hidden" id="id" name="id" value=""> -->
 
@@ -65,7 +65,7 @@
 			</p>
 		
 			 <p>  
-				<a style="text-decoration: none; font-family: Calibri; color: white" href="create.php"><h3>Não tenho conta :(</h3></a>
+				<a style="text-decoration: none; font-family: Calibri; color: white" href="create.php"><h2>Não tenho conta :(</h2></a>
 			    </p>
 			
 				 &nbsp

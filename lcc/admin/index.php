@@ -7,32 +7,32 @@
 <head>
 	<title>■ HIPOC4MPO ■</title>
 	<link rel="stylesheet" href="../css/unsemantic-grid-responsive.css">
-	<link rel="stylesheet" href="../css/style1.css?time=<?=time()?>">
+	<link rel="stylesheet" href="../css/login.css?time=<?=time()?>">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+
+
 	<form name="frmLoginAdmin" action="login.php" method="post">
 
-	<div class="grid-container">
-		<div style="padding-top: 5%" class="grid-100">
-			<p> 
+	<div class="grid-container" style="text-align: center;">
+		<div class="grid-100">
+			<h1>ADMIN</h1>
+		 
 
 				<input  type="text" size="30" name="login" required="required" maxlength="6" autofocus="autofocus" placeholder="Login" > 
-			</p> 
-			<p> 
+ <br>
+			 
 				<input type="password" size="30" name="pass" required="required" placeholder="Senha"> 
-			</p>
+		
 			 <!-- <input type="hidden" id="id" name="id" value=""> -->
 			<p>  
 				<input type="submit"  value="Logar">
 
-			<p style=" color: purple"><?=@urldecode($_GET["msg"])?></p>
-
 			<p>  
-        <a style="color: black" href="../index.php">
-        ⬅️</a>
-
+      <h2>  <a href="../index.php">Volta Página</a></h2>
         <p style=" color: white"><?=@urldecode($_GET["msg"])?></p>	
       </p>
 
