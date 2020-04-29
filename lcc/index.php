@@ -20,9 +20,9 @@
     <script>
         function validarFormulario()	
         {	  
-            if (document.frmLogin.login.value.trim().length < 3) 
+            if (document.frmLogin.login.value.trim().length < 4) 
             {
-                alert("Digite um nome com 3 ou + caracteres");
+                alert("Insira login com 4 ou + caracteres");
                 document.frmLogin.login.focus();
                 return false;
             }

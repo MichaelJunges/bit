@@ -19,8 +19,8 @@ copy($local, $conteudo);
 <html>
 <head>
     <title>Criar Quiz</title>
-    <link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
-    <link rel="stylesheet" href="css/radioBox.css?time=<?=time()?>">
+    <!-- <link rel="stylesheet" href="css/.css?time=<?=time()?>"> -->
+    <link rel="stylesheet" href="css/login.css?time=<?=time()?>">
     <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
@@ -95,6 +95,7 @@ copy($local, $conteudo);
     </script>
 </head>
 <body>
+    <div class="grid-container" style="text-align: center;">
     <form name="frmCreateQuiz" action="enviarQuiz.php" method="POST" enctype="multipart/form-data" >
 
          <h1 style="color: white">Imagem grande ? Redimencione-a !</h1>
@@ -109,7 +110,7 @@ copy($local, $conteudo);
                 <input type="hidden" name="foto" value="<?=$foto?>" >
             </p>
 
-     <div class="grid-container">
+     
         <div class="grid-100">
             <div class="grid-50"></div>
             <h1 class="h1person">Agora, preencha os campos !</h1>
@@ -125,7 +126,7 @@ copy($local, $conteudo);
                 <br /> 
                 <input  type="text" size="50" name="pergunta1" required="required" maxlength="100">
             </p>    
-            <p class="quiz">Selecione a resposta correta !</p>
+           <!--  <h1 class="quiz">Selecione a resposta correta !</h1> -->
 
 <p class="quiz"> 
                 Resposta:<br /> 
@@ -158,6 +159,11 @@ copy($local, $conteudo);
                     <h1 class="h1person">Quando você estiver pronto clique aqui</h1>
                     <input type="submit" value="FINALIZAR" id="finalizar">
                 </p>
+
+                <p>  
+                <a class="aviso" style="color: white; text-decoration: none;" href="index.php">
+                Voltar Pagina</a>
+            </p>
         </div>
     </div>  
     </form>

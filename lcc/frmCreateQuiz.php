@@ -14,7 +14,7 @@ $id = $_SESSION["id"];
 <html>
 <head>
 	<title>Criar Quiz</title>
-	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
+	<link rel="stylesheet" href="css/login.css?time=<?=time()?>">
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@ $id = $_SESSION["id"];
     </script>
 </head>
 <body >
-	<div class="grid-container">
+	<div class="grid-container" style="text-align: center;">
 		<div class="grid-100">
 			<div class="grid-50"></div>
 			<h1 style="color: white">Seu Quiz precisa de uma foto :)</h1>

@@ -13,21 +13,21 @@ session_start();
 	 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script>
-        function validar4()	
+        function validarFormulario()	
         {	  
-            if (document.frmLogin.login.value.trim().length < 3) 
+            if (document.frmCreate.login.value.trim().length < 4) 
             {
-                alert("Digite um nome FICTICIO com 3 ou + caracteres");
-                document.frmLogin.login.focus();
+                alert("Insira login com 4 ou + caracteres");
+                document.frmCreate.login.focus();
                 return false;
             }
             return true;
         }
-</script>
+	</script>
 </head>
 
 <body >
-	<form name="frmCreate" action="create_u.php" method="post" onsubmit="return validar4()">
+	<form name="frmCreate" action="create_u.php" method="post" onsubmit="return validarFormulario()">
 
 	<div class="grid-container">
 		<div style="padding-top: 1%" class="grid-100">

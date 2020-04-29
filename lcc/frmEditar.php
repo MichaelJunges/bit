@@ -24,7 +24,7 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
   <html>
   <head>
   	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
-  	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
+  	<link rel="stylesheet" href="css/login.css?time=<?=time()?>">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   	<title>Alterar Conta</title>
   </head>
@@ -32,8 +32,8 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
     <div class="grid-container">
     <div style="padding-top: 7%" class="grid-100">
 
-<div class="foco">
-  	<h1 class="titulo">Editar</h1>
+<div style="text-align: center;">
+  	<h1>EDITAR</h1>
   	<p><form name="frmEditar" method="POST" action="editarConta.php"></p>
 
  <p><p></p><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value=<?=$consulta[0]["email"]?>></p> 
@@ -42,10 +42,10 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
 
 <input type="hidden" name="id" value="<?=$id?>">
 
-  <p><input type="submit" value="Confirmar"></p>
+  <p><input type="submit" value="OK"></p>
   <p>  
-        <a style="color: white" href="home.php">
-        ⬅️ Voltar Pagina !</a>
+        <a class="aviso" href="home.php">
+        Voltar Pagina</a>
       </p>
 </div>
 
