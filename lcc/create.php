@@ -24,6 +24,43 @@ session_start();
             return true;
         }
 	</script>
+	<script language="Javascript">
+		function validarEmail(){
+		if( document.forms[0].email.value==""){
+			document.getElementById("msgemail").innerHTML = "<font color='red'>Por favor digite um e-mail</font>";
+			return false;
+		}else if( document.forms[0].email.value.indexOf('@')==-1
+		     || document.forms[0].email.value.indexOf('.')==-1 ){
+			  document.getElementById("msgemail").innerHTML = "<font color='red'>E-mail Inválido</font>";
+			  return false;
+			}else{
+				document.getElementById("msgemail").innerHTML = "";
+				return true;
+			}
+		}
+		document.getElementById("email").addEventListener("input", function (event) {
+		  if (validarEmail()) {
+		    fetch('verifica.php?email=${this.value}')
+		      .then(response => {
+		        if (response.ok) {
+		          return response.json();
+		        }
+		        throw new Error("Oops! Algo de errado não está certo...");
+		      })
+		      .then(json => {
+		        if (json.exists) {
+		          document.getElementById("msgemail").innerHTML = "<font color='red'>E-mail já está cadastrado. Por favor, tente outro.</font>";
+		        } else {
+		          document.getElementById("msgemail").innerHTML = "<font color='green'>E-mail disponível.</font>";
+		          document.getElementById("enviar").disabled = false;
+		        }
+		      })
+		      .catch(error => {
+		        document.getElementById("msgemail").innerHTML = "<font color='red'>Falha no servidor, por favor, tente novamente mais tarde.</font>";
+		      });
+		  }
+		});
+	</script>
 </head>
 
 <body >
@@ -41,8 +78,9 @@ session_start();
 				<input type="text" size="30" name="nreal" required="required" maxlength="50" pattern="[a-zA-Z- ]+" placeholder="Nome Real"> 
 			</p>
 			<p> 
-				<input type="email" size="30" name="email" maxlength="50" required="required" placeholder="Email"> 
-			</p> 
+				<input type="email" size="30" name="email" id="email" maxlength="50" required="required" placeholder="Email" onblur="validarEmail()"> 
+			</p>
+			<p id="msgemail"></p>  
 			<p> 
 				<input type="password" size="30" name="pass" required="required" pattern="[a-zA-Z0-9-]+" placeholder="Senha"> 
 			</p>
