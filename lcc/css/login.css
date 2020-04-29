@@ -18,6 +18,8 @@ h3
 	font-size: 25px;
 	color: white;
 	margin: 0px;
+	-webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: black ; /* cor da borda */
 }
 
 
@@ -45,7 +47,7 @@ input[type="text"],input[type="password"],input[type="email"], input[type="texta
 	font-size: 25px;
 }
 
-input[type="submit"]{
+input[type="submit"],input[type="reset"]{
 	font-family: Calibri;
 	font-size: 30px;
 	border-color: black;

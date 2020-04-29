@@ -18,7 +18,7 @@ $id = $_SESSION["id"];
   <html>
   <head>
   	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
-  	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
+  	<link rel="stylesheet" href="css/login.css?time=<?=time()?>">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
   	<title>Alterar Foto</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -42,21 +42,23 @@ $id = $_SESSION["id"];
   </head>
   <body>
     <div class="grid-container">
-    <div style="padding-top: 7%" class="grid-100">
+    <div  class="grid-100" style="text-align: center;">
 
 <div class="foco">
-  	<h1 class="titulo">Foto</h1>
+  <h1>Selecione a foto de perfil ;D</h1>
   <form name="frmFoto" method="POST" action="foto.php" enctype="multipart/form-data" >
+
  <p><input type="file" name="foto" autofocus="autofocus" required="required" accept=".jpg, .jpeg" onchange="mostraImagem()"></p> <br>
 
 <p><img id="inputImage" width="50%"></p>
   <input type="hidden" name="id" value="<?=$id?>">
 
-  <p><input type="submit" value="Enviar"></p><br>
-  <p><input type="reset" value="Limpar"></p>
+ <input type="reset" value="Limpar">
+  <input type="submit" value="Enviar">
+ 
   <p>  
         <a style="color: white" href="home.php"><br>
-        ⬅️ Voltar Pagina !</a>
+       Voltar Pagina</a>
       </p>
 </div>
 

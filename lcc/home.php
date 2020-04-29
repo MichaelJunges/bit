@@ -56,6 +56,12 @@ $dados = $sqlUser->fetchAll();
 </head>
 <body style=" margin: 0px; padding: 0px; background-color: rgb(51,109,226)">
 	<div class="grid-container">
+	  
+	  <div class="grid-100 about_me">
+ 			<img  width="5%" style="border-radius: 10px; padding: 0px" align="left" src="fotos/<?=$id?>.jpg"  >
+		<p class="minhasInfo" >Nome: <?=$dados[0]["nreal"]?> ||  Bio: <?=$dados[0]["bio"]?></p>	
+	  </div>
+
 	  <div class="grid-33 mobile-grid-100" style="padding: 0px;">
 		<a href="frmEditar.php" style="text-decoration: none;">
 		  <p class="criarEditar">Editar Conta</p>
@@ -72,14 +78,6 @@ $dados = $sqlUser->fetchAll();
 	    <a href="logoff.php" style="text-decoration: none;">
 		  <p class="criarEditar">Sair</p>
 		</a>
-	  </div>
-
-	  <div class="grid-100 about_me">
- 		<a href="frmFoto.php?id=<?=$id?>">
- 			<img  width="4%" style="border-radius: 10px; padding-bottom: 0px; padding-right: 10px;" align="left" src="fotos/<?=$id?>.jpg"  >
- 		</a>
-		<p class="minhasInfo" >Nome: <?=$dados[0]["nreal"]?></p>
-		<p class="minhasInfo">Bio: <?=$dados[0]["bio"]?></p>	
 	  </div>
 
 	  <div class="grid-100">&nbsp</div>

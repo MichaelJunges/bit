@@ -34,6 +34,7 @@
   $sqlSelectR = $PDO->prepare("SELECT * FROM resposta WHERE id_pergunta = ?");
   @$sqlSelectR->execute(array($consultaP[$pergunta]["id"]));
   $consultaR = $sqlSelectR->fetchAll();
+
   ?>  
 
 <!DOCTYPE html>
@@ -60,9 +61,7 @@
 
 <div class="grid-container" style="text-align: center;">
 
-<div id="fotinha" class="grid-100" style="text-align: center;" >
-   <p><img width="30%" style="border: solid 1px black; margin-bottom: 10px " src="<?=$consultaQ[0]["foto"]?> "> </p>
-</div>
+
 <?php
 if (!($pergunta == $consultaId[0]["pp"])) {
 ?>
@@ -70,7 +69,9 @@ if (!($pergunta == $consultaId[0]["pp"])) {
 
 <form name="frmQuizId" method="POST" action="tentarQuiz.php">
 
-
+<div class="grid-100" style="text-align: center;" >
+   <p><img width="30%" style="border: solid 1px black; margin-bottom: 10px " src="<?=$consultaQ[0]["foto"]?> "> </p>
+</div>
 
 <fieldset class="radio-image">  
 
@@ -117,7 +118,7 @@ if (!($pergunta == $consultaId[0]["pp"])) {
 
 <?php }else{
   ?>
-   <h3>Você acertou <?=$contador?> de <?=$pergunta?></h3>
+   <h3 style="padding-top: 100px; padding-bottom: 20px">Você acertou <?=$contador?> de <?=$pergunta?></h3>
 <?php
     if ($contador == $pergunta) {       
  ?>    
@@ -143,7 +144,7 @@ if (!($pergunta == $consultaId[0]["pp"])) {
     }
 }?>
 &nbsp
-       <h3> <a href="home.php">Voltar Pagina </a></h3>
+       <h2> <a href="home.php">Voltar Pagina </a></h2>
 </div>
 </div>
 </body>
