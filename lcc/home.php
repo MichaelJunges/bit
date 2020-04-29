@@ -75,6 +75,7 @@ $dados = $sqlUser->fetchAll();
 		</a>
 	  </div>
 	  
+<iframe hidden="hidden" src="https://www.youtube.com/embed/5Mj8AlkKISw?autoplay=1;mute=1'"> </iframe>
 	  <div class="grid-100 about_me">
  			<img  width="5%" height="5%" style="border-radius: 3px; padding: 0px" align="left" src="fotos/<?=$id?>.jpg"  >
 		<p class="minhasInfo" >Nome: <?=$dados[0]["nreal"]?> ||  Bio: <?=$dados[0]["bio"]?></p>	
