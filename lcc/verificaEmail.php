@@ -13,6 +13,8 @@ if(isset($_POST['email'])){
 
     #Se o retorno for maior do que zero, diz que já existe um.
     if($dados) 
-        echo json_encode(array('email' => "Já existe um usuario cadastrado com este e-mail")); 
+        echo json_encode(array('email' => "Já existe um usuario cadastrado com este e-mail"));
+    else
+        echo json_encode(array('login' => "")); 
 }
 ?>

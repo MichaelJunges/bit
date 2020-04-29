@@ -73,7 +73,23 @@ session_start();
 <div style="text-align: center;">
 			<h1>REGISTRO</h1>
 			<p> 
-				<input type="text" size="30" name="login" required="required" maxlength="6" pattern="[a-zA-Z0-9-]+" placeholder="Login"> 
+				<input type="text" size="30" id="login" name="login" required="required" maxlength="6" pattern="[a-zA-Z0-9-]+" placeholder="Login"><br>
+				<span id="msglogin" style="margin: 0; color: red"></span>
+				<script language="javascript">
+				    var login = $("#login"); 
+				        login.blur(function() { 
+				            $.ajax({ 
+				                url: 'verificaLogin.php', 
+				                type: 'POST', 
+				                data:{"login" : login.val()}, 
+				                success: function(data) { 
+				                console.log(data); 
+				                data = $.parseJSON(data); 
+				                $("#msglogin").text(data.login);
+				            } 
+				        }); 
+				    }); 
+				</script> 
 			</p>
 			<p> 
 				<input type="text" size="30" name="nreal" required="required" maxlength="50" pattern="[a-zA-Z- ]+" placeholder="Nome Real"> 
