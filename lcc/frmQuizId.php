@@ -69,6 +69,9 @@ if (!($pergunta == $consultaId[0]["pp"])) {
 
 <form name="frmQuizId" method="POST" action="tentarQuiz.php">
 
+<input type="submit" value="PRÓXIMA">
+&nbsp
+
 <fieldset class="radio-image">  
 
   <div class="grid-100">
@@ -105,11 +108,13 @@ if (!($pergunta == $consultaId[0]["pp"])) {
 </label>
    </fieldset>
 
-  <input type="submit" value="PRÓXIMA">
+  
 	<input type="hidden" name="id" value="<?=$id?>">
   <input type="hidden" name="contador" value="<?=$contador?>">
   <input type="hidden" name="pergunta" value="<?=$pergunta?>">
 </form>
+
+
 <?php }else{
   ?>
   <h2>Você acertou <?=$contador?> de <?=$pergunta?></h2>

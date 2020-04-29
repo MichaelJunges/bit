@@ -97,7 +97,7 @@ $dados = $sqlUser->fetchAll();
 				<p >
 				  <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
 				</p>
-				<p class="textoUpImagem2" >QUIZ	
+				<p class="textoUpImagem2" >QUIZ	BY <?=$quizzes["nreal"]?></p>
 				</p>
 			</div>
 		  </a>
