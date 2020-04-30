@@ -7,7 +7,7 @@ $mensagem = urlencode("Você precisa logar");
 header("Location:index.php?msg=$mensagem");
 exit;
 }
-$mensagem = urlencode("Logoff Sucesso");
+$mensagem = urlencode("Você Saiu");
 session_destroy();
 header("Location:index.php?msg=$mensagem");
 
