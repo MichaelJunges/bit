@@ -14,7 +14,8 @@ $id = $_POST["id"];
 $foto = $_FILES["foto"]["tmp_name"];
 
 copy($foto, "fotos/$id.jpg");
-$mensagem = urldecode("Imagem adicionada com sucesso");
-header("Location: home.php?msg=$mensagem");
+
+$mensagem = urldecode("✔️");
+header("Location: frmEditar.php?fotoAtualiza=$mensagem");
 
   ?>

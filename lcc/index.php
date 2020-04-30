@@ -9,14 +9,12 @@
 
 
 <!DOCTYPE html>
-<html>
+<html>a
 <head>
 	<title>■ 4Quiz - Login ■</title>
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css"> 
 		<link rel="stylesheet" href="css/login.css?time=<?=time()?>">
 		<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
-	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script>
         function validarFormulario()	
         {	  
@@ -60,20 +58,21 @@
 
 			 <!-- <input type="hidden" id="id" name="id" value=""> -->
 
-			 <p>  
-				<input type="submit"  value="ENTRAR">
+			 <p>   
+				<input  type="submit"  value="ENTRAR">
 			</p>
+				<!-- <a class="btnLink" href="suporte.php">AJUDA</a> -->
 		
 			 <p>  
 				<a style="text-decoration: none; font-family: Calibri; color: white" href="create.php"><h2>Não tenho conta :(</h2></a>
-			    </p>
-			
-				 &nbsp
-	
-	
-<p class="aviso"><?=@urldecode($_GET["msg"])?></p>
-	
 
+			
+			    </p>
+				 &nbsp
+					<p><?=@urldecode($_GET["msg"])?></p>
+
+
+	
 </div>
 	</div>
 	</div>

@@ -63,7 +63,8 @@ input[type="submit"],input[type="reset"]{
 }
 input[type="submit"]:hover{
 	cursor: pointer;
-	 background-image: linear-gradient(to bottom right, #6a5acd, #9932cc);
+	background-image: linear-gradient(to bottom right, purple, red);
+	 /*background-image: linear-gradient(to bottom right, #6a5acd, #9932cc);*/
 }
 .aviso
 {
@@ -134,3 +135,24 @@ p,a
 .alternativa:hover{
 	background-color: silver;
 }
+.btnLink{
+ font-family: Calibri; 
+	 color: white;
+	 border-style: groove; 
+	 border-color: black;
+	 text-align: center;
+	 background-image: linear-gradient(to bottom right,#9932cc, #6a5acd);
+	 font-weight: 800;
+	text-shadow: all;
+	-webkit-text-stroke-width: 1.5px;
+	-webkit-text-stroke-color: #000;
+	border-width: 2px;
+	padding-left: 120px; 
+	padding-right: 120px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 25px;
+}
+.btnLink:hover{
+	cursor: pointer;
+	 background-image: linear-gradient(to bottom right, purple, red);

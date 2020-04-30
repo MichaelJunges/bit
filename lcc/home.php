@@ -82,8 +82,6 @@ $dados = $sqlUser->fetchAll();
 		<p class="minhasInfo" >Nome: <?=$dados[0]["nreal"]?> ||  Bio: <?=$dados[0]["bio"]?></p>	
 	  </div>
 
-	 
-	<p class="quiz"><?=@$mensagem?></p>
 	  <div class="grid-100 people_title" style="padding: 0px">
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	

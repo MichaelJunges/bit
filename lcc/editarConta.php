@@ -15,7 +15,6 @@ if ($_SESSION["acesso"] != true) {
 // Dados do Cliente
   	
   $id = $_POST["id"];
-  //$login = $_POST["login"];
   $email = $_POST["email"];
   $bio = $_POST["bio"];
 
@@ -26,12 +25,8 @@ if ($_SESSION["acesso"] != true) {
 
 if ($exec)
   {
-     $mensagem = urldecode("Editado com Sucesso!");
-    header("Location:home.php?msg=$mensagem");
+     // $mensagem = urldecode("Editado com Sucesso!");
+    header("Location:home.php");
   
-  }
-  else{
-    $mensagem = urldecode("Erro X");
-    header("Location:home.php?msg=$mensagem");
     
   }

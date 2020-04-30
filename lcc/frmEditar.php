@@ -33,25 +33,26 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
     <div  class="grid-100">
 
 <div style="text-align: center;">
-  	<h1 style="padding-top: 10px">EDITAR</h1>
+  	<h1>EDITAR</h1>
+
   	<p><form name="frmEditar" method="POST" action="editarConta.php"></p>
 
- <p><p></p><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value=<?=$consulta[0]["email"]?>></p> 
+ <p><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value=<?=$consulta[0]["email"]?>></p> 
 
-  <p><p></p><input type="text" name="bio" maxlength="" autofocus="autofocus" required="required" pattern="[a-zA-Z0-9- ]+" placeholder="Biografia" value="<?=$consulta[0]["bio"]?>"></p> 
+  <p><input type="text" name="bio" maxlength="" autofocus="autofocus" required="required" pattern="[a-zA-Z0-9- ]+" placeholder="Biografia" value="<?=$consulta[0]["bio"]?>"></p> 
 
-<h3>FOTO DE PERFIL</h3>
   <a href="frmFoto.php?id=<?=$id?>" >
       <img  style="border-color: purple; border-style: solid;" width="20%" align="center" src="fotos/<?=$id?>.jpg"  >
     </a> 
 
-
+      <h3><?=@urldecode($_GET["fotoAtualiza"])?></h3>
+  
 <input type="hidden" name="id" value="<?=$id?>">
 
   <p><input type="submit" value="OK"></p>
   <p>  
         <a class="aviso" href="home.php">
-        Voltar Pagina</a>
+        Voltar</a>
       </p>
 </div>
 

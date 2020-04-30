@@ -132,7 +132,7 @@ if (!($pergunta == $consultaId[0]["pp"])) {
     }
 }?>
 &nbsp
-       <h2> <a href="home.php">Voltar Pagina </a></h2>
+       <h2> <a href="home.php">Voltar no 4Quiz </a></h2>
 </div>
 </div>
 </body>
