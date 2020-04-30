@@ -118,7 +118,8 @@ session_start();
 			</p>
 			<p class="radio" >
 				<input  type="radio" id="m" name="sexo" required="required" value="F">Feminino
-                    <input type="radio" id="f" name="sexo" value="M"> Masculino
+                   <input type="radio" id="f" name="sexo" value="M"> Masculino
+                   <input type="radio" id="b" name="sexo" value="B"> Não-Binário
 			</p>
 			<p>  
 				<input type="submit"  value="REGISTRAR">
