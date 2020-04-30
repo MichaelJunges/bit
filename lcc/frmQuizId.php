@@ -12,11 +12,8 @@
 	//Conexão
 	$PDO = new PDO("sqlite:users.db");
 	$id = $_GET["id"];
-  $pergunta = $_GET["pergunta"];
-  @$contador = $_GET["contador"];
-  if (empty($contador)) {
-    $contador = 0;
-  }
+	$pergunta = $_SESSION["pergunta"];
+	$contador = $_SESSION["contador"];
 
     //Consulta e pega quiz
 	$sqlSelectQ = $PDO->prepare("SELECT * FROM quiz WHERE id=?");
@@ -48,14 +45,6 @@
 	  <title>Quiz</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script>
-      function limpaUrl() {     //função
-          urlpg = $(location).attr('href');   //pega a url atual da página
-          urllimpa = urlpg.split("?")[0]      //tira tudo o que estiver depois de '?'
-          window.history.replaceState(null, null, urllimpa); //subtitui a url atual pela url limpa
-      }
-      setTimeout(limpaUrl, 0)
-    </script>
 </head>
 <body>
 
@@ -111,7 +100,6 @@ if (!($pergunta == $consultaId[0]["pp"])) {
 
   <input type="submit" value="PRÓXIMA">
 	<input type="hidden" name="id" value="<?=$id?>">
-  <input type="hidden" name="contador" value="<?=$contador?>">
   <input type="hidden" name="pergunta" value="<?=$pergunta?>">
 </form>
 

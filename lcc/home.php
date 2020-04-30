@@ -17,7 +17,8 @@ $id = $_SESSION['id'];
 $nreal = $_SESSION['nreal'];
 $email = $_SESSION['email'];
 $bio = $_SESSION['bio'];
-
+$_SESSION["contador"] = 0;
+$_SESSION["pergunta"] = 0;
 
 //quizes
 $sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
@@ -87,7 +88,7 @@ $dados = $sqlUser->fetchAll();
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	
 		?>
-		  <a href="frmQuizId.php?id=<?=$quizzes["id"]?>&pergunta=0">
+		  <a href="frmQuizId.php?id=<?=$quizzes["id"]?>">
 		  	<div class="grid-25 mobile-grid-100 people" > 
 				<p class="textoUpImagem" style="text-decoration: none; color: white">
 				  <?=$quizzes["titulo"]?>		
