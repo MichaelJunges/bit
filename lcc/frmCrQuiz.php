@@ -98,7 +98,7 @@ copy($local, $conteudo);
     <div class="grid-container" style="text-align: center;">
     <form name="frmCreateQuiz" action="enviarQuiz.php" method="POST" enctype="multipart/form-data" >
 
-         <h1 style="color: white">Imagem grande ? Redimencione-a !</h1>
+         <h1 style="color: white">Redimencione-a !</h1>
 
             <p >
                 <img id="ImagemCrop" src="<?=$conteudo?>">
@@ -155,14 +155,12 @@ copy($local, $conteudo);
             </p>
             <input type="hidden" name="id" value="<?=$id?>">
        &nbsp
-                <p class="titulo">  
-                    <h1 class="h1person">Quando você estiver pronto clique aqui</h1>
+                
                     <input type="submit" value="FINALIZAR" id="finalizar">
-                </p>
+        
 
                 <p>  
-                <a class="aviso" style="color: white; text-decoration: none;" href="index.php">
-                Voltar Pagina</a>
+               
             </p>
         </div>
     </div>  

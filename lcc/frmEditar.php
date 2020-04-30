@@ -33,7 +33,7 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
     <div  class="grid-100">
 
 <div style="text-align: center;">
-  	<h1>EDITAR</h1>
+  	<h1>  <a class="aviso" href="home.php">< </a>EDITAR </h1>
 
   	<p><form name="frmEditar" method="POST" action="editarConta.php"></p>
 
@@ -42,7 +42,7 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
   <p><input type="text" name="bio" maxlength="" autofocus="autofocus" required="required" pattern="[a-zA-Z0-9- ]+" placeholder="Biografia" value="<?=$consulta[0]["bio"]?>"></p> 
 
   <a href="frmFoto.php?id=<?=$id?>" >
-      <img  style="border-color: purple; border-style: solid;" width="20%" align="center" src="fotos/<?=$id?>.jpg"  >
+      <img  style="border-color: purple; border-style: solid;" width="20%" align="center" src="fotos/<?=$id?>.jpg" alt="Selecione sua foto" >
     </a> 
 
       <h3><?=@urldecode($_GET["fotoAtualiza"])?></h3>
@@ -50,10 +50,6 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
 <input type="hidden" name="id" value="<?=$id?>">
 
   <p><input type="submit" value="OK"></p>
-  <p>  
-        <a class="aviso" href="home.php">
-        Voltar</a>
-      </p>
 </div>
 
   

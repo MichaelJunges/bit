@@ -6,7 +6,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>■ NOVA CONTA ■</title>
+	<title>Registro - 4Quiz </title>
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
 	<link rel="stylesheet" href="css/login.css">
 	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -16,9 +16,10 @@ session_start();
     <script>
         function validarFormulario()	
         {	  
-            if (document.frmCreate.login.value.trim().length < 4) 
+            if (document.frmCreate.login.value.trim().length < 4  || 
+            	document.frmCreate.nreal.value.trim().length < 4 )
             {
-                alert("Insira login com 4 ou + caracteres");
+                alert("Insira login/Nome com 4 ou MAIS Caracteres");
                 document.frmCreate.login.focus();
                 return false;
             }

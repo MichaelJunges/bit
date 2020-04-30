@@ -45,21 +45,17 @@ $id = $_SESSION["id"];
     <div  class="grid-100" style="text-align: center;">
 
 <div class="foco">
-  <h1>Selecione a foto de perfil ;D</h1>
+  <h1>  <a style="color: white" href="home.php"><br>
+       <</a> Selecione a foto de perfil ;D</h1>
   <form name="frmFoto" method="POST" action="foto.php" enctype="multipart/form-data" >
+
+     <input type="reset" value="Limpar">
+  <input type="submit" value="Enviar">
 
  <p><input type="file" name="foto" autofocus="autofocus" required="required" accept=".jpg, .jpeg" onchange="mostraImagem()"></p> <br>
 
 <p><img id="inputImage" width="50%"></p>
   <input type="hidden" name="id" value="<?=$id?>">
-
- <input type="reset" value="Limpar">
-  <input type="submit" value="Enviar">
- 
-  <p>  
-        <a style="color: white" href="home.php"><br>
-       Voltar Pagina</a>
-      </p>
 </div>
 
   
