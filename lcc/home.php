@@ -58,28 +58,30 @@ $dados = $sqlUser->fetchAll();
 <body style=" margin: 0px; padding: 0px; background-color: rgb(51,109,226)">
 	<div class="grid-container">
 
-		 <div class="grid-33 mobile-grid-100" style="padding: 0px;">
+<div class="grid-100">
+		 <div class="grid-33 mobile-grid-100" style="padding: 5px;">
 		<a href="frmEditar.php" style="text-decoration: none;">
-		  <p class="criarEditar">Editar Conta</p>
+		  <p class="criarEditar">Meu Perfil</p>
 		</a>
 	  </div>
 
-	  <div class="grid-33 mobile-grid-100" style="padding: 0px;">
+	  <div class="grid-33 mobile-grid-100" style="padding: 5px;">
 		<a href="frmCreateQuiz.php" style="text-decoration: none;">
 		  <p class="criarEditar">Criar Quiz</p>
 		</a>
 	  </div>
 
-	  <div class="grid-33 mobile-grid-100" style="padding: 0px;">
+	  <div class="grid-33 mobile-grid-100" style="padding: 5px;">
 	    <a href="logoff.php" style="text-decoration: none;">
 		  <p class="criarEditar">Sair</p>
 		</a>
+	 </div>
 	  </div>
 	  
-<iframe hidden="hidden" src="https://www.youtube.com/embed/5Mj8AlkKISw?autoplay=1;mute=1'"> </iframe>
+<!-- <iframe hidden="hidden" src="https://www.youtube.com/embed/5Mj8AlkKISw?autoplay=1;mute=1'"> </iframe> -->
 	  <div class="grid-100 about_me">
- 			<img  width="5%" height="5%" style="border-radius: 3px; padding: 0px" align="left" src="fotos/<?=$id?>.jpg"  >
-		<p class="minhasInfo" >Nome: <?=$dados[0]["nreal"]?> ||  Bio: <?=$dados[0]["bio"]?></p>	
+ 			<!-- <img  width="5%" height="5%" style="border-radius: 3px; padding: 0px" align="left" src="fotos/<?=$id?>.jpg"  > -->
+		<p class="minhasInfo" >Nome: <?=$dados[0]["nreal"]?> <!-- ||  Bio: <?=$dados[0]["bio"]?> --></p>	
 	  </div>
 
 	  <div class="grid-100 people_title" style="padding: 0px">
