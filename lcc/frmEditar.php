@@ -46,10 +46,10 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
   	<p><form name="frmEditar" method="POST" action="editarConta.php"></p>
 
 <h3>E-mail</h3>
- <p><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value=<?=$consulta[0]["email"]?>></p> 
+ <p style="padding-bottom: 20px"><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value=<?=$consulta[0]["email"]?>></p> 
 
 <h3>Biografia</h3>
-  <p><input type="text" name="bio" maxlength="" autofocus="autofocus" required="required" pattern="[a-zA-Z0-9- ]+" placeholder="Biografia" value="<?=$consulta[0]["bio"]?>"></p> 
+  <p style="padding-bottom: 20px"><input type="text" name="bio" maxlength="" autofocus="autofocus" required="required" pattern="[a-zA-Z0-9- ]+" placeholder="Biografia" value="<?=$consulta[0]["bio"]?>"></p> 
 
   <a href="frmFoto.php?id=<?=$id?>" >
       <img  style="border-color: purple; border-style: solid;" width="20%" align="center" src="fotos/<?=$id?>.jpg" alt="Selecione sua foto" >
@@ -59,7 +59,7 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
   
 <input type="hidden" name="id" value="<?=$id?>">
 
-  <p><input type="submit" value="OK"></p>
+  <p style="padding-bottom: 20px"><input type="submit" value="OK"></p>
 
 <div class="grid-100 people_title" style="padding: 0px">
   <h3 style="font-style: italic;">Seus Quiz não podem ser respondidos por você</h3>
