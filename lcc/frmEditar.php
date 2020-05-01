@@ -34,7 +34,7 @@ $dadosQuiz = $sqlQuiz->fetchAll();
   	<link rel="stylesheet" href="css/login.css?time=<?=time()?>">
     <link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  	<title>Alterar Conta</title>
+  	<title>Perfil</title>
   </head>
   <body>
     <div class="grid-container-100">
@@ -45,7 +45,7 @@ $dadosQuiz = $sqlQuiz->fetchAll();
   <a href="home.php"><img src="icons/seta2.png" width="3%"> </a>
   <p><form name="frmEditar" method="POST" action="editarConta.php"></p>
     
- <p style="padding-bottom: 20px;"><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value=<?=$consulta[0]["email"]?>></p> 
+ <p style="padding-bottom: 20px;"><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value="<?=$consulta[0]["email"]?>"></p> 
 
   <p style="padding-bottom: 20px"><input type="text" name="bio" maxlength="" autofocus="autofocus"  pattern="[a-zA-Z0-9- ]+" placeholder="Biografia" value="<?=$consulta[0]["bio"]?>"></p> 
 

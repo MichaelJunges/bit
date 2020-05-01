@@ -23,6 +23,14 @@ $id = $_SESSION["id"];
   	<title>Alterar Foto</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+       <!-- <script>
+    function limpaUrl() {     //função
+        urlpg = $(location).attr('href');   //pega a url atual da página
+        urllimpa = urlpg.split("?")[0]      //tira tudo o que estiver depois de '?'
+        window.history.replaceState(null, null, urllimpa); //subtitui a url atual pela url limpa
+    }
+    setTimeout(limpaUrl, 0)
+  </script> -->
     <script>
       function readURL(input) {
           var reader = new FileReader();
@@ -45,8 +53,7 @@ $id = $_SESSION["id"];
     <div  class="grid-100" style="text-align: center;">
 
 <div class="foco">
-  <h1>  <a style="color: white" href="home.php"><br>
-       <</a> Selecione a foto de perfil ;D</h1>
+  <h1>  <a href="frmEditar.php"><img src="icons/seta2.png" width="3%"> </a> Selecione a foto de perfil ;D</h1>
   <form name="frmFoto" method="POST" action="foto.php" enctype="multipart/form-data" >
 
      <input type="reset" value="Limpar">
