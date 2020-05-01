@@ -26,43 +26,6 @@ session_start();
             return true;
         }
 	</script>
-	<script language="Javascript">
-	  function validarEmail(){
-		if( document.forms[0].email.value==""){
-			document.getElementById("msgemail").innerHTML = "<font color='red'>Por favor digite um e-mail</font>";
-			return false;
-		}else if( document.forms[0].email.value.indexOf('@')==-1
-		     || document.forms[0].email.value.indexOf('.')==-1 ){
-			  document.getElementById("msgemail").innerHTML = "<font color='red'>E-mail Inválido</font>";
-			  return false;
-		}else{
-			document.getElementById("msgemail").innerHTML = "";
-			return true;
-		}
-	  }
-		document.getElementById("email").addEventListener("input", function (event) {
-		  if (validarEmail()) {
-		    fetch('verifica.php?email=${this.value}')
-		      .then(response => {
-		        if (response.ok) {
-		          return response.json();
-		        }
-		        throw new Error("Oops! Algo de errado não está certo...");
-		      })
-		      .then(json => {
-		        if (json.exists) {
-		          document.getElementById("msgemail").innerHTML = "<font color='red'>E-mail já está cadastrado. Por favor, tente outro.</font>";
-		        } else {
-		          document.getElementById("msgemail").innerHTML = "<font color='green'>E-mail disponível.</font>";
-		          document.getElementById("enviar").disabled = false;
-		        }
-		      })
-		      .catch(error => {
-		        document.getElementById("msgemail").innerHTML = "<font color='red'>Falha no servidor, por favor, tente novamente mais tarde.</font>";
-		      });
-		  }
-		});
-	</script>
 </head>
 
 <body >
