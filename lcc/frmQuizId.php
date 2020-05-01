@@ -4,11 +4,14 @@
 	// <!-- Validando o acesso do Usuario -->
 	if ($_SESSION["acesso"] != true) {
 	
-	$mensagem = urldecode("ERRO 404");
+	$mensagem = urldecode("Sem permissão");
   	header("Location:index.php?msg=$mensagem"); 
   	exit; //importa (SAIR)
  	 }
 	
+  // $esconderUrl = urldecode("teste");
+  // header("Location:index.php?msg=$esconderUrl"); 
+
 	//Conexão
 	$PDO = new PDO("sqlite:users.db");
 	$id = $_GET["id"];
@@ -60,7 +63,7 @@ if (!($pergunta == $consultaId[0]["pp"])) {
    <p><img width="20%" style="border: solid 4px black; " src="<?=$consultaQ[0]["foto"]?> "> </p>
 </div>
 
-<h3 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><?=$consultaP[$pergunta]["texto"]?></h3>
+<h3 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><a href="home.php"><img src="icons/seta2.png" width="3%"> </a><?=$consultaP[$pergunta]["texto"]?></h3>
 
 <fieldset class="radio-image">  
 
@@ -106,7 +109,8 @@ if (!($pergunta == $consultaId[0]["pp"])) {
 
 <?php }else{
   ?>
-   <h3 style="padding-top: 100px; padding-bottom: 20px">Você acertou <?=$contador?> de <?=$pergunta?></h3>
+  <a href="home.php"><img src="icons/seta2.png" width="3%">  <h3 style="padding-top: 100px; padding-bottom: 20px">Você acertou <?=$contador?> de <?=$pergunta?></h3>
+   
 <?php
     if ($contador == $pergunta) {       
  ?>    
@@ -131,8 +135,6 @@ if (!($pergunta == $consultaId[0]["pp"])) {
    <?php 
     }
 }?>
-&nbsp
-       <h2> <a href="home.php">Voltar no 4Quiz </a></h2>
 </div>
 </div>
 </body>

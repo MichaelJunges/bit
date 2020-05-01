@@ -67,13 +67,14 @@ input[type="submit"]:hover{
 	background-image: linear-gradient(to bottom right, purple, red);
 	 /*background-image: linear-gradient(to bottom right, #6a5acd, #9932cc);*/
 }
-.aviso
+/*.aviso
 {
-	font-family: Calibri;
-	color: white;
-	font-size: 25px;
-	text-decoration: none;
-}
+
+	background-image: url(../icons/seta.png);
+	padding: 5%;
+	background-repeat: no-repeat;
+	background-position: all;
+}*/
 .button:focus, button:active {
     outline: none;
 }

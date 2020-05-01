@@ -42,7 +42,7 @@
 <body>
 	<form name="frmLogin" action="login.php" method="post" onsubmit="return validarFormulario()">
 
-	<div class="grid-container">
+	<div class="grid-container-100">
 
 <div class="grid-100" style="text-align: center;" >
 		<h1 > 4QUIZZ </h1>

@@ -9,7 +9,7 @@
 	<div class="grid-container">
 		<div class="grid-100" style="text-align: center;">
 
-		 <a href="home.php">Voltar no 4Quiz </a>	
+		 <a href="home.php"><img src="icons/seta2.png" width="3%">	
 
 		<h1>Como Registrar ?</h1>
 		<img src="./icons/registro.gif" alt="gifRegistro" style="border-color: purple; border-style: groove;">

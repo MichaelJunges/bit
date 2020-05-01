@@ -98,7 +98,7 @@ copy($local, $conteudo);
     <div class="grid-container" style="text-align: center;">
     <form name="frmCreateQuiz" action="enviarQuiz.php" method="POST" enctype="multipart/form-data" >
 
-         <h1 style="color: white">Redimencione-a !</h1>
+         <h1 style="color: white"><a href="frmCreateQuiz.php"><img src="icons/seta2.png" width="3%"> </a>Redimencione-a !</h1>
 
             <p >
                 <img id="ImagemCrop" src="<?=$conteudo?>">

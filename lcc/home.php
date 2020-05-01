@@ -21,7 +21,7 @@ $_SESSION["contador"] = 0;
 $_SESSION["pergunta"] = 0;
 
 //quizes
-$sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
+$sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto FROM quiz q, register p WHERE q.id_usuario = p.id");
 $sqlQuiz->execute();
 $dadosQuiz = $sqlQuiz->fetchAll();
 
@@ -32,7 +32,7 @@ $sqlUser->execute(array($id));
 $dados = $sqlUser->fetchAll();
 
 //Mensagens enviadas de outras telas
-@$mensagem=urldecode($_GET["msg"]);
+// @$mensagem=urldecode($_GET["msg"]);
 ?>
 
 
@@ -56,22 +56,28 @@ $dados = $sqlUser->fetchAll();
 	</script>
 </head>
 <body style=" margin: 0px; padding: 0px; background-color: rgb(51,109,226)">
-	<div class="grid-container">
+	<div class="grid-container-100" style="margin-left: 20px; margin-right: 20px">
 
 <div class="grid-100">
-		 <div class="grid-33 mobile-grid-100" style="padding: 5px;">
+
+<div class="grid-25 mobile-grid-100" style="padding: 5px;">
+	    <a href="suporte.php" style="text-decoration: none;">
+		  <p class="criarEditar">4QUIZ</p>
+		</a>
+	 </div>
+		 <div class="grid-25 mobile-grid-100" style="padding: 5px;">
 		<a href="frmEditar.php" style="text-decoration: none;">
 		  <p class="criarEditar">Meu Perfil</p>
 		</a>
 	  </div>
 
-	  <div class="grid-33 mobile-grid-100" style="padding: 5px;">
+	  <div class="grid-25 mobile-grid-100" style="padding: 5px;">
 		<a href="frmCreateQuiz.php" style="text-decoration: none;">
 		  <p class="criarEditar">Criar Quiz</p>
 		</a>
 	  </div>
 
-	  <div class="grid-33 mobile-grid-100" style="padding: 5px;">
+	  <div class="grid-25 mobile-grid-100" style="padding: 5px;">
 	    <a href="logoff.php" style="text-decoration: none;">
 		  <p class="criarEditar">Sair</p>
 		</a>
@@ -89,7 +95,7 @@ $dados = $sqlUser->fetchAll();
 		  foreach ($dadosQuiz as $quizzes) {	
 		?>
 		  <a href="frmQuizId.php?id=<?=$quizzes["id"]?>">
-		  	<div class="grid-25 mobile-grid-100 people" > 
+		  	<div class="grid-20 mobile-grid-100 people" > 
 				<p class="textoUpImagem" style="text-decoration: none; color: white">
 				  <?=$quizzes["titulo"]?>		
 				</p>
