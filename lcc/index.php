@@ -9,7 +9,7 @@
 
 
 <!DOCTYPE html>
-<html>a
+<html>
 <head>
 	<title>■ 4Quiz - Login ■</title>
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css"> 
