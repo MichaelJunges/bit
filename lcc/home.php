@@ -92,42 +92,46 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 	  
 <!-- <iframe hidden="hidden" src="https://www.youtube.com/embed/5Mj8AlkKISw?autoplay=1;mute=1'"> </iframe> -->
 	
+<div class="grid-100 ">
 
-<div class="grid-100 about_me">
-	<?php  
+
+<div class="grid-10 mobile-grid-100 gridCategorias"> <!-- div categorias -->
+	<p class="minhasInfo">Categorias <br> ---------------</p>
+
+		<?php  
 		  foreach ($dadosCategoria as $quizzes) {	
 		?>
-<div class="grid-10 mobile-grid-100" style="padding: 5px; background-color: white;">
 	    <a href="categoriaQuiz.php?categoria=<?=$quizzes["categoria"]?>" style="text-decoration: none;">
-		  <p class="categorias"><?=$quizzes["categoria"]?></p>
+		 <p class="categorias"><?=$quizzes["categoria"]?></p>
 		</a>
-	 </div>
 	 <?php
 		  }
-		?>
-	</div>
+	  ?>
+ </div>
 
-	  <div class="grid-100 people_title" style="padding: 0px">
+
+<div class="grid-90 people_title" style="padding: 0px; display: block;"><!--  div dos quizes -->
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	
 		?>
 
-		  <a href="frmQuizId.php?id=<?=$quizzes["id"]?>">
+		  <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$quizzes["id"]?>">
 		  	<div class="grid-20 mobile-grid-100 people" > 
-				<p class="textoUpImagem" style="text-decoration: none; color: white;">
+				<p class="textoUpImagem" >
 				  <?=$quizzes["titulo"]?>		
 				</p>
 				<p >
 				  <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
 				</p>
-				<p class="textoUpImagem2"><?=$quizzes["categoria"]?></p>
+				<p class="textoDownImagem"><?=$quizzes["categoria"]?></p>
 				</p>
-			</div>
 		  </a>
+		  </div>
 		<?php
 		  }
 		?>
+	
+		</div>
 	  </div>
-	</div>
 </body>
 </html>

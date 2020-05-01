@@ -43,8 +43,10 @@ body{
 	margin: 3px;
 	font-weight: 800;
 	font-size: 20px;
+	text-decoration: none;
+	color: white;
 }
-.textoUpImagem2{
+.textoDownImagem{
 	font-size: 15px;
 text-decoration: none;
  color: white;
@@ -103,9 +105,10 @@ td{
 
 .minhasInfo
 {
-	text-align: left;
+	text-align: center;
 	font-weight: 900;
 	font-size: 20px;
+	padding-bottom: 10px;
 }
 .criarEditar
 {
@@ -128,13 +131,24 @@ td{
 	 margin-top: -1px; 
 	 margin-bottom: -5px;
 }
+
+
+
+.gridCategorias
+{
+	background-color: white; 
+	display: block; 
+	border-radius: 10px; 
+	text-align: left;
+	padding: 0px;
+}
 .categorias{
-color:rgb(51,109,226);
+color: black;
 font-family: Calibri;
 font-weight: 1000;
+padding: 10px;
 }
 .categorias:hover{
 	background-color: red;
-	border-radius: 10px;
 	color: white;
 }
