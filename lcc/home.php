@@ -66,7 +66,6 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 	<div class="grid-container-100" style="margin-left: 20px; margin-right: 20px">
 
 <div class="grid-100">
-
 <div class="grid-25 mobile-grid-100" style="padding: 5px;">
 	    <a href="suporte.php" style="text-decoration: none;">
 		  <p class="criarEditar">4QUIZ</p>
@@ -89,24 +88,18 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 		  <p class="criarEditar">Sair</p>
 		</a>
 	 </div>
-	  </div>
+</div>
 	  
 <!-- <iframe hidden="hidden" src="https://www.youtube.com/embed/5Mj8AlkKISw?autoplay=1;mute=1'"> </iframe> -->
+	
 
-	  <div class="grid-100 about_me">
-		<p class="minhasInfo" >Nome: <?=$dados[0]["nreal"]?></p>	
-	  </div>
-	  <!-- <a href="<?=$categoria?>">Futebol</a> -->
-
-
-
-<div class="grid-100">
+<div class="grid-100 about_me">
 	<?php  
 		  foreach ($dadosCategoria as $quizzes) {	
 		?>
-<div class="grid-10 mobile-grid-100" style="padding: 5px;">
-	    <a href="categoriaQuiz.php?categoria=<?=$quizzes["categoria"]?>" style="text-decoration: none; ">
-		  <p class="criarEditar"><?=$quizzes["categoria"]?></p>
+<div class="grid-10 mobile-grid-100" style="padding: 5px; background-color: white;">
+	    <a href="categoriaQuiz.php?categoria=<?=$quizzes["categoria"]?>" style="text-decoration: none;">
+		  <p class="categorias"><?=$quizzes["categoria"]?></p>
 		</a>
 	 </div>
 	 <?php
@@ -118,6 +111,7 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	
 		?>
+
 		  <a href="frmQuizId.php?id=<?=$quizzes["id"]?>">
 		  	<div class="grid-20 mobile-grid-100 people" > 
 				<p class="textoUpImagem" style="text-decoration: none; color: white;">
