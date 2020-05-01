@@ -122,7 +122,7 @@ copy($local, $conteudo);
                    <input type="radio" id="g" name="categoria" value="Games"> Games
                    <input type="radio" id="h" name="categoria" value="Futebol"> Futebol
                    <input type="radio" id="p" name="categoria" value="Programas/TV"> Programas de TV
-                   <input type="radio" id="i" name="categoria" value="Filmes/Seriados">Filmes e Seriados
+                   <input type="radio" id="t" name="categoria" value="Filmes/Seriados">Filmes e Seriados
                    <input type="radio" id="m" name="categoria" value="Memes">Memes
             </p> 
 

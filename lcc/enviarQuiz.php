@@ -10,6 +10,7 @@ if($_SESSION["acesso"] != true) {
 	$PDO = new PDO("sqlite:users.db");
 	$titulo = $_POST["titulo"];
 	$id_usuario = $_POST["id"];
+	$categoria = $_POST["categoria"];
 	
 	//foto
 	$foto = $_POST["foto"];
@@ -30,8 +31,8 @@ if($_SESSION["acesso"] != true) {
 	unlink("fotos_quiz/$foto");
 	//fim foto
 
-	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, id_usuario, foto) VALUES (?,?,?)");
-	$exec = $sqlInsert->execute(array($titulo, $id_usuario, $conteudo));
+	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, id_usuario, foto, categoria) VALUES (?,?,?,?)");
+	$exec = $sqlInsert->execute(array($titulo, $id_usuario, $conteudo, $categoria));
 
 	$sql = $PDO->prepare("SELECT id FROM quiz ORDER BY id DESC LIMIT 1");
 	$sql->execute();
