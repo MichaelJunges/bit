@@ -23,14 +23,14 @@ $id = $_SESSION["id"];
   	<title>Alterar Foto</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-       <!-- <script>
+       <script>
     function limpaUrl() {     //função
         urlpg = $(location).attr('href');   //pega a url atual da página
         urllimpa = urlpg.split("?")[0]      //tira tudo o que estiver depois de '?'
         window.history.replaceState(null, null, urllimpa); //subtitui a url atual pela url limpa
     }
     setTimeout(limpaUrl, 0)
-  </script> -->
+  </script>
     <script>
       function readURL(input) {
           var reader = new FileReader();

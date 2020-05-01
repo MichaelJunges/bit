@@ -19,7 +19,6 @@ copy($local, $conteudo);
 <html>
 <head>
     <title>Criar Quiz</title>
-    <!-- <link rel="stylesheet" href="css/.css?time=<?=time()?>"> -->
     <link rel="stylesheet" href="css/login.css?time=<?=time()?>">
     <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -111,9 +110,25 @@ copy($local, $conteudo);
             </p>
 
      
-        <div class="grid-100">
+
+
+             <h1>Qual a categoria do seu Quiz ?</h1>  
+             <p class="radio" >
+                <input  type="radio" id="a" name="categoria" required="required"  value="Anime">Animes
+                  <input type="radio" id="b" name="categoria" value="Bts"> BTS
+                   <input type="radio" id="c" name="categoria" value="Comida"> Comidas
+                   <input type="radio" id="d" name="categoria" value="Youtubers"> Youtubers
+                   <input type="radio" id="f" name="categoria" value="Famosos"> Famosos
+                   <input type="radio" id="g" name="categoria" value="Games"> Games
+                   <input type="radio" id="h" name="categoria" value="Futebol"> Futebol
+                   <input type="radio" id="p" name="categoria" value="Programas/TV"> Programas de TV
+                   <input type="radio" id="i" name="categoria" value="Filmes/Seriados">Filmes e Seriados
+                   <input type="radio" id="m" name="categoria" value="Memes">Memes
+            </p> 
+
+
             <div class="grid-50"></div>
-            <h1 class="h1person">Agora, preencha os campos !</h1>
+            <h1 style="padding-top: 0px" >Agora, preencha os campos !</h1>
 
             <p class="quiz"> 
                 Titulo:<br /> 
@@ -121,7 +136,6 @@ copy($local, $conteudo);
             </p> 
             <p class="quiz"> 
                 Pergunta: 
-
                 <!-- name='pergunta"+idContador+"' -->
                 <br /> 
                 <input  type="text" size="50" name="pergunta1" required="required" maxlength="100">
