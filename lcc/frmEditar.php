@@ -12,6 +12,13 @@ if ($_SESSION["acesso"] != true) {
 //Conexão
 $PDO = new PDO("sqlite:users.db");
 $id = $_SESSION["id"];
+$login = $_SESSION['login'];
+
+//quizes
+$sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
+$sqlQuiz->execute();
+$dadosQuiz = $sqlQuiz->fetchAll();
+
 
 
 //Consulta
@@ -25,6 +32,7 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
   <head>
   	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
   	<link rel="stylesheet" href="css/login.css?time=<?=time()?>">
+      <link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   	<title>Alterar Conta</title>
   </head>
@@ -50,9 +58,29 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
 <input type="hidden" name="id" value="<?=$id?>">
 
   <p><input type="submit" value="OK"></p>
-</div>
 
-  
+<div class="grid-100 people_title" style="padding: 0px">
+  <h3 style="font-style: italic;">Seus Quiz não podem ser respondidos por você</h3>
+    <?php  
+      foreach ($dadosQuiz as $quizzes) {  
+    ?>
+        <div class="grid-25 mobile-grid-100 people" > 
+        <p class="textoUpImagem" style="text-decoration: none; color: white">
+          <?=$quizzes["titulo"]?>   
+        </p>
+        <p >
+          <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
+        </p>
+        <p class="textoUpImagem2" >QUIZ BY <?=$quizzes["nreal"]?></p>
+        </p>
+      </div>
+    <?php
+      }
+    ?>
+    </div>
+
+
+</div>
   </form>
   </body>
   </html>

@@ -1,13 +1,4 @@
 
-body{
-	text-align: center;
-	background-color: #00121e;
-	/*background-image: url(imagens/triangulo.jpg);*/
-	background-repeat: no-repeat;
-	background-size: all;
-	font-family: calibri;
-}
-
 
 .titulo{
 	-webkit-text-stroke-width: 1,5px; /* largura da borda */
@@ -84,10 +75,7 @@ td{
 	color: white;
 }
 
-a{
-	color: red;
-	text-decoration: none;
-}
+
 
 .azulEbranco
 {
@@ -104,10 +92,6 @@ a{
 	background-color: silver;	
 }
 
-::-webkit-input-placeholder 
-{
-   color: #4099d1 ;
-}
 input:-webkit-autofill {
     -webkit-text-fill-color: #4099d1 ;
     -webkit-box-shadow: 0 0 0px 1000px #082336 inset;
