@@ -22,7 +22,7 @@ $dadosQuiz = $sqlQuiz->fetchAll();
 
 
 //Consulta
-$sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
+  $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
 	$sqlSelect->execute(array($id));
 	$consulta = $sqlSelect->fetchAll(); 
   ?>  
@@ -49,7 +49,7 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
  <p style="padding-bottom: 20px"><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value=<?=$consulta[0]["email"]?>></p> 
 
 <h3>Biografia</h3>
-  <p style="padding-bottom: 20px"><input type="text" name="bio" maxlength="" autofocus="autofocus" required="required" pattern="[a-zA-Z0-9- ]+" placeholder="Biografia" value="<?=$consulta[0]["bio"]?>"></p> 
+  <p style="padding-bottom: 20px"><input type="text" name="bio" maxlength="" autofocus="autofocus"  pattern="[a-zA-Z0-9- ]+" placeholder="Biografia" value="<?=$consulta[0]["bio"]?>"></p> 
 
   <a href="frmFoto.php?id=<?=$id?>" >
       <img  style="border-color: purple; border-style: solid;" width="20%" align="center" src="fotos/<?=$id?>.jpg" alt="Selecione sua foto" >
