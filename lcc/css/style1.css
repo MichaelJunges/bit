@@ -1,4 +1,12 @@
 
+body{
+	text-align: center;
+	/*background-image: url(imagens/triangulo.jpg);*/
+	background-repeat: no-repeat;
+	background-size: all;
+	font-family: calibri;
+}
+
 
 .titulo{
 	-webkit-text-stroke-width: 1,5px; /* largura da borda */
