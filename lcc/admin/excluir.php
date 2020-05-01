@@ -8,6 +8,7 @@ if ( ($id) && ($confirma == 1) )
 {
 $sqlDelete = $PDO->prepare("DELETE FROM register WHERE id=?");
 $del = $sqlDelete->execute(array($id));
+unlink("../fotos/$id.jpg");
 
 header("Location: home.php");
 }
