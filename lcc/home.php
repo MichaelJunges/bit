@@ -25,10 +25,7 @@ $sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto, q.cat
 $sqlQuiz->execute();
 $dadosQuiz = $sqlQuiz->fetchAll();
 
-//categoria
-// $sqlCat = $PDO->prepare("SELECT * FROM register WHERE categoria = ?");
-// $sqlCat->execute(array($id));
-// $cats = $sqlCat->fetchAll();
+
 
 //perfil
 $sqlUser = $PDO->prepare("SELECT * FROM register WHERE id = ?");
@@ -37,6 +34,12 @@ $dados = $sqlUser->fetchAll();
 
 //Mensagens enviadas de outras telas
 // @$mensagem=urldecode($_GET["msg"]);
+
+//categorias
+$sqlQuiz = $PDO->prepare("SELECT * FROM quiz");
+$sqlQuiz->execute();
+$dadosCategoria = $sqlQuiz->fetchAll();
+
 ?>
 
 
@@ -95,14 +98,22 @@ $dados = $sqlUser->fetchAll();
 	  </div>
 	  <!-- <a href="<?=$categoria?>">Futebol</a> -->
 
-<div class="grid-100">
 
-<div class="grid-100 mobile-grid-100" style="padding: 5px;">
-	    <a href="categoriaQuiz.php" style="text-decoration: none;">
-		  <p class="criarEditar">Categorias</p>
+
+<div class="grid-100">
+	<?php  
+		  foreach ($dadosCategoria as $quizzes) {	
+		?>
+<div class="grid-10 mobile-grid-100" style="padding: 5px;">
+	    <a href="categoriaQuiz.php?categoria=<?=$quizzes["categoria"]?>" style="text-decoration: none;">
+		  <p class="criarEditar"><?=$quizzes["categoria"]?></p>
 		</a>
 	 </div>
+	 <?php
+		  }
+		?>
 	</div>
+
 	  <div class="grid-100 people_title" style="padding: 0px">
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	

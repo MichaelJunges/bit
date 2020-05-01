@@ -11,20 +11,19 @@ if ($_SESSION["acesso"] != true)
 //Conexão com o banco de dados
 $PDO = new PDO("sqlite:users.db");
 
-$categoria = $_GET['categoria'];
-
-$sqlQuiz = $PDO->prepare("SELECT * FROM quiz where categoria='$categoria'");
+$sqlQuiz = $PDO->prepare("SELECT * FROM quiz where categoria == 'FUTEBOL'");
 $sqlQuiz->execute();
 $dadosCategoria = $sqlQuiz->fetchAll();
+
   ?>
 
   <!DOCTYPE html>
   <html>
   <head>
   	<title>Categorias</title>
-  	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
-	<link rel="stylesheet" href="css/login.css?time=<?=time()?>">
-  <link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
+  	<link rel="stylesheet" href="../css/unsemantic-grid-responsive.css">
+	<link rel="stylesheet" href="../css/login.css?time=<?=time()?>">
+  <link rel="stylesheet" href="../css/style1.css?time=<?=time()?>">
   </head>
   <body >
 
