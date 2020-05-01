@@ -114,16 +114,16 @@ copy($local, $conteudo);
 
              <h1>Qual a categoria do seu Quiz ?</h1>  
              <p class="radio" >
-                <input  type="radio" id="a" name="categoria" required="required"  value="Anime">Animes
-                  <input type="radio" id="b" name="categoria" value="Bts"> BTS
-                   <input type="radio" id="c" name="categoria" value="Comida"> Comidas
-                   <input type="radio" id="d" name="categoria" value="Youtubers"> Youtubers
-                   <input type="radio" id="f" name="categoria" value="Famosos"> Famosos
-                   <input type="radio" id="g" name="categoria" value="Games"> Games
-                   <input type="radio" id="h" name="categoria" value="Futebol"> Futebol
-                   <input type="radio" id="p" name="categoria" value="Programas/TV"> Programas de TV
-                   <input type="radio" id="t" name="categoria" value="Filmes/Seriados">Filmes e Seriados
-                   <input type="radio" id="m" name="categoria" value="Memes">Memes
+                <input  type="radio" id="a" name="categoria" required="required"  value="ANIMES">Animes
+                  <input type="radio" id="b" name="categoria" value="BTS"> BTS
+                   <input type="radio" id="c" name="categoria" value="COMIDAS"> Comidas
+                   <input type="radio" id="d" name="categoria" value="YOUTUBERS"> Youtubers
+                   <input type="radio" id="f" name="categoria" value="FAMOSOS"> Famosos
+                   <input type="radio" id="g" name="categoria" value="GAMES"> Games
+                   <input type="radio" id="h" name="categoria" value="FUTEBOL"> Futebol
+                   <input type="radio" id="p" name="categoria" value="TV"> Programas de TV
+                   <input type="radio" id="t" name="categoria" value="FILMES/SÉRIES">Filmes e Seriados
+                   <input type="radio" id="m" name="categoria" value="MEMES">Memes
             </p> 
 
 

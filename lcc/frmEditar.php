@@ -15,7 +15,7 @@ $id = $_SESSION["id"];
 $login = $_SESSION['login'];
 
 //quizes
-$sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto FROM quiz q, register p WHERE q.id_usuario = p.id AND login == '$login'");
+$sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto, q.categoria FROM quiz q, register p WHERE q.id_usuario = p.id AND login == '$login'");
 $sqlQuiz->execute();
 $dadosQuiz = $sqlQuiz->fetchAll();
 
@@ -72,7 +72,7 @@ $dadosQuiz = $sqlQuiz->fetchAll();
         <p >
           <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
         </p>
-        <p class="textoUpImagem2" >QUIZ BY <?=$quizzes["nreal"]?></p>
+        <p class="textoUpImagem2" ><?=$quizzes["categoria"]?></p>
         </p>
       </div>
     </a>

@@ -21,10 +21,14 @@ $_SESSION["contador"] = 0;
 $_SESSION["pergunta"] = 0;
 
 //quizes
-$sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
+$sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto, q.categoria FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
 $sqlQuiz->execute();
 $dadosQuiz = $sqlQuiz->fetchAll();
 
+//categoria
+// $sqlCat = $PDO->prepare("SELECT * FROM register WHERE categoria = ?");
+// $sqlCat->execute(array($id));
+// $cats = $sqlCat->fetchAll();
 
 //perfil
 $sqlUser = $PDO->prepare("SELECT * FROM register WHERE id = ?");
@@ -85,10 +89,20 @@ $dados = $sqlUser->fetchAll();
 	  </div>
 	  
 <!-- <iframe hidden="hidden" src="https://www.youtube.com/embed/5Mj8AlkKISw?autoplay=1;mute=1'"> </iframe> -->
+
 	  <div class="grid-100 about_me">
 		<p class="minhasInfo" >Nome: <?=$dados[0]["nreal"]?></p>	
 	  </div>
+	  <!-- <a href="<?=$categoria?>">Futebol</a> -->
 
+<div class="grid-100">
+
+<div class="grid-100 mobile-grid-100" style="padding: 5px;">
+	    <a href="categoriaQuiz.php" style="text-decoration: none;">
+		  <p class="criarEditar">Categorias</p>
+		</a>
+	 </div>
+	</div>
 	  <div class="grid-100 people_title" style="padding: 0px">
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	
@@ -101,7 +115,7 @@ $dados = $sqlUser->fetchAll();
 				<p >
 				  <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
 				</p>
-				<p class="textoUpImagem2" >QUIZ	BY <?=$quizzes["nreal"]?></p>
+				<p class="textoUpImagem2"><?=$quizzes["categoria"]?></p>
 				</p>
 			</div>
 		  </a>
