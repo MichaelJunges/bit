@@ -41,12 +41,14 @@ $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
     <div  class="grid-100">
 
 <div style="text-align: center;">
-  	<h1>  <a class="aviso" href="home.php">< </a>EDITAR </h1>
+  	<h1>  <a class="aviso" href="home.php">< </a>Perfil (<?=$consulta[0]["nreal"]?>)</h1>
 
   	<p><form name="frmEditar" method="POST" action="editarConta.php"></p>
 
+<h3>E-mail</h3>
  <p><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value=<?=$consulta[0]["email"]?>></p> 
 
+<h3>Biografia</h3>
   <p><input type="text" name="bio" maxlength="" autofocus="autofocus" required="required" pattern="[a-zA-Z0-9- ]+" placeholder="Biografia" value="<?=$consulta[0]["bio"]?>"></p> 
 
   <a href="frmFoto.php?id=<?=$id?>" >
