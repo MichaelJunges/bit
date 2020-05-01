@@ -105,7 +105,7 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 		  foreach ($dadosCategoria as $quizzes) {	
 		?>
 <div class="grid-10 mobile-grid-100" style="padding: 5px;">
-	    <a href="categoriaQuiz.php?categoria=<?=$quizzes["categoria"]?>" style="text-decoration: none;">
+	    <a href="categoriaQuiz.php?categoria=<?=$quizzes["categoria"]?>" style="text-decoration: none; ">
 		  <p class="criarEditar"><?=$quizzes["categoria"]?></p>
 		</a>
 	 </div>
@@ -120,7 +120,7 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 		?>
 		  <a href="frmQuizId.php?id=<?=$quizzes["id"]?>">
 		  	<div class="grid-20 mobile-grid-100 people" > 
-				<p class="textoUpImagem" style="text-decoration: none; color: white">
+				<p class="textoUpImagem" style="text-decoration: none; color: white;">
 				  <?=$quizzes["titulo"]?>		
 				</p>
 				<p >

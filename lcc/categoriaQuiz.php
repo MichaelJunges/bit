@@ -32,6 +32,7 @@ $dadosCategoria = $sqlQuiz->fetchAll();
     <?php  
       foreach ($dadosCategoria as $quizzes) {  
     ?>
+<h1  style="padding: 0px"> <a href="home.php"><img src="icons/seta2.png" width="3%"> </a><?=$quizzes["categoria"]?></h1>
       <a href="frmQuizId.php?id=<?=$quizzes["id"]?>">
         <div class="grid-20 mobile-grid-100 people" > 
         <p class="textoUpImagem" style="text-decoration: none; color: white">
