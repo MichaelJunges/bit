@@ -76,7 +76,7 @@ if($_SESSION["acesso"] != true) {
 			$z++;
 			$resposta = $_POST["resposta$z"];
 			$sqlInsert = $PDO->prepare("INSERT INTO resposta (resposta, id_quiz, id_pergunta, numero) VALUES (?,?,?,?)");
-			$execR = $sqlInsert->execute(array($resposta, $id_quiz, $id_pergunta, $i));
+			$execR = $sqlInsert->execute(array($resposta, $id_quiz, $id_pergunta, $x));
 		}
 	}
 
