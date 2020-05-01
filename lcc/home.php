@@ -21,7 +21,7 @@ $_SESSION["contador"] = 0;
 $_SESSION["pergunta"] = 0;
 
 //quizes
-$sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto FROM quiz q, register p WHERE q.id_usuario = p.id");
+$sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
 $sqlQuiz->execute();
 $dadosQuiz = $sqlQuiz->fetchAll();
 
