@@ -99,6 +99,7 @@ copy($local, $conteudo);
 
          <h1 style="color: white"><a href="frmCreateQuiz.php"><img src="icons/seta2.png" width="3%"> </a>Redimencione-a !</h1>
 
+
             <p >
                 <img id="ImagemCrop" src="<?=$conteudo?>">
                 <input type="hidden" id="x" name="x" />
@@ -109,17 +110,22 @@ copy($local, $conteudo);
                 <input type="hidden" name="foto" value="<?=$foto?>" >
             </p>
 
-     
+            <p class="quiz"> 
+                Titulo:<br /> 
+                <input  type="text" size="50" name="titulo" required="required" maxlength="50" autofocus="autofocus" > 
+            </p> 
 
 
-             <h1>Qual a categoria do seu Quiz ?</h1>  
+             <h1 style="display: block;">Qual a categoria do seu Quiz ?</h1>  
              <p class="radio" >
                 <input  type="radio" id="a" name="categoria" required="required"  value="ANIMES">Animes
                   <input type="radio" id="b" name="categoria" value="BTS"> BTS
                    <input type="radio" id="c" name="categoria" value="COMIDAS"> Comidas
+                   <br>
                    <input type="radio" id="d" name="categoria" value="YOUTUBERS"> Youtubers
                    <input type="radio" id="f" name="categoria" value="FAMOSOS"> Famosos
                    <input type="radio" id="g" name="categoria" value="GAMES"> Games
+                   <br>
                    <input type="radio" id="h" name="categoria" value="FUTEBOL"> Futebol
                    <input type="radio" id="p" name="categoria" value="TV"> Programas de TV
                    <input type="radio" id="t" name="categoria" value="FILMES/SÉRIES">Filmes e Seriados
@@ -130,10 +136,7 @@ copy($local, $conteudo);
             <div class="grid-50"></div>
             <h1 style="padding-top: 0px" >Agora, preencha os campos !</h1>
 
-            <p class="quiz"> 
-                Titulo:<br /> 
-                <input  type="text" size="50" name="titulo" required="required" maxlength="50" autofocus="autofocus" > 
-            </p> 
+            
             <p class="quiz"> 
                 Pergunta: 
                 <!-- name='pergunta"+idContador+"' -->
