@@ -47,8 +47,8 @@ body{
 	color: white;
 }
 .textoDownImagem{
-	font-size: 15px;
-text-decoration: none;
+ font-size: 15px;
+ text-decoration: none;
  color: white;
  background-color: red;
  font-family: calibri;
@@ -104,26 +104,34 @@ td{
 }
 
 .minhasInfo
-{
-	text-align: center;
-	font-weight: 900;
-	font-size: 20px;
-	padding-bottom: 10px;
+{	
+	text-decoration: none; 
+	color: black; 
+	font-weight: 700; 
+	font-family: Calibri;
+	font-size: 22px;
+	padding-bottom: 5px;
+
 }
+.minhasConta:hover{
+	background-color: red;
+	color: white;
+
+}
+
 .criarEditar
 {
 	background-color: rgb(51,109,226);
 	font-weight: 900;
-	font-size: 20px;
+	font-size: 15px;
 	text-decoration: none;
-	color: white;
 	padding: 0px;
+	color:black;
 }
 .criarEditar:hover
 {	
 	background-color: red;
 	color: white;
-	border-radius: 10px;
 }
 
 .imagemQuiz{

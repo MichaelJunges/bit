@@ -63,40 +63,35 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 	</script>
 </head>
 <body style=" margin: 0px; padding: 0px; background-color: rgb(51,109,226)">
-	<div class="grid-container-100" style="margin-left: 20px; margin-right: 20px">
 
-<div class="grid-100">
-<div class="grid-25 mobile-grid-100" style="padding: 5px;">
-	    <a href="suporte.php" style="text-decoration: none;">
-		  <p class="criarEditar">4QUIZ</p>
-		</a>
-	 </div>
-		 <div class="grid-25 mobile-grid-100" style="padding: 5px;">
-		<a href="frmEditar.php" style="text-decoration: none;">
-		  <p class="criarEditar">Meu Perfil</p>
-		</a>
-	  </div>
 
-	  <div class="grid-25 mobile-grid-100" style="padding: 5px;">
-		<a href="frmCreateQuiz.php" style="text-decoration: none;">
-		  <p class="criarEditar">Criar Quiz</p>
-		</a>
-	  </div>
 
-	  <div class="grid-25 mobile-grid-100" style="padding: 5px;">
+	 <!--  <div class="grid-100 mobile-grid-100">
 	    <a href="logoff.php" style="text-decoration: none;">
-		  <p class="criarEditar">Sair</p>
+		  <p class="criarEditar">SAIR</p>
 		</a>
-	 </div>
-</div>
+	 </div> -->
+
 	  
 <!-- <iframe hidden="hidden" src="https://www.youtube.com/embed/5Mj8AlkKISw?autoplay=1;mute=1'"> </iframe> -->
 	
-<div class="grid-100 ">
+<div class="grid-100" style="padding-top: 15PX;">
 
 
-<div class="grid-10 mobile-grid-100 gridCategorias"> <!-- div categorias -->
-	<p class="minhasInfo">Categorias <br> ---------------</p>
+<div class="grid-10 mobile-grid-100 gridCategorias" > <!-- div categorias -->
+
+<div class="grid-100" style="padding: 0px">
+	<p class="textoUpImagem">Conta</p>
+  <a  class="minhasInfo" href="frmEditar.php"><p class="minhasConta" style="padding: 5px;" >Perfil</p></a>
+ 	<a class="minhasInfo" href="frmCreateQuiz.php"><p class="minhasConta" style="padding: 5px">Criar Quiz</p></a>
+ 	 <a href="logoff.php" style="text-decoration: none;">
+		  <p class="textoUpImagem" style="font-size: 15px; text-align: center; background-color:black">SAIR</p>
+		</a>
+
+ 	 
+ </div>
+
+	<p class="textoUpImagem">Categorias</p>
 
 		<?php  
 		  foreach ($dadosCategoria as $quizzes) {	
@@ -107,8 +102,12 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 	 <?php
 		  }
 	  ?>
+
+	
+	   
  </div>
 
+ 
 
 <div class="grid-90 people_title" style="padding: 0px; display: block;"><!--  div dos quizes -->
 		<?php  
@@ -130,7 +129,7 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 		<?php
 		  }
 		?>
-	
+		 
 		</div>
 	  </div>
 </body>

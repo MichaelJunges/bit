@@ -41,7 +41,7 @@ $dadosCategoria = $sqlQuiz->fetchAll();
         <p >
           <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
         </p>
-        <p class="textoUpImagem2"><?=$quizzes["categoria"]?></p>
+        <p class="textoDownImagem"><?=$quizzes["categoria"]?></p>
         </p>
       </div>
       </a>
