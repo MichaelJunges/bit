@@ -46,7 +46,7 @@ copy($local, $conteudo);
     <script>
         var idContador = 1;
         var alternativa = 3;
-        var resultado = 1;
+        var resultado = 2;
 
         function exclui(id ){
             var campo = $("#"+id.id).remove();
@@ -54,9 +54,8 @@ copy($local, $conteudo);
             alternativa--;
         }
         function adicionaAlternativa(){
-
-            idContador++;
-                
+               
+            idContador++;    
             var alter = "alternativa"+alternativa;
             var idForm = "alter"+idContador;
             
@@ -77,14 +76,13 @@ copy($local, $conteudo);
             resultado++;
 
             var idForm = "alter"+idContador;
-            var resultado = "resultado"+resultado;
+            var result = "resultado"+resultado;
 
             var html = "";
                 
             html += "<div style='margin-top: 8px;' id='"+idForm+"'>";
             html += "<p class='quiz'>Resultado:<br>"
-            html += "<input  type='text' size='30' name='"+resultado+"' required='required' maxlength='50'>"
-            resultado++;
+            html += "<input  type='text' size='30' name='"+result+"' required='required' maxlength='50'>"
             html += "<button onclick='exclui("+idForm+")' type='button' class='excluir'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button> "; 
             html += "</p></div>";
                 
@@ -106,6 +104,7 @@ copy($local, $conteudo);
                 html += "<p class='quiz'>Alternativa:</p>"
                 html += "<input  type='text' size='30' name='"+alter+"' required='required' maxlength='50'>"
                 alternativa++;
+                alter = "alternativa"+alternativa;
                 html += "<p class='quiz'>Alternativa:</p>"
                 html += "<input  type='text' size='30' name='"+alter+"' required='required' maxlength='50'><br><br>"
                 alternativa++;
@@ -183,7 +182,11 @@ copy($local, $conteudo);
             </p>
             <p>
                 Resultado:<br>
-                <input type="text" name="resultado1">
+                <input type="text" name="resultado1" required="required">
+            </p>
+            <p>
+                Resultado:<br>
+                <input type="text" name="resultado2" required="required">
             </p>
             <div id="addResultado"></div>
             <p>
