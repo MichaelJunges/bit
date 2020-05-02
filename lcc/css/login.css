@@ -159,3 +159,18 @@ p,a
 	cursor: pointer;
 	 background-image: linear-gradient(to bottom right, purple, red);
 }
+.tipoQuiz
+{	
+	text-align: center; 
+	border-style: solid;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+	padding: 0px;
+	border-color: black;
+	background-color: white;
+    /*border-radius: 10px;*/
+      }
+    .tipoQuiz:hover{
+	background-color: silver;
+}

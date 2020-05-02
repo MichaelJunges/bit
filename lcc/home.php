@@ -63,22 +63,13 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 	</script>
 </head>
 <body style=" margin: 0px; padding: 0px; background-color: rgb(51,109,226)">
-
-
-
-	 <!--  <div class="grid-100 mobile-grid-100">
-	    <a href="logoff.php" style="text-decoration: none;">
-		  <p class="criarEditar">SAIR</p>
-		</a>
-	 </div> -->
-
 	  
 <!-- <iframe hidden="hidden" src="https://www.youtube.com/embed/5Mj8AlkKISw?autoplay=1;mute=1'"> </iframe> -->
 	
 <div class="grid-100" style="padding-top: 15PX;">
 
 
-<div class="grid-10 mobile-grid-100 gridCategorias" > <!-- div categorias -->
+<div class="grid-10 mobile-grid-100 gridCategorias" > <!-- div LATERAL -->
 
 <div class="grid-100" style="padding: 0px">
 	<p class="textoUpImagem">Conta</p>
@@ -91,6 +82,7 @@ $dadosCategoria = $sqlQuiz->fetchAll();
  	 
  </div>
 
+<div>
 	<p class="textoUpImagem">Categorias</p>
 
 		<?php  
@@ -102,14 +94,19 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 	 <?php
 		  }
 	  ?>
+</div>
+<div>
 
+<p class="textoUpImagem">Sobre</p>
 	
-	   
+	<a href="suporte.php" style="text-decoration: none;"><p class="categorias">Tutorial</p></a>
+	<a href="suporte.php" style="text-decoration: none;"><p class="categorias">Desenvolvedores</p></a>
+	</div>
  </div>
 
  
 
-<div class="grid-90 people_title" style="padding: 0px; display: block;"><!--  div dos quizes -->
+<div class="grid-90 " style="padding: 0px; display: block;"><!--  div dos quizes -->
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	
 		?>
