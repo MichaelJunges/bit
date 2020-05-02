@@ -24,11 +24,11 @@
 	$consultaQ = $sqlSelectQ->fetchAll();
 
   $sqlSelectP = $PDO->prepare("SELECT id, texto, certa FROM pergunta WHERE id_quiz = ?");
-  $sqlSelectP->execute(array($consultaQ[0]["id"]));
+  @$sqlSelectP->execute(array($consultaQ[0]["id"]));
   $consultaP = $sqlSelectP->fetchAll();
 
   $sqlId = $PDO->prepare("SELECT count(id) AS pp FROM pergunta WHERE id_quiz = ?");
-  $sqlId->execute(array($consultaQ[0]["id"]));
+ @$sqlId->execute(array($consultaQ[0]["id"]));
   $consultaId = $sqlId->fetchAll();
 
   $sqlSelectR = $PDO->prepare("SELECT * FROM resposta WHERE id_pergunta = ?");
@@ -63,7 +63,7 @@ if (!($pergunta == $consultaId[0]["pp"])) {
    <p><img width="20%" style="border: solid 4px black; " src="<?=$consultaQ[0]["foto"]?> "> </p>
 </div>
 
-<h3 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><a href="home.php"><img src="icons/seta2.png" width="3%"> </a><?=$consultaP[$pergunta]["texto"]?></h3>
+<h3 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><a href="home.php?categoria"><img src="icons/seta2.png" width="3%"> </a><?=$consultaP[$pergunta]["texto"]?></h3>
 
 <fieldset class="radio-image">  
 
@@ -107,18 +107,20 @@ if (!($pergunta == $consultaId[0]["pp"])) {
 </form>
 
 
-<?php }else{
-  ?>
-  <a href="home.php"><img src="icons/seta2.png" width="3%">  <h3 style="padding-top: 100px; padding-bottom: 20px">Você acertou <?=$contador?> de <?=$pergunta?></h3>
-   
+<?php 
+}else{
+?>
+  <a href="home.php?categoria"><img src="icons/seta2.png" width="3%"></a>  <h3 style="padding-top: 100px; padding-bottom: 20px">Você acertou <?=$contador?> de <?=$pergunta?></h3>
+
 <?php
-    if ($contador == $pergunta) {       
+    if ($contador == "0" && $pergunta == "0") {       
  ?>    
  <div style="text-align: center;">
- <h3>PARABÉNS</h3>
-  <img src="./icons/congru.gif" alt="meu gif">
+ <h3>NÃO É ASSIM CARA....</h3>
+  <img src="./icons/reprovado.gif" alt="meu gif">
   </div>
  <?php  
+
     }elseif ($contador == "0") {
       ?>
     <div style="text-align: center;">
@@ -126,6 +128,7 @@ if (!($pergunta == $consultaId[0]["pp"])) {
   <img src="./icons/reprovado.gif" alt="meu gif">
   </div>
    <?php 
+
     }elseif ($contador == $pergunta - '1') {
       ?>
     <div style="text-align: center;">
@@ -133,8 +136,25 @@ if (!($pergunta == $consultaId[0]["pp"])) {
   <img src="./icons/quase.gif" alt="meu gif">
   </div>
    <?php 
+
+    }elseif ($pergunta == "0") {
+      ?>
+    <div style="text-align: center;">
+ <h3>ESSA FOI POR POUCO...</h3>
+  <img src="./icons/quase.gif" alt="meu gif">
+  </div>
+   <?php 
+ }elseif ($contador == $pergunta  && $pergunta > "0") {       
+ ?>    
+ <div style="text-align: center;">
+ <h3>PARABÉNS</h3>
+  <img src="./icons/congru.gif" alt="meu gif">
+  </div>
+ <?php 
     }
 }?>
+
+
 </div>
 </div>
 </body>

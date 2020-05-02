@@ -16,7 +16,7 @@ if($_SESSION["acesso"] != true) {
 	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
 </head>
 <body>
-	<a href="home.php"><img src="icons/seta2.png" width="3%">
+	<a href="home.php?categoria"><img src="icons/seta2.png" width="3%">
 	<div class="grid-container-100" style="text-align: center; ">
 		<div class="grid-100" >
 			

@@ -3,45 +3,42 @@
 session_start();
 
 if ($_SESSION["acesso"] != true)
-{
+ {
 	// Não está autenticado
 	$mensagem = urlencode("Você precisa fazer login!");
 	header("Location:index.php?msg=$mensagem");
 	exit;
-}
+ }
+
 //Conexão com o banco de dados
-$PDO = new PDO("sqlite:users.db");
+ $PDO = new PDO("sqlite:users.db");
 
-$login = $_SESSION['login'];
-$id = $_SESSION['id'];
-$nreal = $_SESSION['nreal'];
-$email = $_SESSION['email'];
-$bio = $_SESSION['bio'];
-$_SESSION["contador"] = 0;
-$_SESSION["pergunta"] = 0;
+ $login = $_SESSION['login'];
+ $id = $_SESSION['id'];
+ $nreal = $_SESSION['nreal'];
+ $email = $_SESSION['email'];
+ $bio = $_SESSION['bio'];
+ $_SESSION["contador"] = 0;
+ $_SESSION["pergunta"] = 0;
 
-//quizes
-$sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto, q.categoria FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
-$sqlQuiz->execute();
-$dadosQuiz = $sqlQuiz->fetchAll();
+// MOSTRA quizes recentes
+ $sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto, q.categoria FROM quiz q, register p WHERE q.id_usuario = p.id AND login != '$login'");
+ $sqlQuiz->execute();
+ $dadosQuiz = $sqlQuiz->fetchAll();
 
+// $PDO categorias lateral
+ $categoria = $_GET['categoria'];
+ $sqlQuiz = $PDO->prepare("SELECT * FROM quiz where categoria!=''");
+ $sqlQuiz->execute();
+ $dadosCategoria = $sqlQuiz->fetchAll();
 
+// $PDO pega por categorias
+ $sqlCarrega = $PDO->prepare("SELECT * FROM quiz where categoria=='$categoria'");
+ $sqlCarrega->execute();
+ $carregaCategoria = $sqlCarrega->fetchAll();
 
-//perfil
-$sqlUser = $PDO->prepare("SELECT * FROM register WHERE id = ?");
-$sqlUser->execute(array($id));
-$dados = $sqlUser->fetchAll();
-
-//Mensagens enviadas de outras telas
-// @$mensagem=urldecode($_GET["msg"]);
-
-//categorias
-$sqlQuiz = $PDO->prepare("SELECT * FROM quiz");
-$sqlQuiz->execute();
-$dadosCategoria = $sqlQuiz->fetchAll();
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -52,61 +49,77 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
 	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-	<script>
-		function limpaUrl() {     //função
-		    urlpg = $(location).attr('href');   //pega a url atual da página
-		    urllimpa = urlpg.split("?")[0]      //tira tudo o que estiver depois de '?'
-		    window.history.replaceState(null, null, urllimpa); //subtitui a url atual pela url limpa
-		}
-		setTimeout(limpaUrl, 0)
-	</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script> 
+
 </head>
 <body style=" margin: 0px; padding: 0px; background-color: rgb(51,109,226)">
 	  
 <!-- <iframe hidden="hidden" src="https://www.youtube.com/embed/5Mj8AlkKISw?autoplay=1;mute=1'"> </iframe> -->
 	
-<div class="grid-100" style="padding-top: 15PX;">
+<div class="grid-100" style="padding-top: 15PX;"> <!-- DIV PRINCIPAL GRID-100 -->
 
+<div class="grid-10 mobile-grid-100 gridCategorias" > <!-- DIV LATERAL GRID-10 -->
 
-<div class="grid-10 mobile-grid-100 gridCategorias" > <!-- div LATERAL -->
-
-<div class="grid-100" style="padding: 0px">
+<div class="grid-100" style="padding: 0px"> <!-- DIV CONTA (LATERAL) -->
 	<p class="textoUpImagem">Conta</p>
-  <a  class="minhasInfo" href="frmEditar.php"><p class="minhasConta" style="padding: 5px;" >Perfil</p></a>
+  <a  class="minhasInfo" href="frmEditar.php" ><p class="minhasConta" style="padding: 5px;" >Perfil</p></a>
  	<a class="minhasInfo" href="tipoQuiz.php"><p class="minhasConta" style="padding: 5px">Criar Quiz</p></a>
  	 <a href="logoff.php" style="text-decoration: none;">
 		  <p class="textoUpImagem" style="font-size: 15px; text-align: center; background-color:black">SAIR</p>
-		</a>
-
- 	 
+	</a>
  </div>
 
-<div>
-	<p class="textoUpImagem">Categorias</p>
-
+<div>  <!-- DIV CATEGORIAS (LATERAL) -->
+ <p class="textoUpImagem">Categorias</p> 
+		<a href="home.php?categoria" style="text-decoration: none;">
+			<p class="categorias">+ RECENTES</p>
+		</a>		
 		<?php  
 		  foreach ($dadosCategoria as $quizzes) {	
 		?>
-	    <a href="categoriaQuiz.php?categoria=<?=$quizzes["categoria"]?>" style="text-decoration: none;">
+		<!-- <a href="home.php?categoria=<?=$categoria?>" style="text-decoration: none;"> -->
+	    <a href="home.php?categoria=<?=$quizzes["categoria"]?>" style="text-decoration: none;">
 		 <p class="categorias"><?=$quizzes["categoria"]?></p>
 		</a>
 	 <?php
 		  }
 	  ?>
-</div>
-<div>
+     </div> 
 
-<p class="textoUpImagem">Sobre</p>
+<div><!--  DIV SOBRE (LATERAL) -->
+
+ <p class="textoUpImagem">Sobre</p>
 	
 	<a href="suporte.php" style="text-decoration: none;"><p class="categorias">Tutorial</p></a>
 	<a href="suporte.php" style="text-decoration: none;"><p class="categorias">Desenvolvedores</p></a>
 	</div>
  </div>
 
- 
+<div class="grid-90 " style="padding: 0px; display: block;"><!--  DIV DOS QUIZ GRID-90 -->
 
-<div class="grid-90 " style="padding: 0px; display: block;"><!--  div dos quizes -->
+<div class="grid-100" >	<!-- DIV QUE CARREGA POR CATEGORIA -->
+    <?php  
+      foreach ($carregaCategoria as $recaregados) {  
+    ?>
+
+      <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$quizzes["id"]?>">
+        <div class="grid-20 mobile-grid-100 people" style="background-color: black;" > 
+        <p class="textoUpImagem" style="text-decoration: none; color: white">
+          <?=$recaregados["titulo"]?>   
+        </p>
+        <p >
+          <img class="imagemQuiz" width="100%" height="100%" src="<?=$recaregados["foto"]?>">
+        </p>
+        <p class="textoDownImagem"><?=$recaregados["categoria"]?></p>
+        </p>
+      </a>
+       </div>
+    <?php
+      }
+    ?>
+ </div>
+
+<div class="grid-100"> <!-- DIV QUE CARREGA QUIZ RECENTES (categoria=) -->
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	
 		?>
@@ -126,8 +139,9 @@ $dadosCategoria = $sqlQuiz->fetchAll();
 		<?php
 		  }
 		?>
-		 
 		</div>
-	  </div>
+		
+		
+ </div>
 </body>
 </html>

@@ -42,7 +42,7 @@ $dadosQuiz = $sqlQuiz->fetchAll();
 
 <div style="text-align: center;">
 
-  <a href="home.php"><img src="icons/seta2.png" width="3%"> </a>
+  <a href="home.php?categoria"><img src="icons/seta2.png" width="3%"> </a>
   <p><form name="frmEditar" method="POST" action="editarConta.php"></p>
     
  <p style="padding-bottom: 20px;"><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value="<?=$consulta[0]["email"]?>"></p> 

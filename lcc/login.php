@@ -19,7 +19,7 @@ session_start();
     $_SESSION["id"] = $dados[0]["id"];
     $_SESSION["nreal"] = $dados[0]["nreal"];
     $_SESSION['login'] = $login;
-    header("Location:home.php");
+    header("Location:home.php?categoria");
     
   }
   else
