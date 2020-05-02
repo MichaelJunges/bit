@@ -118,7 +118,8 @@ if ($_SESSION["acesso"] != true)
       }
     ?>
  </div>
-
+<?php if (empty(@$categoria)) {
+?>
 <div class="grid-100"> <!-- DIV QUE CARREGA QUIZ RECENTES (categoria=) -->
 	<h1  style="padding: 0px; margin: 0px; background-color: white; border-radius: 20px;">+ RECENTES GERAL</h1>
 		<?php  
@@ -141,7 +142,7 @@ if ($_SESSION["acesso"] != true)
 		  }
 		?>
 		</div>
-		
+		<?php }?>
 		
  </div>
 </body>
