@@ -4,7 +4,7 @@ session_start();
 if ($_SESSION["acesso"] != true) {
 	
 	$mensagem = urldecode("Usuário e/ou Senha inválidos");
-  	header("Location:index.php?msg=$mensagem"); // L maiúsculo obrigatório
+  	header("Location:index.php?categoria=msg=$mensagem"); // L maiúsculo obrigatório
   	exit; //importa (SAIR)
   }
 
@@ -26,7 +26,7 @@ if ($_SESSION["acesso"] != true) {
 if ($exec)
   {
      // $mensagem = urldecode("Editado com Sucesso!");
-    header("Location:home.php");
+    header("Location:home.php?categoria");
   
     
   }

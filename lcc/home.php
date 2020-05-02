@@ -60,7 +60,7 @@ if ($_SESSION["acesso"] != true)
 
 <div class="grid-10 mobile-grid-100 gridCategorias" > <!-- DIV LATERAL GRID-10 -->
 
-<div class="grid-100" style="padding: 0px"> <!-- DIV CONTA (LATERAL) -->
+<div class="grid-100" style="padding: 0px;background-color: "> <!-- DIV CONTA (LATERAL) -->
 	<p class="textoUpImagem">Conta</p>
   <a  class="minhasInfo" href="frmEditar.php" ><p class="minhasConta" style="padding: 5px;" >Perfil</p></a>
  	<a class="minhasInfo" href="tipoQuiz.php"><p class="minhasConta" style="padding: 5px">Criar Quiz</p></a>
@@ -102,7 +102,7 @@ if ($_SESSION["acesso"] != true)
     <?php  
       foreach ($carregaCategoria as $recaregados) {  
     ?>
-      <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$quizzes["id"]?>">
+      <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$recaregados["id"]?>">
         <div class="grid-20 mobile-grid-100 people" style="background-color: black;" > 
         <p class="textoUpImagem" style="text-decoration: none; color: white">
           <?=$recaregados["titulo"]?>   
