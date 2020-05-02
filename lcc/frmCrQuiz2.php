@@ -46,6 +46,7 @@ copy($local, $conteudo);
     <script>
         var idContador = 1;
         var alternativa = 3;
+        var resultado = 1;
 
         function exclui(id ){
             var campo = $("#"+id.id).remove();
@@ -69,6 +70,25 @@ copy($local, $conteudo);
             html += "</p></div>";
                 
             $("#addAlter").append(html);
+        }
+        function adicionaResultado(){
+
+            idContador++;
+            resultado++;
+
+            var idForm = "alter"+idContador;
+            var resultado = "resultado"+resultado;
+
+            var html = "";
+                
+            html += "<div style='margin-top: 8px;' id='"+idForm+"'>";
+            html += "<p class='quiz'>Resultado:<br>"
+            html += "<input  type='text' size='30' name='"+resultado+"' required='required' maxlength='50'>"
+            resultado++;
+            html += "<button onclick='exclui("+idForm+")' type='button' class='excluir'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button> "; 
+            html += "</p></div>";
+                
+            $("#addResultado").append(html);
         }
         function adicionaCampo(){
 
@@ -160,6 +180,15 @@ copy($local, $conteudo);
             <div id="addPerg"></div>
             <p> 
                 <input type="button" class="adicionar" onclick="adicionaCampo()" value="        Adicionar +Pergunta">
+            </p>
+            <p>
+                Resultado:<br>
+                <input type="text" name="resultado1">
+            </p>
+            <div id="addResultado"></div>
+            <p>
+                <input type="button" class="adicionar" onclick="adicionaResultado()" value="        Adicionar +Resultado">
+
             </p>
             <input type="hidden" name="id" value="<?=$id?>">
        &nbsp

@@ -27,7 +27,7 @@ if ($_SESSION["acesso"] != true)
  $dadosQuiz = $sqlQuiz->fetchAll();
 
 // $PDO categorias lateral
- $categoria = $_GET['categoria'];
+ @$categoria = $_GET['categoria'];
  $sqlQuiz = $PDO->prepare("SELECT * FROM quiz where categoria!=''");
  $sqlQuiz->execute();
  $dadosCategoria = $sqlQuiz->fetchAll();

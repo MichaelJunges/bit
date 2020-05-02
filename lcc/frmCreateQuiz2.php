@@ -41,7 +41,7 @@ $id = $_SESSION["id"];
 		<div class="grid-100">
 			<div class="grid-50"></div>
 			<h1 style="color: white">
-<a href="home.php"><img src="icons/seta2.png" width="3%"> </a>Seu Quiz precisa de uma foto :)</h1>
+<a href="tipoQuiz.php"><img src="icons/seta2.png" width="3%"> </a>Seu Quiz precisa de uma foto :)</h1>
 		<form name="frmCreateQuiz2" action="frmCrQuiz2.php" method="POST" enctype="multipart/form-data" >
 				 <p class="titulo">  
 		        <input type="submit" value="PRÓXIMO" id="proximo">
