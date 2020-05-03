@@ -36,7 +36,7 @@
   $consultaR = $sqlSelectR->fetchAll();
 
   @$categoria = $_GET['categoria'];
- $sqlQuiz = $PDO->prepare("SELECT * FROM quiz where categoria!=''");
+ $sqlQuiz = $PDO->prepare("SELECT DISTINCT categoria FROM quiz where categoria!='' ORDER BY categoria ASC ");
  $sqlQuiz->execute();
  $dadosCategoria = $sqlQuiz->fetchAll();
 

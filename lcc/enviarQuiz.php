@@ -82,7 +82,7 @@ if($_SESSION["acesso"] != true) {
 
 	if ($exec && $execR && $execP){
 		$msg=urlencode("Quiz criado com sucesso");
-		header("Location:home.php?categoria=?msg=$msg");  
+		header("Location:home.php?categoria=");  
 		// header("Location:home.php?msg=$msg");
 		exit;
   	}else{
