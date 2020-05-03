@@ -101,7 +101,7 @@ if (!($pergunta == $consultaId[0]["pp"])) {
 </label>
    </fieldset>
 
-  <input type="submit" value="PRÓXIMA">
+  <input type="submit" value="PRÓXIMA"> 
 	<input type="hidden" name="id" value="<?=$id?>">
   <input type="hidden" name="pergunta" value="<?=$pergunta?>">
 </form>

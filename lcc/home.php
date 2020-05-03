@@ -72,7 +72,7 @@ if ($_SESSION["acesso"] != true)
 <div>  <!-- DIV CATEGORIAS (LATERAL) -->
  <p class="textoUpImagem">Categorias</p> 
 		<a href="home.php?categoria" style="text-decoration: none;">
-			<p class="categorias">+ RECENTES</p>
+			<p class="categorias"> RECENTES <img src="icons/estrela.png" width="25px" height="25px" style="vertical-align: middle;"></p>
 		</a>		
 		<?php  
 		  foreach ($dadosCategoria as $quizzes) {	
@@ -118,10 +118,11 @@ if ($_SESSION["acesso"] != true)
       }
     ?>
  </div>
-<?php if (empty(@$categoria)) {
+<?php if (empty(@$categoria)) 
+{
 ?>
 <div class="grid-100"> <!-- DIV QUE CARREGA QUIZ RECENTES (categoria=) -->
-	<h1  style="padding: 0px; margin: 0px; background-color: white; border-radius: 20px;">+ RECENTES GERAL</h1>
+	<h1  style="padding: 0px; margin: 0px; background-color: white; border-radius: 20px;">+ RECENTES </h1>
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	
 		?>
