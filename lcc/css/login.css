@@ -67,14 +67,6 @@ input[type="submit"]:hover{
 	background-image: linear-gradient(to bottom right, purple, red);
 	 /*background-image: linear-gradient(to bottom right, #6a5acd, #9932cc);*/
 }
-/*.aviso
-{
-
-	background-image: url(../icons/seta.png);
-	padding: 5%;
-	background-repeat: no-repeat;
-	background-position: all;
-}*/
 .button:focus, button:active {
     outline: none;
 }
@@ -125,17 +117,7 @@ p,a
 	text-decoration: none;
 	margin-top: 0px;
 }
-.alternativa{
-	background-color: white;
-	text-align: center;
-	font-weight: 800;
-	font-size: 30px;
-	font-family: Calibri;
-	border: inset;
-	border-color: black;
-}
-.alternativa:hover{
-	background-color: silver;
+
 }
 .btnLink{
  font-family: Calibri; 

@@ -149,6 +149,7 @@ td{
 	border-radius: 10px; 
 	text-align: left;
 	padding: 0px;
+	margin: 0px;
 }
 .categorias{
 color: black;
@@ -158,5 +159,41 @@ padding: 10px;
 }
 .categorias:hover{
 	background-color: red;
+	color: white;
+}
+.alternativa{
+	background-color: white;
+	text-align: center;
+	font-weight: 500;
+	font-size: 30px;
+	font-family: Calibri;
+	border-radius: 5px;
+}
+.alternativa:hover{
+	background-color: silver;
+	  }
+input[type="submit"]{
+	font-family: Calibri;
+	font-size: 30px;
+	border-color: black;
+	/*background-image: linear-gradient(to bottom right,green, green);*/
+	color: black;
+	font-weight: 800;
+	text-shadow: all;
+	/*-webkit-text-stroke-width: 1.5px;
+	-webkit-text-stroke-color: #000;*/
+	width: 315px;
+	border-radius: 5px;
+	
+	
+}	
+input[type="submit"]:hover{
+	cursor: pointer;
+	color:white;
+	background-color: red;
+	/*background-image: linear-gradient(to bottom right, purple, red);*/
+	 /*background-image: linear-gradient(to bottom right, #6a5acd, #9932cc);*/
+}
+h3{
 	color: white;
 }

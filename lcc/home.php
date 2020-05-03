@@ -72,7 +72,7 @@ if ($_SESSION["acesso"] != true)
 <div>  <!-- DIV CATEGORIAS (LATERAL) -->
  <p class="textoUpImagem">Categorias</p> 
 		<a href="home.php?categoria" style="text-decoration: none;">
-			<p class="categorias"> RECENTES <img src="icons/estrela.png" width="25px" height="25px" style="vertical-align: middle;"></p>
+			<p class="categorias"> RECENTES <!-- <img src="icons/estrela.png" width="25px" height="25px" style="vertical-align: middle;"> --></p>
 		</a>		
 		<?php  
 		  foreach ($dadosCategoria as $quizzes) {	
@@ -93,8 +93,8 @@ if ($_SESSION["acesso"] != true)
 	<a href="suporte.php" style="text-decoration: none;"><p class="categorias">Tutorial</p></a>
 	<a href="suporte.php" style="text-decoration: none;"><p class="categorias">Desenvolvedores</p></a>
 	</div>
- </div>
 
+</div>
 <div class="grid-90 " style="padding: 0px; display: block;"><!--  DIV DOS QUIZ GRID-90 -->
 
 <div class="grid-100"  >	<!-- DIV QUE CARREGA POR CATEGORIA -->
