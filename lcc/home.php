@@ -72,7 +72,7 @@ if ($_SESSION["acesso"] != true)
       <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$recaregados["id"]?>">
         <div class="grid-20 mobile-grid-100 people" style="background-color: black;" > 
         <p class="textoUpImagem" style="text-decoration: none; color: white">
-          <?=substr(strip_tags($recaregados["titulo"]),0,51)?>...   
+          <?=substr(strip_tags($recaregados["titulo"]),0,35)?>...   
         </p>
         <p >
           <img class="imagemQuiz" width="100%" height="100%" src="<?=$recaregados["foto"]?>">
@@ -97,7 +97,7 @@ if ($_SESSION["acesso"] != true)
 		  <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$quizzes["id"]?>">
 		  	<div class="grid-20 mobile-grid-100 people"  > 
 				<p class="textoUpImagem" >
-					<?=substr(strip_tags($quizzes["titulo"]),0,51)?>	
+					<?=substr(strip_tags($quizzes["titulo"]),0,35)?>	
 				</p>
 				<p >
 				  <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">

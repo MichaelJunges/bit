@@ -63,7 +63,7 @@ if ($_SESSION["acesso"] != true)
 		  <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$quizzes["id"]?>">
 		  	<div class="grid-20 mobile-grid-100 people"  > 
 				<p class="textoUpImagem" >
-				  <?=$quizzes["titulo"]?>		
+				  <?=substr(strip_tags($quizzes["titulo"]),0,35)?>		
 				</p>
 				<p >
 				  <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
