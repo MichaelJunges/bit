@@ -14,7 +14,7 @@
 <div class="grid-100" style="padding: 0px;background-color: "> <!-- DIV CONTA (LATERAL) -->
 	<p class="textoUpImagem">Conta</p>
   <a  class="minhasInfo" href="frmEditar.php" ><p class="minhasConta" style="padding: 5px;" >Perfil</p></a>
- 	<a class="minhasInfo" href="tipoQuiz.php"><p class="minhasConta" style="padding: 5px">Criar Quiz</p></a>
+ 	<a class="minhasInfo" href="frmCreateQuiz"><p class="minhasConta" style="padding: 5px">Criar Quiz</p></a>
  	 <a href="logoff.php" style="text-decoration: none;">
 		  <p class="textoUpImagem" style="font-size: 15px; text-align: center; background-color:black">SAIR</p>
 	</a>

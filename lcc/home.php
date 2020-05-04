@@ -64,7 +64,7 @@ if ($_SESSION["acesso"] != true)
 </div>
 <div class="grid-90 " style="padding: 0px; display: block;"><!--  DIV DOS QUIZ GRID-90 -->
 
-<div class="grid-100"  >	<!-- DIV QUE CARREGA POR CATEGORIA -->
+<div class="grid-100" >	<!-- DIV QUE CARREGA POR CATEGORIA -->
 	<h1  style="padding: 0px; margin: 0px; background-color: white; border-radius: 20px;"><?=$categoria?></h1>
     <?php  
       foreach ($carregaCategoria as $recaregados) {  
@@ -88,7 +88,7 @@ if ($_SESSION["acesso"] != true)
 <?php if (empty(@$categoria)) 
 {
 ?>
-<div class="grid-100"> <!-- DIV QUE CARREGA QUIZ RECENTES (categoria=) -->
+<div class="grid-100" style="padding: 0px;" > <!-- DIV QUE CARREGA QUIZ RECENTES (categoria=) -->
 	<h1  style="padding: 0px; margin: 0px; background-color: white; border-radius: 20px;">+ RECENTES </h1>
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	
