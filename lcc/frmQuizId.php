@@ -40,7 +40,12 @@
  $sqlQuiz->execute();
  $dadosCategoria = $sqlQuiz->fetchAll();
 
+$sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id == '$id' AND q.id_usuario == r.id");
+ $sqlQuizA->execute();
+ $dadosQuiz = $sqlQuizA->fetchAll();
+ // var_dump($dadosQuiz)
   ?>  
+
 
 <!DOCTYPE html>
 <html>
@@ -75,12 +80,16 @@
 
 <!--   <div class="grid-90" style="text-align: center;" > -->
 <div class="grid-40">
-
      <!-- <p style="text-align: left;"><img width="80%" style="border: solid 4px white; " src="<?=$consultaQ[0]["foto"]?> "> </p> -->
 </div>
-<!--   <h3 style="font-family: 'Calibri';font-size: 40px; " class="titulo"><a href="home.php?categoria"><img src="icons/seta2.png" width="3%"> </a></h3> -->
 <div class="grid-100" style="background-color: ">
+ <!--   <p><?=$dadosQuiz?></p>  -->
   <p class="perguntaQuiz"><?=$consultaP[$pergunta]["texto"]?></p>
+
+
+  <?php 
+
+   ?>
   <fieldset class="radio-image">  
 
     <div class="grid-100">
@@ -116,7 +125,10 @@
   </label>
      </fieldset>
 
+
     <input type="submit" value="PRÓXIMA"> 
+
+
   	<input type="hidden" name="id" value="<?=$id?>">
     <input type="hidden" name="pergunta" value="<?=$pergunta?>">
   </form>
