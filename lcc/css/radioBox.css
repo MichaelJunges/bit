@@ -4,7 +4,8 @@
 .radio-image label > input + img{
     cursor:pointer;
     border-radius:20px;
-    padding: 0px;
+    padding: 0px
+    visibility: hidden;
 }
 .radio-image label > input:checked + img{
     border:4px solid #39ff14;

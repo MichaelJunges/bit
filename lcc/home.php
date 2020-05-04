@@ -56,44 +56,11 @@ if ($_SESSION["acesso"] != true)
 	  
 <!-- <iframe hidden="hidden" src="https://www.youtube.com/embed/5Mj8AlkKISw?autoplay=1;mute=1'"> </iframe> -->
 	
-<div class="grid-100" style="padding-top: 15PX;"> <!-- DIV PRINCIPAL GRID-100 -->
-
-<div class="grid-10 mobile-grid-100 gridCategorias" > <!-- DIV LATERAL GRID-10 -->
-
-<div class="grid-100" style="padding: 0px;background-color: "> <!-- DIV CONTA (LATERAL) -->
-	<p class="textoUpImagem">Conta</p>
-  <a  class="minhasInfo" href="frmEditar.php" ><p class="minhasConta" style="padding: 5px;" >Perfil</p></a>
- 	<a class="minhasInfo" href="tipoQuiz.php"><p class="minhasConta" style="padding: 5px">Criar Quiz</p></a>
- 	 <a href="logoff.php" style="text-decoration: none;">
-		  <p class="textoUpImagem" style="font-size: 15px; text-align: center; background-color:black">SAIR</p>
-	</a>
- </div>
-
-<div>  <!-- DIV CATEGORIAS (LATERAL) -->
- <p class="textoUpImagem">Categorias</p> 
-		<a href="home.php?categoria" style="text-decoration: none;">
-			<p class="categorias"> RECENTES <!-- <img src="icons/estrela.png" width="25px" height="25px" style="vertical-align: middle;"> --></p>
-		</a>		
-		<?php  
-		  foreach ($dadosCategoria as $quizzes) {	
-		?>
-		<!-- <a href="home.php?categoria=<?=$categoria?>" style="text-decoration: none;"> -->
-	    <a href="home.php?categoria=<?=$quizzes["categoria"]?>" style="text-decoration: none;">
-		 <p class="categorias"><?=$quizzes["categoria"]?></p>
-		</a>
-	 <?php
-		  }
-	  ?>
-     </div> 
-
-<div><!--  DIV SOBRE (LATERAL) -->
-
- <p class="textoUpImagem">Sobre</p>
-	
-	<a href="suporte.php" style="text-decoration: none;"><p class="categorias">Tutorial</p></a>
-	<a href="suporte.php" style="text-decoration: none;"><p class="categorias">Desenvolvedores</p></a>
-	</div>
-
+<div class="grid-100" style="padding: 0PX;"> <!-- DIV PRINCIPAL GRID-100 -->
+	<div>
+	<?php 
+		 include('menu.php');
+	 ?>
 </div>
 <div class="grid-90 " style="padding: 0px; display: block;"><!--  DIV DOS QUIZ GRID-90 -->
 

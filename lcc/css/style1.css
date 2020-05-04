@@ -150,12 +150,15 @@ td{
 	text-align: left;
 	padding: 0px;
 	margin: 0px;
+	border-style: groove;
+border-color: rgb(51,109,226);
 }
 .categorias{
 color: black;
 font-family: Calibri;
 font-weight: 1000;
 padding: 10px;
+
 }
 .categorias:hover{
 	background-color: red;
@@ -164,13 +167,21 @@ padding: 10px;
 .alternativa{
 	background-color: white;
 	text-align: center;
-	font-weight: 500;
+	font-weight: 900;
 	font-size: 30px;
 	font-family: Calibri;
-	border-radius: 5px;
+	border-radius: 2px;
+	border-color: black;
+	border-style: groove; 
+	border-width: 0.7px;
+	padding: 10px
 }
 .alternativa:hover{
-	background-color: silver;
+	background-color:rgb(51,109,226); 
+	color: white;
+	border-color:rgb(51,109,226); 
+
+
 	  }
 input[type="submit"]{
 	font-family: Calibri;
@@ -196,4 +207,15 @@ input[type="submit"]:hover{
 }
 h3{
 	color: white;
+	font-family: Calibri;
+	font-size: 30px;
+}
+.perguntaQuiz{
+font-family: Calibri;
+font-size: 50px;
+font-weight: 900px;
+color:white; 
+padding: 50px; 
+-webkit-text-stroke-width: 1.2px;
+-webkit-text-stroke-color: #000;
 }
