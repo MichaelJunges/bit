@@ -22,6 +22,10 @@
 
 <div>  <!-- DIV CATEGORIAS (LATERAL) -->
  <p class="textoUpImagem">Categorias</p> 
+ 	<form action="buscar.php" style="margin-left: 5px; " method="POST">
+ 		<input type="text" name="buscar" placeholder="Buscar" required="required">
+ 		<center><input type="submit" value="Ok"></center>
+ 	</form>
 		<a href="home.php?categoria" style="text-decoration: none;">
 			<p class="categorias"> RECENTES <!-- <img src="icons/estrela.png" width="25px" height="25px" style="vertical-align: middle;"> --></p>
 		</a>		
