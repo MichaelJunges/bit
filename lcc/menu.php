@@ -21,11 +21,12 @@
  </div>
 
 <div>  <!-- DIV CATEGORIAS (LATERAL) -->
- <p class="textoUpImagem">Categorias</p> 
- 	<form action="buscar.php" style="margin-left: 5px; " method="POST">
- 		<input type="text" name="buscar" placeholder="Buscar" required="required">
- 		<center><input type="submit" value="Ok"></center>
- 	</form>
+	<p class="textoUpImagem">Procurar</p>
+	<form action="buscar.php" style="margin-left: 5px; " method="POST">		
+ 		<input type="text" name="buscar" placeholder="Buscar" required="required" style="    width: 115px;">
+ 		<input type="submit" value="Ok"  style="width: 115px; font-size: 10px; height: 20px;">
+ 		</form>
+ <p class="textoUpImagem">Categorias</p>  	
 		<a href="home.php?categoria" style="text-decoration: none;">
 			<p class="categorias"> RECENTES <!-- <img src="icons/estrela.png" width="25px" height="25px" style="vertical-align: middle;"> --></p>
 		</a>		
