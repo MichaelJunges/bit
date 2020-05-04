@@ -70,12 +70,14 @@ if ($_SESSION["acesso"] != true)
       foreach ($carregaCategoria as $recaregados) {  
     ?>
       <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$recaregados["id"]?>">
-        <div class="grid-20 mobile-grid-100 people" style="background-color: black;" > 
+        <div class="grid-20 mobile-grid-100 people" > 
         <p class="textoUpImagem" style="text-decoration: none; color: white">
           <?=$recaregados["titulo"]?>   
         </p>
         <p >
+        	<div class="zoom">
           <img class="imagemQuiz" width="100%" height="100%" src="<?=$recaregados["foto"]?>">
+      </div>
         </p>
         <p class="textoDownImagem"><?=$recaregados["categoria"]?></p>
         </p>
@@ -89,7 +91,6 @@ if ($_SESSION["acesso"] != true)
 {
 ?>
 <div class="grid-100" style="padding: 0px;" > <!-- DIV QUE CARREGA QUIZ RECENTES (categoria=) -->
-	<h1  style="padding: 0px; margin: 0px; background-color: white;">+ RECENTES </h1>
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	
 		?>
@@ -99,10 +100,11 @@ if ($_SESSION["acesso"] != true)
 				<p class="textoUpImagem" >
 				  <?=$quizzes["titulo"]?>		
 				</p>
-				<p >
-				  <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
-				</p>
-				<p class="textoDownImagem"><?=$quizzes["categoria"]?></p>
+			
+				<div class="zoom">
+				  <img class="imagemQuiz img-responsive" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
+				  </div>
+				 <p class="textoDownImagem"><?=$quizzes["categoria"]?></p> 
 				</p>
 		  </a>
 		  </div>
