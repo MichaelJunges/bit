@@ -64,18 +64,20 @@ if ($_SESSION["acesso"] != true)
 </div>
 <div class="grid-90 " style="padding: 0px; display: block;"><!--  DIV DOS QUIZ GRID-90 -->
 
-<div class="grid-100"  >	<!-- DIV QUE CARREGA POR CATEGORIA -->
-	<h1  style="padding: 0px; margin: 0px; background-color: white; border-radius: 20px;"><?=$categoria?></h1>
+<div class="grid-100" style="padding: 0px" >	<!-- DIV QUE CARREGA POR CATEGORIA -->
+	<h1  style="padding: 0px; margin: 0px; background-color: white;"><?=$categoria?></h1>
     <?php  
       foreach ($carregaCategoria as $recaregados) {  
     ?>
       <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$recaregados["id"]?>">
-        <div class="grid-20 mobile-grid-100 people" style="background-color: black;" > 
+        <div class="grid-20 mobile-grid-100 people" > 
         <p class="textoUpImagem" style="text-decoration: none; color: white">
           <?=$recaregados["titulo"]?>   
         </p>
         <p >
+        	<div class="zoom">
           <img class="imagemQuiz" width="100%" height="100%" src="<?=$recaregados["foto"]?>">
+      </div>
         </p>
         <p class="textoDownImagem"><?=$recaregados["categoria"]?></p>
         </p>
@@ -88,8 +90,7 @@ if ($_SESSION["acesso"] != true)
 <?php if (empty(@$categoria)) 
 {
 ?>
-<div class="grid-100"> <!-- DIV QUE CARREGA QUIZ RECENTES (categoria=) -->
-	<h1  style="padding: 0px; margin: 0px; background-color: white; border-radius: 20px;">+ RECENTES </h1>
+<div class="grid-100" style="padding: 0px;" > <!-- DIV QUE CARREGA QUIZ RECENTES (categoria=) -->
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	
 		?>
@@ -99,10 +100,11 @@ if ($_SESSION["acesso"] != true)
 				<p class="textoUpImagem" >
 				  <?=$quizzes["titulo"]?>		
 				</p>
-				<p >
-				  <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
-				</p>
-				<p class="textoDownImagem"><?=$quizzes["categoria"]?></p>
+			
+				<div class="zoom">
+				  <img class="imagemQuiz img-responsive" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
+				  </div>
+				 <p class="textoDownImagem"><?=$quizzes["categoria"]?></p> 
 				</p>
 		  </a>
 		  </div>

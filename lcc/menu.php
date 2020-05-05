@@ -14,16 +14,21 @@
 <div class="grid-100" style="padding: 0px;background-color: "> <!-- DIV CONTA (LATERAL) -->
 	<p class="textoUpImagem">Conta</p>
   <a  class="minhasInfo" href="frmEditar.php" ><p class="minhasConta" style="padding: 5px;" >Perfil</p></a>
- 	<a class="minhasInfo" href="tipoQuiz.php"><p class="minhasConta" style="padding: 5px">Criar Quiz</p></a>
+ 	<a class="minhasInfo" href="frmCreateQuiz"><p class="minhasConta" style="padding: 5px">Criar Quiz</p></a>
  	 <a href="logoff.php" style="text-decoration: none;">
 		  <p class="textoUpImagem" style="font-size: 15px; text-align: center; background-color:black">SAIR</p>
 	</a>
  </div>
 
 <div>  <!-- DIV CATEGORIAS (LATERAL) -->
- <p class="textoUpImagem">Categorias</p> 
+	<p class="textoUpImagem">Procurar</p>
+	<form action="buscar.php" style="margin-left: 5px; " method="POST">		
+ 		<input type="text" name="buscar" placeholder="Procurar Quiz" required="required" style="    width: 115px;">
+ 		<input type="submit" value="Ok"  style="width: 115px; font-size: 10px; height: 20px;">
+ 		</form>
+ <p class="textoUpImagem">Categorias</p>  	
 		<a href="home.php?categoria" style="text-decoration: none;">
-			<p class="categorias"> RECENTES <!-- <img src="icons/estrela.png" width="25px" height="25px" style="vertical-align: middle;"> --></p>
+			<p class="categorias"> RECENTES </p>
 		</a>		
 		<?php  
 		  foreach ($dadosCategoria as $quizzes) {	
