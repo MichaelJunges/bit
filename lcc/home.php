@@ -52,7 +52,7 @@ if ($_SESSION["acesso"] != true)
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script> 
 
 </head>
-<body style=" margin: 0px; padding: 0px; background-color: rgb(51,109,226)">
+<body style=" margin: 0px; padding: 0px; ">
 	  
 <!-- <iframe hidden="hidden" src="https://www.youtube.com/embed/5Mj8AlkKISw?autoplay=1;mute=1'"> </iframe> -->
 	
@@ -65,7 +65,6 @@ if ($_SESSION["acesso"] != true)
 <div class="grid-90 " style="padding: 0px; display: block;"><!--  DIV DOS QUIZ GRID-90 -->
 
 <div class="grid-100" style="padding: 0px" >	<!-- DIV QUE CARREGA POR CATEGORIA -->
-	<h1  style="padding: 0px; margin: 0px; background-color: white;"><?=$categoria?></h1>
     <?php  
       foreach ($carregaCategoria as $recaregados) {  
     ?>
@@ -79,8 +78,7 @@ if ($_SESSION["acesso"] != true)
           <img class="imagemQuiz" width="100%" height="100%" src="<?=$recaregados["foto"]?>">
       </div>
         </p>
-        <p class="textoDownImagem"><?=$recaregados["categoria"]?></p>
-        </p>
+       
       </a>
        </div>
     <?php
@@ -104,7 +102,7 @@ if ($_SESSION["acesso"] != true)
 				<div class="zoom">
 				  <img class="imagemQuiz img-responsive" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
 				  </div>
-				 <p class="textoDownImagem"><?=$quizzes["categoria"]?></p> 
+				<!--  <p class="textoUpImagem"><?=$quizzes["categoria"]?></p>  -->
 				</p>
 		  </a>
 		  </div>
