@@ -59,17 +59,19 @@ if ($_SESSION["acesso"] != true)
 <div class="grid-100" style="padding: 0PX;"> <!-- DIV PRINCIPAL GRID-100 -->
 	<div>
 	<?php 
-		 include('menu.php');
+		 include('menu2.php');
 	 ?>
 </div>
-<div class="grid-90 " style="padding: 0px; display: block;"><!--  DIV DOS QUIZ GRID-90 -->
+<div class="grid-100 " style="padding: 0px; display: block;"><!--  DIV DOS QUIZ GRID-90 -->
+	<p class="titulo" style="text-align: center;"><?=$categoria?></p>
 
-<div class="grid-100" style="padding: 0px" >	<!-- DIV QUE CARREGA POR CATEGORIA -->
+<div class="grid-100" style="padding: 0px; margin-top: 10px;" >	<!-- DIV QUE CARREGA POR CATEGORIA -->
+
     <?php  
       foreach ($carregaCategoria as $recaregados) {  
     ?>
       <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$recaregados["id"]?>">
-        <div class="grid-20 mobile-grid-100 people" > 
+        <div class="grid-50 mobile-grid-50 people" > 
         <p class="textoUpImagem" style="text-decoration: none; color: white">
           <?=$recaregados["titulo"]?>   
         </p>
