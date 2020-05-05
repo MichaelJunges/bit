@@ -71,7 +71,7 @@ if ($_SESSION["acesso"] != true)
       foreach ($carregaCategoria as $recaregados) {  
     ?>
       <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$recaregados["id"]?>">
-        <div class="grid-50 mobile-grid-50 people" > 
+        <div class="grid-20 mobile-grid-50 people" > 
         <p class="textoUpImagem" style="text-decoration: none; color: white">
           <?=$recaregados["titulo"]?>   
         </p>
@@ -90,13 +90,13 @@ if ($_SESSION["acesso"] != true)
 <?php if (empty(@$categoria)) 
 {
 ?>
-<div class="grid-100" style="padding: 0px;" > <!-- DIV QUE CARREGA QUIZ RECENTES (categoria=) -->
+<div class="grid-100" style="padding: 0px; margin: 0;"  > <!-- DIV QUE CARREGA QUIZ RECENTES (categoria=) -->
 		<?php  
 		  foreach ($dadosQuiz as $quizzes) {	
 		?>
 
 		  <a style="text-decoration: none;" href="frmQuizId.php?id=<?=$quizzes["id"]?>">
-		  	<div class="grid-20 mobile-grid-100 people"  > 
+		  	<div class="grid-20 people"  > 
 				<p class="textoUpImagem" >
 				  <?=$quizzes["titulo"]?>		
 				</p>

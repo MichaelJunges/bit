@@ -27,6 +27,7 @@
 	.menu a{
 		font-weight: 900;
 		padding: 15px;
+		font-size: 20px;
 		display: block;
 		text-decoration: none;
 		text-align: center;
@@ -42,18 +43,18 @@
 }
 .menu a:hover{
 	background-color: white;
-	color: rgb(51,109,226);
+	color: #008080;
 }
 .menu ul ul li{
 	float: none;
 	border-bottom: solid 1px #ccc;
 }
 .menu ul ul li a{
-	background-color: rgb(51,109,226);
+	background-color: #008080;
 }
 label[for="bt_menu"]{
 	padding: 5px;
-	background-color: rgb(51,109,226);
+	background-color: #008080;
 	color: white;
 	font-family: Calibri;
 	text-align: center;

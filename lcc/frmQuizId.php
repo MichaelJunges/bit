@@ -60,18 +60,18 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
-<body style=" margin: 0px; padding: 0px; background-color:rgb(51,109,226);;">
+<body style=" margin: 0px; padding: 0px; background-color: #1C1C1C;">
 
 <div class="grid-100" style="padding: 0PX;"> <!-- DIV PRINCIPAL GRID-100 -->
 
 <div>
   <?php 
-      include('menu.php');
+      include('menu2.php');
    ?>
 </div>
 
-<div class="grid-90 " style="padding: 0px; display: block;"><!--  DIV DOS QUIZ GRID-90 -->
-<div> <!-- CODIGO -->
+<div class="grid-100 "><!--  DIV DOS QUIZ GRID-90 -->
+<div class="grid-100"> <!-- CODIGO -->
 
   <?php
   if (!($pergunta == $consultaId[0]["pp"])) {
@@ -82,10 +82,9 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
 <div class="grid-40">
      <!-- <p style="text-align: left;"><img width="80%" style="border: solid 4px white; " src="<?=$consultaQ[0]["foto"]?> "> </p> -->
 </div>
-<div class="grid-100" style="background-color: ">
+<div class="grid-100" >
  <!--   <p><?=$dadosQuiz?></p>  -->
   <p class="perguntaQuiz"><?=$consultaP[$pergunta]["texto"]?></p>
-
 
   <?php 
 

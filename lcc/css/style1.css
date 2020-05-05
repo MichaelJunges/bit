@@ -28,17 +28,17 @@ body{
 	text-align: center; 
 	font-size: 18px;
 	color: white;
-	background-color: rgb(51,109,226);
+	background-color: #008080; 
 	text-decoration: none;
 	padding-left: 2px;
     padding-right: 2px;
     padding-bottom: 2px;
     margin: 4px;
-}
+   }
 
 .textoUpImagem
 {
-	background-color: rgb(51,109,226);
+	background-color: #008080;
 	font-family: calibri;
 	border-radius: 5px;
 	padding: 5px;
@@ -179,9 +179,9 @@ padding: 10px;
 	padding: 10px
 }
 .alternativa:hover{
-	background-color:rgb(51,109,226); 
+	background-color:#008080;
 	color: white;
-	border-color:rgb(51,109,226); 
+	border-color:black; 
 
 
 	  }
