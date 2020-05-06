@@ -46,7 +46,8 @@ if ($_SESSION["acesso"] != true)
 	<title>QUIZ/<?=$nreal?></title>
  	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
+	<link rel="stylesheet" href="css/unsemantic-grid-mobile.css">
+	<link rel="stylesheet" href="css/unsemantic-grid-desktop.css">
 	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script> 
@@ -62,30 +63,22 @@ if ($_SESSION["acesso"] != true)
 	<div class="grid-100 " style="padding: 0px; display: block;"><!--  DIV DOS QUIZ GRID-90 -->
 		<p class="titulo" style="text-align: center;"><?=$categoria?></p>
 	</div>
-
-	<div class="grid-100" style="padding: 0px; margin-top: 10px;" >	<!-- DIV QUE CARREGA POR CATEGORIA -->
-	    <?php  
-	      foreach ($carregaCategoria as $recaregados) {  
-	    ?>
-	      <a  class="grid-25 mobile-grid-50" style="text-decoration: none;" href="frmQuizId.php?id=<?=$recaregados["id"]?>">
+	<?php  
+	    foreach ($carregaCategoria as $recaregados) {  
+	?>
+	    <a  class="grid-25 mobile-grid-50" style="text-decoration: none;margin-top: 100px;" href="frmQuizId.php?id=<?=$recaregados["id"]?>">
 	        <div class="people" > 
 		        <p class="textoUpImagem" style="color: white">
 		          <?=$recaregados["titulo"]?>   
 		        </p>
-		         <div class="zoom">
-		          	<img class="imagemQuiz" width="100%" height="100%" src="<?=$recaregados["foto"]?>">
+		        <div class="zoom">
+		         	<img class="imagemQuiz" width="100%" height="100%" src="<?=$recaregados["foto"]?>">
 		      	</div> 
 	      	</div>     
-	      </a>
-	    <?php
-	      }
-	    ?>
- 	</div>
-	<?php 
-		if (empty(@$categoria)) {
-	?>
-	<div class="grid-100" style="padding: 0px;"> <!-- DIV QUE CARREGA QUIZ RECENTES (categoria=) -->
-		<?php  
+	    </a>
+	<?php
+	    }
+		if (empty(@$categoria)) { 
 		  foreach ($dadosQuiz as $quizzes) {	
 		?>
 		  <a class="grid-25 mobile-grid-50" style="text-decoration: none; margin: 0" href="frmQuizId.php?id=<?=$quizzes["id"]?>">
