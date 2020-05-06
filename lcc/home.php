@@ -43,17 +43,18 @@ if ($_SESSION["acesso"] != true)
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>QUIZ/<?=$nreal?></title>
  	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/unsemantic-grid-mobile.css">
-	<link rel="stylesheet" href="css/unsemantic-grid-desktop.css">
+	<link rel="stylesheet" href="./css/unsemantic-grid-responsive.css">
 	<link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script> 
 
 </head>
-<body>	
+<body>
 	<div class="grid-100"> <!-- DIV PRINCIPAL GRID-100 -->
 		<?php 
 			include('menu2.php');
