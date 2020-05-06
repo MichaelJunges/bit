@@ -125,7 +125,7 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
      </fieldset>
 
 
-    <input type="submit" value="PRÓXIMA"> 
+    <input type="submit" value="PRÓXIMA" class="submit"> 
 
 
   	<input type="hidden" name="id" value="<?=$id?>">

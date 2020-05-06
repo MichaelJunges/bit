@@ -12,7 +12,7 @@
 	.menu
 	{
 		width: 100%;
-		height: 50px;
+		height: 55px;
 		background-color: #222;
 		font-family: 'Calibri';	
 	}
@@ -69,7 +69,7 @@ label[for="bt_menu"]{
 label[for="bt_menu"]{
 	display: none;
 }
-@media(max-width: 800px ){
+@media(max-width: 1210px ){
 	label[for="bt_menu"]{
 		display: block;
 	}
@@ -88,7 +88,12 @@ label[for="bt_menu"]{
 		width: 100%;
 		float: none;
 	}
+	.menu ul div{
+		width: 100%;
+		float: none;
+	}
 	.menu ul ul{
+		width: 100%;
 		position: static;
 		overflow: hidden;
 		max-height: 0;
@@ -98,48 +103,55 @@ label[for="bt_menu"]{
 		height: auto;
 		max-height: 200px;
 	}
-
 }
-
+.btpesq{
+	font-family: Calibri;
+	font-size: 1em;
+	border-color: black;
+	color: black;
+	font-weight: 800;
+	text-shadow: all;
+	width: 2em;
+	height: 1.7em;
+	border-radius: 0.5em;
+}
 </style>
 <body>
-
-
-<input type="checkbox" id="bt_menu">
-<label for="bt_menu">&#9776;</label>
-
-		<nav class="menu">
-			
-			<ul>
-					<div class="grid-15" style="text-align: right;">
-		<form style="text-align: left;" action="buscar.php"  method="POST">		
- 		<input type="text" name="buscar" placeholder="Procurar Quiz" required="required" style="padding: 5px; border-radius: 10px; border: none; margin-top: 15px;">
- 		<input hidden="hidden" type="submit" value="Ok" >
- 		</form>
-				</div>
-				<li><a href="frmEditar.php">Perfil</a></li>
-				<li><a href="#">Quero Criar</a>
-					<ul>
-						<li><a href="frmCreateQuiz.php">Criar Quiz</a></li>
-						<li><a href="">[EM BREVE]</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Categorias</a>
-						<ul>
-						<li><a href="home.php?categoria">RECENTES</a></li>	
-							<?php  
-		 					 foreach ($dadosCategoria as $quizzes) {	
-							?>
-						<li><a href="home.php?categoria=<?=$quizzes["categoria"]?>"><?=$quizzes["categoria"]?></a></li>
-						 <?php
-						  }
-	  					?>
-					</ul>	
-				</li>
-				<li><a href="logoff.php">Sair</a></li>
-
-			
-			</ul>
-		</nav>
+	<input type="checkbox" id="bt_menu">
+	<label for="bt_menu">&#9776;</label>
+	<nav class="menu">
+		<ul>
+			<div class="grid-20">
+				<form action="buscar.php"  method="POST">		
+			 		<input type="text" name="buscar" placeholder="Procurar Quiz" required="required" style="padding: 5px; border-radius: 10px; border: none; margin-top: 1.3em;">
+					<input type="submit" value="Ok" class="btpesq">
+			 	</form>
+			</div>
+			<li><a href="home.php">Home</a></li>
+			<li><a href="frmEditar.php">Perfil</a></li>
+			<li><a href="#">Quero Criar</a>
+				<ul>
+					<li><a href="frmCreateQuiz.php">Criar Quiz</a></li>
+					<li><a href="">[EM BREVE]</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Categorias</a>
+				<ul>
+					<li><a href="home.php?categoria">RECENTES</a></li>	
+					<?php  
+		 				foreach ($dadosCategoria as $quizzes) {	
+					?>
+						<li>
+							<a href="home.php?categoria=<?=$quizzes["categoria"]?>"><?=$quizzes["categoria"]?></a>
+						</li>
+					<?php
+						}
+	  				?>
+				</ul>	
+			</li>
+			<li><a href="logoff.php">Sair</a></li>
+		</ul>
+	</nav>
 </body>
 </html>
