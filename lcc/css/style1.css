@@ -6,6 +6,8 @@ body{
 	background-size: all;
 	font-family: calibri;
 	background-color: #1C1C1C;
+	padding: 0;
+	margin: 
 }
 
 .barraPesquisa{
@@ -28,17 +30,15 @@ body{
 	text-align: center; 
 	font-size: 18px;
 	color: white;
-	background-color: #008080; 
+	background-color: #DC143C; 
 	text-decoration: none;
-	padding-left: 2px;
-    padding-right: 2px;
-    padding-bottom: 2px;
+    padding: 2px;
     margin: 4px;
    }
 
-.textoUpImagem
+/*.textoUpImagem
 {
-	background-color: #008080;
+	background-color: #4e805c;
 	font-family: calibri;
 	border-radius: 5px;
 	padding: 5px;
@@ -47,7 +47,7 @@ body{
 	font-size: 20px;
 	text-decoration: none;
 	color: white;
-}
+}*/
 .textoDownImagem{
  font-size: 15px;
  text-decoration: none;
@@ -176,15 +176,14 @@ padding: 10px;
 	border-color: black;
 	border-style: groove; 
 	border-width: 0.7px;
-	padding: 10px
+	padding: 10px;
 }
 .alternativa:hover{
-	background-color:#008080;
+	background-color: #DC143C;
 	color: white;
 	border-color:black; 
+}
 
-
-	  }
 .submit{
 	font-family: Calibri;
 	font-size: 30px;
@@ -221,6 +220,7 @@ padding: 50px;
 }
 
 .zoom img {
+	position: unset;
 	max-width: 100%;
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
@@ -231,17 +231,4 @@ padding: 50px;
 	-moz-transform: scale(1.2);
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
-}
-.text-item {
-
-	left: 5%;
-	right: 5%;
-	bottom: 20px;
-	z-index: 10;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	color: #ffffff;
-	text-align: center;
-	font-weight: 700;
-	text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }

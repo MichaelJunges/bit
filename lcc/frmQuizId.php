@@ -53,6 +53,7 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
 	  <!-- <link rel="stylesheet" href="css/unsemantic-grid-responsive.css"> -->
     <link rel="stylesheet" href="css/radioBox.css?time=<?=time()?>">
     <link rel="stylesheet" href="css/style1.css?time=<?=time()?>">
+    <link rel="stylesheet" href="css/login.css?time=<?=time()?>">
     <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -70,8 +71,7 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
    ?>
 </div>
 
-<div class="grid-100 "><!--  DIV DOS QUIZ GRID-90 -->
-<div class="grid-100"> <!-- CODIGO -->
+<div class="grid-100" style="padding: 0px;"> <!-- CODIGO -->
 
   <?php
   if (!($pergunta == $consultaId[0]["pp"])) {
@@ -137,9 +137,7 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
   <?php 
   }else{
   ?>
-    <h3 style="font-size: 70px; background-color: red; color: white; margin: 5px;">Você acertou <?=$contador?> de <?=$pergunta?></h3>
-
-<a href="home.php?categoria"><img src="icons/seta2.png" width="5%"></a>
+    <h3 style="font-size: 70px; background-color: red; color: white; margin: 5px; margin-bottom: 100px;">Você acertou <?=$contador?> de <?=$pergunta?></h3>
 
   <?php
       if ($contador == "0" && $pergunta == "0") {       

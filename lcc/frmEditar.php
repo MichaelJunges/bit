@@ -17,15 +17,21 @@ $login = $_SESSION['login'];
 //quizes
 $sqlQuiz = $PDO->prepare("SELECT q.id, p.nreal, p.email, q.titulo, q.foto, q.categoria FROM quiz q, register p WHERE q.id_usuario = p.id AND login == '$login'");
 $sqlQuiz->execute();
-$dadosQuiz = $sqlQuiz->fetchAll();
-
+$dadosQuiz2 = $sqlQuiz->fetchAll();
 
 
 //Consulta
   $sqlSelect = $PDO->prepare("SELECT * FROM register WHERE id=?");
 	$sqlSelect->execute(array($id));
 	$consulta = $sqlSelect->fetchAll(); 
+
+   @$categoria = $_GET['categoria'];
+ $sqlQuiz = $PDO->prepare("SELECT DISTINCT categoria FROM quiz where categoria!='' ORDER BY categoria ASC");
+ $sqlQuiz->execute();
+ $dadosCategoria = $sqlQuiz->fetchAll();
   ?>  
+
+
 
   <!DOCTYPE html>
   <html>
@@ -38,51 +44,30 @@ $dadosQuiz = $sqlQuiz->fetchAll();
   </head>
   <body>
     <div class="grid-container-100">
-    <div  class="grid-100">
+      <div>
+        
+          <?php 
+      include('menu2.php');
+    ?>
+      </div>
 
-<div style="text-align: center;">
 
-  <a href="home.php?categoria"><img src="icons/seta2.png" width="3%"> </a>
+
+<div  class="grid-100" style="padding: 0px;">
+  <a href="home.php?categoria"><img src="icons/seta2.png" width="5%"> </a>
   <p><form name="frmEditar" method="POST" action="editarConta.php"></p>
     
  <p style="padding-bottom: 20px;"><input type="email" name="email" maxlength="100" autofocus="autofocus" required="required" placeholder="E-mail" value="<?=$consulta[0]["email"]?>"></p> 
 
   <p style="padding-bottom: 20px"><input type="text" name="bio" maxlength="" autofocus="autofocus"  pattern="[a-zA-Z0-9- ]+" placeholder="Biografia" value="<?=$consulta[0]["bio"]?>"></p> 
-
-  <a href="frmFoto.php?id=<?=$id?>" >
+      <h3><?=@urldecode($_GET["fotoAtualiza"])?></h3>  
+<input type="hidden" name="id" value="<?=$id?>">
+  <p style="padding-bottom: 20px"><input type="submit" value="OK"></p>
+   
+     <a href="frmFoto.php?id=<?=$id?>" >
       <img   style="border-color: purple; border-style: groove; " width="20%" align="center" src="fotos/<?=$id?>.jpg" alt="Selecione sua foto" >
     </a> 
-
-      <h3><?=@urldecode($_GET["fotoAtualiza"])?></h3>
-  
-<input type="hidden" name="id" value="<?=$id?>">
-
-  <p style="padding-bottom: 20px"><input type="submit" value="OK"></p>
-
-<div class="grid-100 people_title">
-  <h3 style="font-style: italic; padding-top: 20px; padding-bottom: 20px">Criados por Você</h3>
-    <?php  
-      foreach ($dadosQuiz as $quizzes) {  
-    ?>
-        <a href="frmQuizId.php?id=<?=$quizzes["id"]?>">
-        <div class="grid-20 mobile-grid-50 people" >    
-        <p class="textoUpImagem" style="text-decoration: none; color: white">
-          <?=$quizzes["titulo"]?>   
-        </p>
-        <p >
-          <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
-        </p>
-        <p class="textoDownImagem"><?=$quizzes["categoria"]?></p>
-        </p>
-      </div>
-    </a>
-    <?php
-      }
-    ?>
-    </div>
-
-
-</div>
+ </div>
   </form>
   </body>
   </html>

@@ -1,6 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
 	<title></title>
 </head>
 <style>
@@ -43,18 +45,19 @@
 }
 .menu a:hover{
 	background-color: white;
-	color: #008080;
+	color:#DC143C;
 }
 .menu ul ul li{
 	float: none;
 	border-bottom: solid 1px #ccc;
+
 }
 .menu ul ul li a{
-	background-color: #008080;
+	background-color: #DC143C;
 }
 label[for="bt_menu"]{
 	padding: 5px;
-	background-color: #008080;
+	background-color: #DC143C;
 	color: white;
 	font-family: Calibri;
 	text-align: center;
@@ -82,7 +85,7 @@ label[for="bt_menu"]{
 	.menu{
 		margin-top: 5px;
 		margin-left: -100%;
-		transition: all .4s;
+		transition: all .2s;
 	}
 	.menu ul li{
 		width: 100%;
@@ -115,20 +118,38 @@ label[for="bt_menu"]{
 	height: 1.7em;
 	border-radius: 0.5em;
 }
+.txtimg p{
+	color: white;
+	background-color: black;
+	width: 100%;
+	text-align: center;
+	font-family: Calibri;
+	font-size: 20px;
+	background-color: #DC143C;
+	font-style: unset;
+}
+
+
 </style>
 <body>
 	<input type="checkbox" id="bt_menu">
 	<label for="bt_menu">&#9776;</label>
 	<nav class="menu">
 		<ul>
-			<div class="grid-20">
+			<div class="grid-25">
 				<form action="buscar.php"  method="POST">		
-			 		<input type="text" name="buscar" placeholder="Procurar Quiz" required="required" style="padding: 5px; border-radius: 10px; border: none; margin-top: 1.3em;">
-					<input type="submit" value="Ok" class="btpesq">
+			 		<input type="text" name="buscar" placeholder="Procurar Quiz" required="required" style="padding: 5px; border-radius: 10px; border: none; margin-top: 0.5em;">
+					<!-- <input type="submit" value="OK" class="btpesq"> nao precisa -->
 			 	</form>
 			</div>
 			<li><a href="home.php">Home</a></li>
-			<li><a href="frmEditar.php">Perfil</a></li>
+			<li><a href="#">Perfil</a>
+				<ul>
+					<li><a href="frmEditar.php">Editar Perfil</a></li>
+					<li><a href="mycriados.php">Eu Criei</a></li>
+					<li><a href="logoff.php">Sair</a></li>
+				</ul>
+			</li>
 			<li><a href="#">Quero Criar</a>
 				<ul>
 					<li><a href="frmCreateQuiz.php">Criar Quiz</a></li>
@@ -150,7 +171,7 @@ label[for="bt_menu"]{
 	  				?>
 				</ul>	
 			</li>
-			<li><a href="logoff.php">Sair</a></li>
+			
 		</ul>
 	</nav>
 </body>

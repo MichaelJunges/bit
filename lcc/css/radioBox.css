@@ -6,13 +6,14 @@
     border-radius:20px;
     padding: 0px
     visibility: hidden;
+    opacity: 0;
 }
 .radio-image label > input:checked + img{
     border:4px solid #39ff14;
     background-image: url(../icons/right.png);
     background-color: black;
+    opacity: 100;
 }
-
 label:hover
 {
   cursor: pointer;
