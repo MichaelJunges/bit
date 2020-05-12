@@ -8,6 +8,13 @@ if($_SESSION["acesso"] != true) {
 }
 $PDO = new PDO("sqlite:users.db");
 $id = $_SESSION["id"];
+
+// $PDO categorias lateral
+ @$categoria = $_GET['categoria'];
+ $sqlQuiz = $PDO->prepare("SELECT DISTINCT categoria FROM quiz where categoria!='' ORDER BY categoria ASC");
+ $sqlQuiz->execute();
+ $dadosCategoria = $sqlQuiz->fetchAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -37,11 +44,20 @@ $id = $_SESSION["id"];
     </script>
 </head>
 <body >
+	<?php 
+			include('menu2.php');
+	 ?>
+
 	<div class="grid-container" style="text-align: center;">
+<div>
+
+</div>
+
+
 		<div class="grid-100">
 			<div class="grid-50"></div>
 			<h1 style="color: white">
-<a href="tipoQuiz.php"><img src="icons/seta2.png" width="3%"> </a>Seu Quiz precisa de uma foto :)</h1>
+<a href="tipoQuiz.php"></a>Seu Quiz precisa de uma foto 📷</h1>
 		<form name="frmCreateQuiz" action="frmCrQuiz.php" method="POST" enctype="multipart/form-data" >
 				 <p class="titulo">  
 		        <input type="submit" value="PRÓXIMO" id="proximo">

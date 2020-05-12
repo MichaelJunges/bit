@@ -13,6 +13,13 @@ $local = $_FILES["foto"]["tmp_name"];
 $foto = $_FILES['foto']["name"];
 $conteudo = "fotos_quiz/$foto";
 copy($local, $conteudo);
+
+// $PDO categorias lateral
+ @$categoria = $_GET['categoria'];
+ $sqlQuiz = $PDO->prepare("SELECT DISTINCT categoria FROM quiz where categoria!='' ORDER BY categoria ASC");
+ $sqlQuiz->execute();
+ $dadosCategoria = $sqlQuiz->fetchAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -94,11 +101,22 @@ copy($local, $conteudo);
     </script>
 </head>
 <body>
+    <?php 
+            include('menu2.php');
+
+     ?>
+
     <div class="grid-container" style="text-align: center;">
     <form name="frmCreateQuiz" action="enviarQuiz.php" method="POST" enctype="multipart/form-data" >
 
-         <h1 style="color: white"><a href="frmCreateQuiz.php"><img src="icons/seta2.png" width="3%"> </a>Redimencione-a !</h1>
+ <p class="quiz"> 
+     Titulo: 
+ <input  type="text" size="50" name="titulo" required="required" maxlength="50" autofocus="autofocus" > 
+            </p> 
 
+<div style="text-align: center;">
+         <h1 style="color: white"><a href="frmCreateQuiz.php"><img src="icons/seta2.png" width="3%"> </a>Trocar</h1>
+</div>
 
             <p >
                 <img id="ImagemCrop" src="<?=$conteudo?>">
@@ -110,31 +128,35 @@ copy($local, $conteudo);
                 <input type="hidden" name="foto" value="<?=$foto?>" >
             </p>
 
-            <p class="quiz"> 
-                Titulo:<br /> 
-                <input  type="text" size="50" name="titulo" required="required" maxlength="50" autofocus="autofocus" > 
-            </p> 
+        
 
-
-             <h1 style="display: block;">Qual a categoria do seu Quiz ?</h1>  
-             <p class="radio" >
+            <div class="grid-50">
+             <h1 style="display: block;">SELECIONA A CATEGORIA</h1>  
+             <p class="radio" style="text-align: left;" >
                 <input  type="radio" id="a" name="categoria" required="required"  value="ANIMES">Animes
+                <br>
                   <input type="radio" id="b" name="categoria" value="BTS"> BTS
+                  <br>
                    <input type="radio" id="c" name="categoria" value="COMIDAS"> Comidas
                    <br>
                    <input type="radio" id="d" name="categoria" value="YOUTUBERS"> Youtubers
+                   <br>
                    <input type="radio" id="f" name="categoria" value="FAMOSOS"> Famosos
+                   <br>
                    <input type="radio" id="g" name="categoria" value="GAMES"> Games
                    <br>
                    <input type="radio" id="h" name="categoria" value="FUTEBOL"> Futebol
+                   <br>
                    <input type="radio" id="p" name="categoria" value="TV"> Programas de TV
+                   <br>
                    <input type="radio" id="t" name="categoria" value="FILMES/SÉRIES">Filmes e Seriados
+                   <br>
                    <input type="radio" id="m" name="categoria" value="MEMES">Memes
             </p> 
-
+</div>
 
             <div class="grid-50"></div>
-            <h1 style="padding-top: 0px" >Agora, preencha os campos !</h1>
+         
 
             
             <p class="quiz"> 
@@ -170,7 +192,7 @@ copy($local, $conteudo);
             <p> 
                 <input type="button" class="adicionar" id="btnAdicionarPergunta" value="        Adicionar +Pergunta">
             </p>
-            <p>
+            <p style="margin-top: 10px;">
                 <textarea name="tags" placeholder="Digite tags para o seu quiz"></textarea>
             </p>
             <input type="hidden" name="id" value="<?=$id?>">
