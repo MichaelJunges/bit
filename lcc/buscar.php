@@ -22,8 +22,8 @@ if ($_SESSION["acesso"] != true)
  $_SESSION["pergunta"] = 0;
 
 // MOSTRA quizes recentes
- $sqlQuiz = $PDO->prepare("SELECT * FROM quiz WHERE titulo LIKE ? OR categoria LIKE ?");
- $sqlQuiz->execute(array("%$buscar%","%$buscar%"));
+ $sqlQuiz = $PDO->prepare("SELECT * FROM quiz WHERE titulo LIKE ? OR categoria LIKE ? OR tags LIKE ?");
+ $sqlQuiz->execute(array("%$buscar%","%$buscar%","%$buscar%"));
  $dadosQuiz = $sqlQuiz->fetchAll();
 
 // $PDO categorias lateral

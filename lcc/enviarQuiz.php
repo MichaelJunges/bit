@@ -11,6 +11,7 @@ if($_SESSION["acesso"] != true) {
 	$titulo = $_POST["titulo"];
 	$id_usuario = $_POST["id"];
 	$categoria = $_POST["categoria"];
+	$tags = $_POST["tags"];
 	
 	//foto
 	$foto = $_POST["foto"];
@@ -31,8 +32,8 @@ if($_SESSION["acesso"] != true) {
 	unlink("fotos_quiz/$foto");
 	//fim foto
 
-	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, id_usuario, foto, categoria) VALUES (?,?,?,?)");
-	$exec = $sqlInsert->execute(array($titulo, $id_usuario, $conteudo, $categoria));
+	$sqlInsert = $PDO->prepare("INSERT INTO quiz (titulo, id_usuario, foto, categoria, tags) VALUES (?,?,?,?,?)");
+	$exec = $sqlInsert->execute(array($titulo, $id_usuario, $conteudo, $categoria, $tags));
 
 	$sql = $PDO->prepare("SELECT id FROM quiz ORDER BY id DESC LIMIT 1");
 	$sql->execute();

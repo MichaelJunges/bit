@@ -64,16 +64,15 @@ $dadosQuiz2 = $sqlQuiz->fetchAll();
     <?php  
       foreach ($dadosQuiz2 as $quizzes) {  
     ?>
-        <a href="frmQuizId.php?id=<?=$quizzes["id"]?>">
-        <div class="grid-25 mobile-grid-50 people" >    
-       <div class="txtimg">
+        <a class="grid-25 mobile-grid-50" href="frmQuizId.php?id=<?=$quizzes["id"]?>">
+        <div class="people" >    
+          <div class="txtimg">
           <p><?=$quizzes["titulo"]?></p>
           </div>
         <p >
           <img class="imagemQuiz" width="100%" height="100%" src="<?=$quizzes["foto"]?>">
         </p>
         <p class="textoDownImagem"><?=$quizzes["categoria"]?></p>
-        </p>
       </div>
     </a>
     <?php

@@ -170,6 +170,9 @@ copy($local, $conteudo);
             <p> 
                 <input type="button" class="adicionar" id="btnAdicionarPergunta" value="        Adicionar +Pergunta">
             </p>
+            <p>
+                <textarea name="tags" placeholder="Digite tags para o seu quiz"></textarea>
+            </p>
             <input type="hidden" name="id" value="<?=$id?>">
        &nbsp
                 
