@@ -76,7 +76,6 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
   <?php
   if (!($pergunta == $consultaId[0]["pp"])) {
   ?>
-  <form name="frmQuizId" method="POST" action="tentarQuiz.php">
 
 <!--   <div class="grid-90" style="text-align: center;" > -->
 <div class="grid-40">
@@ -85,52 +84,33 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
 <div class="grid-100" >
  <!--   <p><?=$dadosQuiz?></p>  -->
   <p class="perguntaQuiz"><?=$consultaP[$pergunta]["texto"]?></p>
-
-  <?php 
-
-   ?>
   <fieldset class="radio-image">  
 
     <div class="grid-100">
+      <a href="tentarQuiz.php?id=<?=$id?>&resposta=1" style="color:black">
     <div class="alternativa" >
-    <label for="A">
-    	<input id="A" type="radio" class="button" name="resposta" value="1" required="required"><?=$consultaR[0]["resposta"]?>
-       <img src="icons/right.png"  width="20px" alt="Masculino">  
+    	<?=$consultaR[0]["resposta"]?>
     </div>
-  </label>
-
-
+     </a>
+<a href="tentarQuiz.php?id=<?=$id?>&resposta=2" style="color:black">
     <div class="alternativa"> 
-      <label for="B">
-    	<input id="B" type="radio" class="button" name="resposta" value="2"><?=$consultaR[1]["resposta"]?>
-      <img src="icons/right.png"  width="20px" alt="Masculino">
+    	<?=$consultaR[1]["resposta"]?>
     </div>
-  </label>
+    </a>
 
-   
+   <a href="tentarQuiz.php?id=<?=$id?>&resposta=3" style="color:black">
     <div class="alternativa"> 
-      <label for="C"> 
-    	<input id="C" type="radio" class="button" name="resposta" value="3"><?=$consultaR[2]["resposta"]?>
-          <img src="icons/right.png"  width="20px" alt="Masculino">
+    	<?=$consultaR[2]["resposta"]?>
     </div>
-  </label>
+  </a>
 
 
-    <div class="alternativa"> 
-      <label for="D"> 
-    	<input id="D" type="radio" class="button"  name="resposta" value="4"><?=$consultaR[3]["resposta"]?>
-      <img src="icons/right.png"  width="20px" alt="Masculino">
+    <a href="tentarQuiz.php?id=<?=$id?>&resposta=4" style="color:black">
+      <div class="alternativa"> 
+    	<?=$consultaR[3]["resposta"]?>
     </div>
-  </label>
+  </a>
      </fieldset>
-
-
-    <input type="submit" value="PRÓXIMA" class="submit"> 
-
-
-  	<input type="hidden" name="id" value="<?=$id?>">
-    <input type="hidden" name="pergunta" value="<?=$pergunta?>">
-  </form>
   </div>
 
 
