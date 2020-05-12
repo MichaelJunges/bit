@@ -59,7 +59,8 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	  <title>Quiz</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js">
+    </script>
 </head>
 <body style=" margin: 0px; padding: 0px; background-color: #1C1C1C;">
 
@@ -67,6 +68,7 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
 
 <div>
   <?php 
+
       include('menu2.php');
    ?>
 </div>
@@ -86,9 +88,9 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
   <p class="perguntaQuiz"><?=$consultaP[$pergunta]["texto"]?></p>
   <fieldset class="radio-image">  
 
-    <div class="grid-100">
-      <a href="tentarQuiz.php?id=<?=$id?>&resposta=1" style="color:black">
-    <div class="alternativa" >
+    <div class="grid-100" style="background-color: #DC143C">
+      <a href="tentarQuiz.php?id=<?=$id?>&resposta=1" style="color:black;">
+    <div class="alternativa">
     	<?=$consultaR[0]["resposta"]?>
     </div>
      </a>
@@ -98,26 +100,27 @@ $sqlQuizA = $PDO->prepare("SELECT r.nreal FROM quiz q, register r WHERE  q.id ==
     </div>
     </a>
 
-   <a href="tentarQuiz.php?id=<?=$id?>&resposta=3" style="color:black">
-    <div class="alternativa"> 
+   <a href="tentarQuiz.php?id=<?=$id?>&resposta=3" style="color:black;">
+    <div class="alternativa" style="background-color: <?$color?>"> 
     	<?=$consultaR[2]["resposta"]?>
     </div>
   </a>
 
 
-    <a href="tentarQuiz.php?id=<?=$id?>&resposta=4" style="color:black">
+    <a href="tentarQuiz.php?id=<?=$id?>&resposta=4" style="color:black;">
       <div class="alternativa"> 
     	<?=$consultaR[3]["resposta"]?>
     </div>
   </a>
+<!-- <div style="background-color: <?=$color?>">
+ teste  
+</div> -->
      </fieldset>
   </div>
-
-
   <?php 
   }else{
   ?>
-    <h3 style="font-size: 70px; background-color: red; color: white; margin: 5px; margin-bottom: 100px;">Você acertou <?=$contador?> de <?=$pergunta?></h3>
+    <h3 style="font-size: 70px; background-color: red; color: white; margin: 5px; margin-bottom: 100px;">PONTUAÇÃO <?=$contador?> de <?=$pergunta?></h3>
 
   <?php
       if ($contador == "0" && $pergunta == "0") {       

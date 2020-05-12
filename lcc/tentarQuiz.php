@@ -18,20 +18,19 @@ $pergunta = $_SESSION["pergunta"];
 if ($resposta == $certa) {
 	$_SESSION["contador"]++;
 	$_SESSION["pergunta"]++;
-	$color= "green";
-	$msg = "Você acertou";
+	sleep(1);
+	  // $msg = "Você acertou";
+	  $color= "green";
+	  header("Location:frmQuizId.php?id=$id");
+    exit;
+	
+
 }else {
 	$_SESSION["pergunta"]++;
-	$color= "red";
-	$msg = "Você errou";
+	sleep(1);
+	// $msg = "Você errou";
+	 $color= "red";
+	header("Location:frmQuizId.php?id=$id");
+    exit;
+	
 }
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Resposta</title>
-</head>
-<body style="background-color: <?=$color?>">
-<h1 style="color: white"><?=$msg?></h1>
-</body>
-</html>

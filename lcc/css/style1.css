@@ -183,6 +183,9 @@ padding: 10px;
 	color: white;
 	border-color:black; 
 }
+.alternativa:checked{
+	background-color: blue;
+}
 
 .submit{
 	font-family: Calibri;
@@ -232,3 +235,7 @@ padding: 50px;
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
 }
+#A
+  {
+    background-color:#333;
+  }

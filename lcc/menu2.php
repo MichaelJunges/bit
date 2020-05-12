@@ -16,7 +16,8 @@
 		width: 100%;
 		height: 55px;
 		background-color: #222;
-		font-family: 'Calibri';	
+		font-family: 'Calibri';
+
 	}
 	.menu ul{
 		list-style: none;
@@ -27,6 +28,8 @@
 		float: left;
 	}
 	.menu a{
+		border-style: groove;
+		border-color: transparent;
 		font-weight: 900;
 		padding: 15px;
 		font-size: 20px;
@@ -44,6 +47,7 @@
 	visibility: visible;
 }
 .menu a:hover{
+	border-top-color: #DC143C;
 	background-color: white;
 	color:#DC143C;
 }
