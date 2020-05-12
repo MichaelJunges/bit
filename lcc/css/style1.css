@@ -197,6 +197,17 @@ padding: 10px;
 	width: 315px;
 	border-radius: 5px;
 }	
+.button{
+	font-family: Calibri;
+	font-size: 1em;
+	border-color: black;
+	color: black;
+	display: inline-block;
+	font-weight: 800;
+	text-shadow: all;
+	width: 40%;
+	border-radius: 5px;
+}	
 input[type="submit"]:hover{
 	cursor: pointer;
 	color:white;

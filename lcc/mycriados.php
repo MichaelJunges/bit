@@ -63,8 +63,10 @@ $dadosQuiz2 = $sqlQuiz->fetchAll();
 
     <?php  
       foreach ($dadosQuiz2 as $quizzes) {  
-    ?>
-        <a class="grid-25 mobile-grid-50" href="frmQuizId.php?id=<?=$quizzes["id"]?>">
+    ?>	<div class="grid-25 mobile-grid-50">
+    	<p><a href="editarQuiz.php?id=<?=$quizzes["id"]?>"><button class="button">Editar</button></a>
+    	<a href="excluirQuiz.php?id=<?=$quizzes["id"]?>"><button class="button">Excluir</button></p></a>
+        <a  href="frmQuizId.php?id=<?=$quizzes["id"]?>">
         <div class="people" >    
           <div class="txtimg">
           <p><?=$quizzes["titulo"]?></p>
@@ -75,6 +77,7 @@ $dadosQuiz2 = $sqlQuiz->fetchAll();
         <p class="textoDownImagem"><?=$quizzes["categoria"]?></p>
       </div>
     </a>
+    </div>
     <?php
       }
     ?>
