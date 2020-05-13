@@ -63,7 +63,7 @@ if ($_SESSION["acesso"] != true)
 	</div>
 
 	<div class="grid-100 " style="padding: 0; display: block;"><!--  DIV DOS QUIZ GRID-90 -->
-		<p class="titulo" style="text-align: center;"><?=$categoria?></p>
+		<h1  style="padding: 0px; margin: 0px; background-color: white;"><?=$categoria?></h1>
 	</div>
 	<?php  
 	    foreach ($carregaCategoria as $recaregados) {  

@@ -150,7 +150,7 @@ label[for="bt_menu"]{
 			<li><a href="#">Perfil</a>
 				<ul>
 					<li><a href="frmEditar.php">Editar Perfil</a></li>
-					<li><a href="mycriados.php">Eu Criei</a></li>
+					<li><a href="mycriados.php">Criados</a></li>
 					<li><a href="logoff.php">Sair</a></li>
 				</ul>
 			</li>

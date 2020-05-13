@@ -109,11 +109,6 @@ copy($local, $conteudo);
     <div class="grid-container" style="text-align: center;">
     <form name="frmCreateQuiz" action="enviarQuiz.php" method="POST" enctype="multipart/form-data" >
 
- <p class="quiz"> 
-     Titulo: 
- <input  type="text" size="50" name="titulo" required="required" maxlength="50" autofocus="autofocus" > 
-            </p> 
-
 <div style="text-align: center;">
          <h1 style="color: white"><a href="frmCreateQuiz.php"><img src="icons/seta2.png" width="3%"> </a>Trocar</h1>
 </div>
@@ -128,12 +123,14 @@ copy($local, $conteudo);
                 <input type="hidden" name="foto" value="<?=$foto?>" >
             </p>
 
-        
-
+       <div style="text-align: center;"> 
+ <p>Titulo: </p>
+ <input  type="text" size="50" name="titulo" required="required" maxlength="50" autofocus="autofocus" >
+      </div>      
             <div class="grid-50">
              <h1 style="display: block;">SELECIONA A CATEGORIA</h1>  
              <p class="radio" style="text-align: left;" >
-                <input  type="radio" id="a" name="categoria" required="required"  value="ANIMES">Animes
+                <input  type="radio" id="a" name="categoria" required="required"  value="ANIMES"> Animes
                 <br>
                   <input type="radio" id="b" name="categoria" value="BTS"> BTS
                   <br>
@@ -149,9 +146,11 @@ copy($local, $conteudo);
                    <br>
                    <input type="radio" id="p" name="categoria" value="TV"> Programas de TV
                    <br>
-                   <input type="radio" id="t" name="categoria" value="FILMES/SÉRIES">Filmes e Seriados
+                   <input type="radio" id="t" name="categoria" value="FILMES/SÉRIES"> Filmes e Seriados
                    <br>
-                   <input type="radio" id="m" name="categoria" value="MEMES">Memes
+                   <input type="radio" id="m" name="categoria" value="MEMES"> Memes
+                   <br>
+                   <input type="radio" id="o" name="categoria" value="OUTROS"> Outros/Gerais
             </p> 
 </div>
 
