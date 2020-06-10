@@ -56,7 +56,8 @@ if ($_SESSION["acesso"] != true)
 
 </head>
 <body>
-	<div class="grid-100" style="padding: 0px;"> <!-- DIV PRINCIPAL GRID-100 -->
+	<div class="grid-container-100"> 
+	<div class="grid-100" style="padding: 0;"> <!-- DIV PRINCIPAL GRID-100 -->
 		<?php 
 			include('menu2.php');
 		?>
@@ -101,5 +102,6 @@ if ($_SESSION["acesso"] != true)
 	<?php 
 		}
 	?>
+	</div>
 </body>
 </html>
